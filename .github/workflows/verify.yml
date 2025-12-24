@@ -1,0 +1,54 @@
+name: Verify Registries
+
+on:
+  # Run on pull requests
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "registries/**"
+      - "shared/**"
+      - "scripts/**"
+
+  # Manual trigger
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Type check
+        run: bun run tsc --noEmit
+
+      - name: Verify registries
+        run: bun run verify
+
+  test-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Test sync (dry run)
+        run: bun run sync -- --dry-run

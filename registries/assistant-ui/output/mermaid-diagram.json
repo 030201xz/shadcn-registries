@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mermaid-diagram",
+  "type": "registry:component",
+  "files": [
+    {
+      "content": "\"use client\";\n\nimport { useAssistantState } from \"@assistant-ui/react\";\nimport type { SyntaxHighlighterProps } from \"@assistant-ui/react-markdown\";\nimport mermaid from \"mermaid\";\nimport { FC, useEffect, useRef } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * Props for the MermaidDiagram component\n */\nexport type MermaidDiagramProps = SyntaxHighlighterProps & {\n  className?: string;\n};\n\n// Configure mermaid options here\nmermaid.initialize({ theme: \"default\", startOnLoad: false });\n\n/**\n * MermaidDiagram component for rendering Mermaid diagrams\n * Use it by passing to `componentsByLanguage` for mermaid in `markdown-text.tsx`\n *\n * @example\n * const MarkdownTextImpl = () => {\n *   return (\n *     <MarkdownTextPrimitive\n *       remarkPlugins={[remarkGfm]}\n *       className=\"aui-md\"\n *       components={defaultComponents}\n *       componentsByLanguage={{\n *         mermaid: {\n *           SyntaxHighlighter: MermaidDiagram\n *         },\n *       }}\n *     />\n *   );\n * };\n */\nexport const MermaidDiagram: FC<MermaidDiagramProps> = ({\n  code,\n  className,\n  node: _node,\n  components: _components,\n  language: _language,\n}) => {\n  const ref = useRef<HTMLPreElement>(null);\n\n  // Detect when this code block is complete\n  const isComplete = useAssistantState(({ part }) => {\n    if (part.type !== \"text\") return false;\n\n    // Find the position of this code block\n    const codeIndex = part.text.indexOf(code);\n    if (codeIndex === -1) return false;\n\n    // Check if there are closing backticks immediately after this code block\n    const afterCode = part.text.substring(codeIndex + code.length);\n\n    // Look for the closing backticks - should be at the start or after a newline\n    const closingBackticksMatch = afterCode.match(/^```|^\\n```/);\n    return closingBackticksMatch !== null;\n  });\n\n  useEffect(() => {\n    if (!isComplete) return;\n\n    (async () => {\n      try {\n        const id = `mermaid-${Math.random().toString(36).slice(2)}`;\n        const result = await mermaid.render(id, code);\n        if (ref.current) {\n          ref.current.innerHTML = result.svg;\n          result.bindFunctions?.(ref.current);\n        }\n      } catch (e) {\n        console.warn(\"Failed to render Mermaid diagram:\", e);\n      }\n    })();\n  }, [isComplete, code]);\n\n  return (\n    <pre\n      ref={ref}\n      className={cn(\n        \"aui-mermaid-diagram rounded-b-lg bg-muted p-2 text-center [&_svg]:mx-auto\",\n        className,\n      )}\n    >\n      Drawing diagram...\n    </pre>\n  );\n};\n\nMermaidDiagram.displayName = \"MermaidDiagram\";\n",
+      "type": "registry:component",
+      "path": "components/assistant-ui/mermaid-diagram.tsx"
+    }
+  ],
+  "dependencies": [
+    "mermaid",
+    "@assistant-ui/react",
+    "@assistant-ui/react-markdown"
+  ]
+}

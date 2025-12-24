@@ -1,0 +1,19 @@
+{
+  "name": "shadcn-registries",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aggregated Shadcn UI Component Registries",
+  "type": "module",
+  "scripts": {
+    "sync": "bun run scripts/sync-all.ts",
+    "sync:registry": "bun run scripts/sync-registry.ts",
+    "verify": "bun run scripts/verify-all.ts",
+    "init": "bun run scripts/init-registry.ts",
+    "build:index": "bun run scripts/build-index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "zod": "^4.2.1"
+  },
+  "license": "MIT"
+}

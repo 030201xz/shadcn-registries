@@ -1,0 +1,82 @@
+name: Sync Registries
+
+on:
+  # Scheduled sync - runs daily at 00:00 UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Manual trigger with optional registry parameter
+  workflow_dispatch:
+    inputs:
+      registry:
+        description: "Specific registry to sync (leave empty for all)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run mode (preview without writing files)"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Sync registries
+        run: |
+          if [ -n "${{ github.event.inputs.registry }}" ]; then
+            echo "Syncing specific registry: ${{ github.event.inputs.registry }}"
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              bun run sync:registry ${{ github.event.inputs.registry }} --dry-run
+            else
+              bun run sync:registry ${{ github.event.inputs.registry }}
+            fi
+          else
+            echo "Syncing all registries"
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              bun run sync -- --dry-run
+            else
+              bun run sync
+            fi
+          fi
+
+      - name: Build global index
+        if: github.event.inputs.dry_run != 'true'
+        run: bun run build:index
+
+      - name: Verify registries
+        if: github.event.inputs.dry_run != 'true'
+        run: bun run verify
+
+      - name: Commit and push changes
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add all output directories
+          git add registries/*/output/
+          git add index.json
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync registries [skip ci]"
+            git push
+          fi

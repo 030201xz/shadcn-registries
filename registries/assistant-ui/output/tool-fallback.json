@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tool-fallback",
+  "type": "registry:component",
+  "files": [
+    {
+      "content": "import type { ToolCallMessagePartComponent } from \"@assistant-ui/react\";\nimport {\n  CheckIcon,\n  ChevronDownIcon,\n  ChevronUpIcon,\n  XCircleIcon,\n} from \"lucide-react\";\nimport { useState } from \"react\";\nimport { Button } from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\n\nexport const ToolFallback: ToolCallMessagePartComponent = ({\n  toolName,\n  argsText,\n  result,\n  status,\n}) => {\n  const [isCollapsed, setIsCollapsed] = useState(true);\n\n  const isCancelled =\n    status?.type === \"incomplete\" && status.reason === \"cancelled\";\n  const cancelledReason =\n    isCancelled && status.error\n      ? typeof status.error === \"string\"\n        ? status.error\n        : JSON.stringify(status.error)\n      : null;\n\n  return (\n    <div\n      className={cn(\n        \"aui-tool-fallback-root mb-4 flex w-full flex-col gap-3 rounded-lg border py-3\",\n        isCancelled && \"border-muted-foreground/30 bg-muted/30\",\n      )}\n    >\n      <div className=\"aui-tool-fallback-header flex items-center gap-2 px-4\">\n        {isCancelled ? (\n          <XCircleIcon className=\"aui-tool-fallback-icon size-4 text-muted-foreground\" />\n        ) : (\n          <CheckIcon className=\"aui-tool-fallback-icon size-4\" />\n        )}\n        <p\n          className={cn(\n            \"aui-tool-fallback-title grow\",\n            isCancelled && \"text-muted-foreground line-through\",\n          )}\n        >\n          {isCancelled ? \"Cancelled tool: \" : \"Used tool: \"}\n          <b>{toolName}</b>\n        </p>\n        <Button onClick={() => setIsCollapsed(!isCollapsed)}>\n          {isCollapsed ? <ChevronUpIcon /> : <ChevronDownIcon />}\n        </Button>\n      </div>\n      {!isCollapsed && (\n        <div className=\"aui-tool-fallback-content flex flex-col gap-2 border-t pt-2\">\n          {cancelledReason && (\n            <div className=\"aui-tool-fallback-cancelled-root px-4\">\n              <p className=\"aui-tool-fallback-cancelled-header font-semibold text-muted-foreground\">\n                Cancelled reason:\n              </p>\n              <p className=\"aui-tool-fallback-cancelled-reason text-muted-foreground\">\n                {cancelledReason}\n              </p>\n            </div>\n          )}\n          <div\n            className={cn(\n              \"aui-tool-fallback-args-root px-4\",\n              isCancelled && \"opacity-60\",\n            )}\n          >\n            <pre className=\"aui-tool-fallback-args-value whitespace-pre-wrap\">\n              {argsText}\n            </pre>\n          </div>\n          {!isCancelled && result !== undefined && (\n            <div className=\"aui-tool-fallback-result-root border-t border-dashed px-4 pt-2\">\n              <p className=\"aui-tool-fallback-result-header font-semibold\">\n                Result:\n              </p>\n              <pre className=\"aui-tool-fallback-result-content whitespace-pre-wrap\">\n                {typeof result === \"string\"\n                  ? result\n                  : JSON.stringify(result, null, 2)}\n              </pre>\n            </div>\n          )}\n        </div>\n      )}\n    </div>\n  );\n};\n",
+      "type": "registry:component",
+      "path": "components/assistant-ui/tool-fallback.tsx"
+    }
+  ],
+  "dependencies": [
+    "@assistant-ui/react",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ]
+}

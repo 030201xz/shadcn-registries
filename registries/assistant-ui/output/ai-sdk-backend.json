@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-sdk-backend",
+  "type": "registry:page",
+  "files": [
+    {
+      "content": "import { openai } from \"@ai-sdk/openai\";\nimport { frontendTools } from \"@assistant-ui/react-ai-sdk\";\nimport { convertToModelMessages, streamText } from \"ai\";\n\nexport const maxDuration = 30;\n\nexport async function POST(req: Request) {\n  const { messages, system, tools } = await req.json();\n\n  const result = streamText({\n    model: openai(\"gpt-4o\"),\n    messages: convertToModelMessages(messages),\n    system,\n    tools: {\n      ...frontendTools(tools),\n      // add backend tools here\n    },\n  });\n\n  return result.toUIMessageStreamResponse();\n}\n",
+      "type": "registry:page",
+      "path": "app/api/chat/route.ts",
+      "target": "app/api/chat/route.ts"
+    }
+  ],
+  "dependencies": [
+    "@assistant-ui/react-ai-sdk",
+    "ai",
+    "@ai-sdk/openai"
+  ]
+}

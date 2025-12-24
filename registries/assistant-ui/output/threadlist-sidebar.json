@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "threadlist-sidebar",
+  "type": "registry:component",
+  "files": [
+    {
+      "content": "import * as React from \"react\";\nimport { Github, MessagesSquare } from \"lucide-react\";\nimport Link from \"next/link\";\nimport {\n  Sidebar,\n  SidebarContent,\n  SidebarFooter,\n  SidebarHeader,\n  SidebarMenu,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  SidebarRail,\n} from \"@/components/ui/sidebar\";\nimport { ThreadList } from \"@/components/assistant-ui/thread-list\";\n\nexport function ThreadListSidebar({\n  ...props\n}: React.ComponentProps<typeof Sidebar>) {\n  return (\n    <Sidebar {...props}>\n      <SidebarHeader className=\"aui-sidebar-header mb-2 border-b\">\n        <div className=\"aui-sidebar-header-content flex items-center justify-between\">\n          <SidebarMenu>\n            <SidebarMenuItem>\n              <SidebarMenuButton size=\"lg\" asChild>\n                <Link\n                  href=\"https://assistant-ui.com\"\n                  target=\"_blank\"\n                  rel=\"noopener noreferrer\"\n                >\n                  <div className=\"aui-sidebar-header-icon-wrapper flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground\">\n                    <MessagesSquare className=\"aui-sidebar-header-icon size-4\" />\n                  </div>\n                  <div className=\"aui-sidebar-header-heading mr-6 flex flex-col gap-0.5 leading-none\">\n                    <span className=\"aui-sidebar-header-title font-semibold\">\n                      assistant-ui\n                    </span>\n                  </div>\n                </Link>\n              </SidebarMenuButton>\n            </SidebarMenuItem>\n          </SidebarMenu>\n        </div>\n      </SidebarHeader>\n      <SidebarContent className=\"aui-sidebar-content px-2\">\n        <ThreadList />\n      </SidebarContent>\n      <SidebarRail />\n      <SidebarFooter className=\"aui-sidebar-footer border-t\">\n        <SidebarMenu>\n          <SidebarMenuItem>\n            <SidebarMenuButton size=\"lg\" asChild>\n              <Link\n                href=\"https://github.com/assistant-ui/assistant-ui\"\n                target=\"_blank\"\n              >\n                <div className=\"aui-sidebar-footer-icon-wrapper flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground\">\n                  <Github className=\"aui-sidebar-footer-icon size-4\" />\n                </div>\n                <div className=\"aui-sidebar-footer-heading flex flex-col gap-0.5 leading-none\">\n                  <span className=\"aui-sidebar-footer-title font-semibold\">\n                    GitHub\n                  </span>\n                  <span>View Source</span>\n                </div>\n              </Link>\n            </SidebarMenuButton>\n          </SidebarMenuItem>\n        </SidebarMenu>\n      </SidebarFooter>\n    </Sidebar>\n  );\n}\n",
+      "type": "registry:component",
+      "path": "components/assistant-ui/threadlist-sidebar.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "sidebar",
+    "https://r.assistant-ui.com/thread-list.json"
+  ]
+}

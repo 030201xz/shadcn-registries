@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "generatedAt": "2025-12-24T12:19:50.048Z",
+  "registries": [
+    {
+      "name": "assistant-ui",
+      "displayName": "Assistant UI",
+      "description": "AI Chat UI Library - React components for building AI chat interfaces",
+      "homepage": "https://assistant-ui.com",
+      "itemCount": 17,
+      "lastSync": "2025-12-24T12:18:41.324Z",
+      "url": "registries/assistant-ui/output/{name}.json"
+    }
+  ]
+}

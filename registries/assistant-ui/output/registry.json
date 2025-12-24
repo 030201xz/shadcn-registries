@@ -1,0 +1,185 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "assistant-ui",
+  "homepage": "https://assistant-ui.com",
+  "syncedAt": "2025-12-24T12:18:41.324Z",
+  "itemCount": 17,
+  "items": [
+    {
+      "name": "shimmer-style",
+      "type": "registry:style"
+    },
+    {
+      "name": "chat/b/ai-sdk-quick-start/json",
+      "type": "registry:page",
+      "registryDependencies": [
+        "https://r.assistant-ui.com/ai-sdk-backend.json",
+        "https://r.assistant-ui.com/thread.json",
+        "https://r.assistant-ui.com/thread-list.json"
+      ]
+    },
+    {
+      "name": "ai-sdk-backend",
+      "type": "registry:page",
+      "dependencies": [
+        "@assistant-ui/react-ai-sdk",
+        "ai",
+        "@ai-sdk/openai"
+      ]
+    },
+    {
+      "name": "thread",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "https://r.assistant-ui.com/attachment.json",
+        "https://r.assistant-ui.com/markdown-text.json",
+        "https://r.assistant-ui.com/tooltip-icon-button.json",
+        "https://r.assistant-ui.com/tool-fallback.json"
+      ]
+    },
+    {
+      "name": "markdown-text",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react-markdown",
+        "lucide-react",
+        "remark-gfm"
+      ],
+      "registryDependencies": [
+        "https://r.assistant-ui.com/tooltip-icon-button.json"
+      ]
+    },
+    {
+      "name": "reasoning",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react",
+        "tw-shimmer"
+      ],
+      "registryDependencies": [
+        "collapsible",
+        "https://r.assistant-ui.com/markdown-text.json"
+      ]
+    },
+    {
+      "name": "thread-list",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "skeleton",
+        "https://r.assistant-ui.com/tooltip-icon-button.json"
+      ]
+    },
+    {
+      "name": "attachment",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react",
+        "zustand"
+      ],
+      "registryDependencies": [
+        "dialog",
+        "tooltip",
+        "avatar",
+        "https://r.assistant-ui.com/tooltip-icon-button.json"
+      ]
+    },
+    {
+      "name": "follow-up-suggestions",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "tooltip-icon-button",
+      "type": "registry:component",
+      "registryDependencies": [
+        "tooltip",
+        "button"
+      ]
+    },
+    {
+      "name": "syntax-highlighter",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react-syntax-highlighter",
+        "react-syntax-highlighter",
+        "@types/react-syntax-highlighter"
+      ]
+    },
+    {
+      "name": "assistant-modal",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://r.assistant-ui.com/thread.json",
+        "https://r.assistant-ui.com/tooltip-icon-button.json"
+      ]
+    },
+    {
+      "name": "assistant-sidebar",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react"
+      ],
+      "registryDependencies": [
+        "resizable",
+        "https://r.assistant-ui.com/thread.json"
+      ]
+    },
+    {
+      "name": "tool-fallback",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "shiki-highlighter",
+      "type": "registry:component",
+      "dependencies": [
+        "react-shiki"
+      ]
+    },
+    {
+      "name": "mermaid-diagram",
+      "type": "registry:component",
+      "dependencies": [
+        "mermaid",
+        "@assistant-ui/react",
+        "@assistant-ui/react-markdown"
+      ]
+    },
+    {
+      "name": "threadlist-sidebar",
+      "type": "registry:component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "sidebar",
+        "https://r.assistant-ui.com/thread-list.json"
+      ]
+    }
+  ]
+}

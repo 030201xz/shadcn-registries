@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "thread-list",
+  "type": "registry:component",
+  "files": [
+    {
+      "content": "import { TooltipIconButton } from \"@/components/assistant-ui/tooltip-icon-button\";\nimport { Button } from \"@/components/ui/button\";\nimport { Skeleton } from \"@/components/ui/skeleton\";\nimport {\n  AssistantIf,\n  ThreadListItemPrimitive,\n  ThreadListPrimitive,\n} from \"@assistant-ui/react\";\nimport { ArchiveIcon, PlusIcon } from \"lucide-react\";\nimport type { FC } from \"react\";\n\nexport const ThreadList: FC = () => {\n  return (\n    <ThreadListPrimitive.Root className=\"aui-root aui-thread-list-root flex flex-col gap-1\">\n      <ThreadListNew />\n      <AssistantIf condition={({ threads }) => threads.isLoading}>\n        <ThreadListSkeleton />\n      </AssistantIf>\n      <AssistantIf condition={({ threads }) => !threads.isLoading}>\n        <ThreadListPrimitive.Items components={{ ThreadListItem }} />\n      </AssistantIf>\n    </ThreadListPrimitive.Root>\n  );\n};\n\nconst ThreadListNew: FC = () => {\n  return (\n    <ThreadListPrimitive.New asChild>\n      <Button\n        variant=\"outline\"\n        className=\"aui-thread-list-new h-9 justify-start gap-2 rounded-lg px-3 text-sm hover:bg-muted data-active:bg-muted\"\n      >\n        <PlusIcon className=\"size-4\" />\n        New Thread\n      </Button>\n    </ThreadListPrimitive.New>\n  );\n};\n\nconst ThreadListSkeleton: FC = () => {\n  return (\n    <div className=\"flex flex-col gap-1\">\n      {Array.from({ length: 5 }, (_, i) => (\n        <div\n          key={i}\n          role=\"status\"\n          aria-label=\"Loading threads\"\n          className=\"aui-thread-list-skeleton-wrapper flex h-9 items-center px-3\"\n        >\n          <Skeleton className=\"aui-thread-list-skeleton h-4 w-full\" />\n        </div>\n      ))}\n    </div>\n  );\n};\n\nconst ThreadListItem: FC = () => {\n  return (\n    <ThreadListItemPrimitive.Root className=\"aui-thread-list-item group flex h-9 items-center rounded-lg transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:outline-none data-active:bg-muted\">\n      <ThreadListItemPrimitive.Trigger className=\"aui-thread-list-item-trigger flex h-full flex-1 items-center truncate px-3 text-start text-sm\">\n        <ThreadListItemPrimitive.Title fallback=\"New Chat\" />\n      </ThreadListItemPrimitive.Trigger>\n      <ThreadListItemArchive />\n    </ThreadListItemPrimitive.Root>\n  );\n};\n\nconst ThreadListItemArchive: FC = () => {\n  return (\n    <ThreadListItemPrimitive.Archive asChild>\n      <TooltipIconButton\n        variant=\"ghost\"\n        tooltip=\"Archive thread\"\n        className=\"aui-thread-list-item-archive mr-2 size-7 p-0 opacity-0 transition-opacity group-hover:opacity-100\"\n      >\n        <ArchiveIcon className=\"size-4\" />\n      </TooltipIconButton>\n    </ThreadListItemPrimitive.Archive>\n  );\n};\n",
+      "type": "registry:component",
+      "path": "components/assistant-ui/thread-list.tsx"
+    }
+  ],
+  "registryDependencies": [
+    "button",
+    "skeleton",
+    "https://r.assistant-ui.com/tooltip-icon-button.json"
+  ],
+  "dependencies": [
+    "@assistant-ui/react",
+    "lucide-react"
+  ]
+}

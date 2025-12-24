@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "assistant-sidebar",
+  "type": "registry:component",
+  "files": [
+    {
+      "content": "import { Separator, ResizablePanel, Group } from \"@/components/ui/resizable\";\nimport type { FC, PropsWithChildren } from \"react\";\n\nimport { Thread } from \"@/components/assistant-ui/thread\";\n\nexport const AssistantSidebar: FC<PropsWithChildren> = ({ children }) => {\n  return (\n    <Group orientation=\"horizontal\">\n      <ResizablePanel>{children}</ResizablePanel>\n      <Separator />\n      <ResizablePanel>\n        <Thread />\n      </ResizablePanel>\n    </Group>\n  );\n};\n",
+      "type": "registry:component",
+      "path": "components/assistant-ui/assistant-sidebar.tsx"
+    }
+  ],
+  "dependencies": [
+    "@assistant-ui/react"
+  ],
+  "registryDependencies": [
+    "resizable",
+    "https://r.assistant-ui.com/thread.json"
+  ]
+}
