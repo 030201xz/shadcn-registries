@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-5",
+  "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
+  "registryDependencies": [
+    "button",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "registry/cta/5/cta.tsx",
+      "type": "registry:component",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n\tInputGroup,\n\tInputGroupAddon,\n\tInputGroupInput,\n} from \"@/components/ui/input-group\";\nimport { ArrowRightIcon, AtSignIcon } from \"lucide-react\";\n\nexport function CallToAction() {\n\treturn (\n\t\t<div className=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-6 border-x bg-secondary/80 px-2 py-8 md:px-4 dark:bg-secondary/40\">\n\t\t\t<div className=\"-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t\" />\n\n\t\t\t<div className=\"space-y-1\">\n\t\t\t\t<h2 className=\"text-center font-semibold text-2xl tracking-tight md:text-4xl\">\n\t\t\t\t\tSubscripe to our newsletter\n\t\t\t\t</h2>\n\t\t\t\t<p className=\"text-balance text-center text-muted-foreground text-sm md:text-base\">\n\t\t\t\t\tGet the latest updates and insights delivered right to your inbox.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div className=\"flex items-center justify-center gap-2\">\n\t\t\t\t<InputGroup className=\"max-w-[280px] bg-card\">\n\t\t\t\t\t<InputGroupInput placeholder=\"Enter your email\" />\n\t\t\t\t\t<InputGroupAddon>\n\t\t\t\t\t\t<AtSignIcon />\n\t\t\t\t\t</InputGroupAddon>\n\t\t\t\t</InputGroup>\n\n\t\t\t\t<Button>\n\t\t\t\t\tSubscribe <ArrowRightIcon />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t\t<div className=\"flex items-center justify-center gap-2\">\n\t\t\t\t<p className=\"text-muted-foreground text-sm\">\n\t\t\t\t\tWritten by{\" \"}\n\t\t\t\t\t<span className=\"font-medium text-foreground\">real humans</span> (we\n\t\t\t\t\tswear).\n\t\t\t\t</p>\n\t\t\t\t<div className=\"-space-x-[0.45rem] flex\">\n\t\t\t\t\t<img\n\t\t\t\t\t\talt=\"Avatar 01\"\n\t\t\t\t\t\tclassName=\"rounded-full ring-1 ring-background\"\n\t\t\t\t\t\theight={24}\n\t\t\t\t\t\tsrc=\"https://mynaui.com/avatars/avatar-01.jpg\"\n\t\t\t\t\t\twidth={24}\n\t\t\t\t\t/>\n\t\t\t\t\t<img\n\t\t\t\t\t\talt=\"Avatar 02\"\n\t\t\t\t\t\tclassName=\"rounded-full ring-1 ring-background\"\n\t\t\t\t\t\theight={24}\n\t\t\t\t\t\tsrc=\"https://mynaui.com/avatars/avatar-02.jpg\"\n\t\t\t\t\t\twidth={24}\n\t\t\t\t\t/>\n\t\t\t\t\t<img\n\t\t\t\t\t\talt=\"Avatar 03\"\n\t\t\t\t\t\tclassName=\"rounded-full ring-1 ring-background\"\n\t\t\t\t\t\theight={24}\n\t\t\t\t\t\tsrc=\"https://mynaui.com/avatars/avatar-03.jpg\"\n\t\t\t\t\t\twidth={24}\n\t\t\t\t\t/>\n\t\t\t\t\t<img\n\t\t\t\t\t\talt=\"Avatar 04\"\n\t\t\t\t\t\tclassName=\"rounded-full ring-1 ring-background\"\n\t\t\t\t\t\theight={24}\n\t\t\t\t\t\tsrc=\"https://mynaui.com/avatars/avatar-04.jpg\"\n\t\t\t\t\t\twidth={24}\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div className=\"-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b\" />\n\t\t</div>\n\t);\n}\n"
+    }
+  ],
+  "categories": [
+    "cta"
+  ],
+  "type": "registry:block"
+}

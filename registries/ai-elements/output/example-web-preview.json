@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-web-preview",
+  "type": "registry:block",
+  "title": "Web Preview Example",
+  "description": "Example implementation of web preview.",
+  "files": [
+    {
+      "path": "registry/default/examples/web-preview.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  WebPreview,\n  WebPreviewBody,\n  WebPreviewConsole,\n  WebPreviewNavigation,\n  WebPreviewNavigationButton,\n  WebPreviewUrl,\n} from \"@/components/ai-elements/web-preview\";\nimport {\n  ArrowLeftIcon,\n  ArrowRightIcon,\n  ExternalLinkIcon,\n  Maximize2Icon,\n  MousePointerClickIcon,\n  RefreshCcwIcon,\n} from \"lucide-react\";\nimport { useState } from \"react\";\n\nconst exampleLogs = [\n  {\n    level: \"log\" as const,\n    message: \"Page loaded successfully\",\n    timestamp: new Date(Date.now() - 10_000),\n  },\n  {\n    level: \"warn\" as const,\n    message: \"Deprecated API usage detected\",\n    timestamp: new Date(Date.now() - 5000),\n  },\n  {\n    level: \"error\" as const,\n    message: \"Failed to load resource\",\n    timestamp: new Date(),\n  },\n];\n\nconst Example = () => {\n  const [fullscreen, setFullscreen] = useState(false);\n\n  return (\n    <WebPreview\n      defaultUrl=\"/\"\n      onUrlChange={(url) => console.log(\"URL changed to:\", url)}\n      style={{ height: \"400px\" }}\n    >\n      <WebPreviewNavigation>\n        <WebPreviewNavigationButton\n          onClick={() => console.log(\"Go back\")}\n          tooltip=\"Go back\"\n        >\n          <ArrowLeftIcon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n        <WebPreviewNavigationButton\n          onClick={() => console.log(\"Go forward\")}\n          tooltip=\"Go forward\"\n        >\n          <ArrowRightIcon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n        <WebPreviewNavigationButton\n          onClick={() => console.log(\"Reload\")}\n          tooltip=\"Reload\"\n        >\n          <RefreshCcwIcon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n        <WebPreviewUrl />\n        <WebPreviewNavigationButton\n          onClick={() => console.log(\"Select\")}\n          tooltip=\"Select\"\n        >\n          <MousePointerClickIcon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n        <WebPreviewNavigationButton\n          onClick={() => console.log(\"Open in new tab\")}\n          tooltip=\"Open in new tab\"\n        >\n          <ExternalLinkIcon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n        <WebPreviewNavigationButton\n          onClick={() => setFullscreen(!fullscreen)}\n          tooltip=\"Maximize\"\n        >\n          <Maximize2Icon className=\"size-4\" />\n        </WebPreviewNavigationButton>\n      </WebPreviewNavigation>\n\n      <WebPreviewBody src=\"https://preview-v0me-kzml7zc6fkcvbyhzrf47.vusercontent.net/\" />\n\n      <WebPreviewConsole logs={exampleLogs} />\n    </WebPreview>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-web-preview.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/web-preview.json"
+  ]
+}

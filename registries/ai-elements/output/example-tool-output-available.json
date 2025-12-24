@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-tool-output-available",
+  "type": "registry:block",
+  "title": "Tool Output Available Example",
+  "description": "Example implementation of tool output-available.",
+  "files": [
+    {
+      "path": "registry/default/examples/tool-output-available.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { CodeBlock } from \"@/components/ai-elements/code-block\";\nimport {\n  Tool,\n  ToolContent,\n  ToolHeader,\n  ToolInput,\n  ToolOutput,\n} from \"@/components/ai-elements/tool\";\nimport type { ToolUIPart } from \"ai\";\nimport { nanoid } from \"nanoid\";\n\nconst toolCall: ToolUIPart = {\n  type: \"tool-database_query\" as const,\n  toolCallId: nanoid(),\n  state: \"output-available\" as const,\n  input: {\n    query: \"SELECT COUNT(*) FROM users WHERE created_at >= ?\",\n    params: [\"2024-01-01\"],\n    database: \"analytics\",\n  },\n  output: [\n    {\n      \"User ID\": 1,\n      Name: \"John Doe\",\n      Email: \"john@example.com\",\n      \"Created At\": \"2024-01-15\",\n    },\n    {\n      \"User ID\": 2,\n      Name: \"Jane Smith\",\n      Email: \"jane@example.com\",\n      \"Created At\": \"2024-01-20\",\n    },\n    {\n      \"User ID\": 3,\n      Name: \"Bob Wilson\",\n      Email: \"bob@example.com\",\n      \"Created At\": \"2024-02-01\",\n    },\n    {\n      \"User ID\": 4,\n      Name: \"Alice Brown\",\n      Email: \"alice@example.com\",\n      \"Created At\": \"2024-02-10\",\n    },\n    {\n      \"User ID\": 5,\n      Name: \"Charlie Davis\",\n      Email: \"charlie@example.com\",\n      \"Created At\": \"2024-02-15\",\n    },\n  ],\n  errorText: undefined,\n};\n\nconst Example = () => (\n  <div style={{ height: \"500px\" }}>\n    <Tool>\n      <ToolHeader state={toolCall.state} type={toolCall.type} />\n      <ToolContent>\n        <ToolInput input={toolCall.input} />\n        {toolCall.state === \"output-available\" && (\n          <ToolOutput\n            errorText={toolCall.errorText}\n            output={\n              <CodeBlock\n                code={JSON.stringify(toolCall.output)}\n                language=\"json\"\n              />\n            }\n          />\n        )}\n      </ToolContent>\n    </Tool>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-tool-output-available.tsx"
+    }
+  ],
+  "dependencies": [
+    "ai",
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/code-block.json",
+    "https://registry.ai-sdk.dev/tool.json"
+  ]
+}

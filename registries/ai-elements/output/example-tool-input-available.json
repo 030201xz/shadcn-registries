@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-tool-input-available",
+  "type": "registry:block",
+  "title": "Tool Input Available Example",
+  "description": "Example implementation of tool input-available.",
+  "files": [
+    {
+      "path": "registry/default/examples/tool-input-available.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Tool, ToolContent, ToolHeader, ToolInput } from \"@/components/ai-elements/tool\";\nimport { nanoid } from \"nanoid\";\n\nconst toolCall = {\n  type: \"tool-image_generation\" as const,\n  toolCallId: nanoid(),\n  state: \"input-available\" as const,\n  input: {\n    prompt: \"A futuristic cityscape at sunset with flying cars\",\n    style: \"digital_art\",\n    resolution: \"1024x1024\",\n    quality: \"high\",\n  },\n  output: undefined,\n  errorText: undefined,\n};\n\nconst Example = () => (\n  <div style={{ height: \"500px\" }}>\n    <Tool>\n      <ToolHeader state={toolCall.state} type={toolCall.type} />\n      <ToolContent>\n        <ToolInput input={toolCall.input} />\n      </ToolContent>\n    </Tool>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-tool-input-available.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/tool.json"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-checkpoint",
+  "type": "registry:block",
+  "title": "Checkpoint Example",
+  "description": "Example implementation of checkpoint.",
+  "files": [
+    {
+      "path": "registry/default/examples/checkpoint.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  Checkpoint,\n  CheckpointIcon,\n  CheckpointTrigger,\n} from \"@/components/ai-elements/checkpoint\";\nimport { Conversation, ConversationContent } from \"@/components/ai-elements/conversation\";\nimport {\n  Message,\n  MessageContent,\n  MessageResponse,\n} from \"@/components/ai-elements/message\";\nimport { nanoid } from \"nanoid\";\nimport { Fragment, useState } from \"react\";\n\ntype MessageType = {\n  id: string;\n  role: \"user\" | \"assistant\";\n  content: string;\n};\n\nconst initialMessages: MessageType[] = [\n  {\n    id: nanoid(),\n    role: \"user\",\n    content: \"What is React?\",\n  },\n  {\n    id: nanoid(),\n    role: \"assistant\",\n    content:\n      \"React is a JavaScript library for building user interfaces. It was developed by Facebook and is now maintained by Meta and a community of developers.\",\n  },\n  {\n    id: nanoid(),\n    role: \"user\",\n    content: \"How does component state work?\",\n  },\n];\n\nconst Example = () => {\n  const [messages, setMessages] = useState<MessageType[]>(initialMessages);\n  const [checkpoints] = useState([\n    { messageCount: 2, timestamp: new Date(Date.now() - 3_600_000) },\n  ]);\n\n  const handleRestore = (messageCount: number) => {\n    setMessages(initialMessages.slice(0, messageCount));\n  };\n\n  return (\n    <div className=\"flex size-full flex-col rounded-lg border p-6\">\n      <Conversation>\n        <ConversationContent>\n          {messages.map((message, index) => {\n            const checkpoint = checkpoints.find(\n              (cp) => cp.messageCount === index + 1\n            );\n\n            return (\n              <Fragment key={message.id}>\n                <Message from={message.role}>\n                  <MessageContent>\n                    <MessageResponse>{message.content}</MessageResponse>\n                  </MessageContent>\n                </Message>\n                {checkpoint && (\n                  <Checkpoint>\n                    <CheckpointIcon />\n                    <CheckpointTrigger\n                      onClick={() => handleRestore(checkpoint.messageCount)}\n                      tooltip=\"Restores workspace and chat to this point\"\n                    >\n                      Restore checkpoint\n                    </CheckpointTrigger>\n                  </Checkpoint>\n                )}\n              </Fragment>\n            );\n          })}\n        </ConversationContent>\n      </Conversation>\n    </div>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-checkpoint.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/checkpoint.json",
+    "https://registry.ai-sdk.dev/conversation.json",
+    "https://registry.ai-sdk.dev/message.json"
+  ]
+}

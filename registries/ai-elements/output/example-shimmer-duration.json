@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-shimmer-duration",
+  "type": "registry:block",
+  "title": "Shimmer Duration Example",
+  "description": "Example implementation of shimmer duration.",
+  "files": [
+    {
+      "path": "registry/default/examples/shimmer-duration.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Shimmer } from \"@/components/ai-elements/shimmer\";\n\nconst Example = () => (\n  <div className=\"flex flex-col gap-6 p-8\">\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">Fast (1 second)</p>\n      <Shimmer duration={1}>Loading quickly...</Shimmer>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">Default (2 seconds)</p>\n      <Shimmer duration={2}>Loading at normal speed...</Shimmer>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">Slow (4 seconds)</p>\n      <Shimmer duration={4}>Loading slowly...</Shimmer>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">\n        Very Slow (6 seconds)\n      </p>\n      <Shimmer duration={6}>Loading very slowly...</Shimmer>\n    </div>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-shimmer-duration.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/shimmer.json"
+  ]
+}

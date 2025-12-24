@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "logo-cloud-1",
+  "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
+  "files": [
+    {
+      "path": "registry/logo-cloud/1/logo-cloud.tsx",
+      "type": "registry:component",
+      "content": "export function LogoCloud() {\n\treturn (\n\t\t<div className=\"grid grid-cols-2 rounded-lg bg-border shadow md:grid-cols-4\">\n\t\t\t{logos.map((logo) => (\n\t\t\t\t<div\n\t\t\t\t\tclassName=\"flex items-center justify-center rounded-lg border bg-background p-8\"\n\t\t\t\t\tkey={logo.alt}\n\t\t\t\t>\n\t\t\t\t\t<img\n\t\t\t\t\t\talt={logo.alt}\n\t\t\t\t\t\tclassName=\"pointer-events-none block h-4 select-none md:h-5 dark:brightness-0 dark:invert\"\n\t\t\t\t\t\theight=\"auto\"\n\t\t\t\t\t\tloading=\"lazy\"\n\t\t\t\t\t\tsrc={logo.src}\n\t\t\t\t\t\twidth=\"auto\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t))}\n\t\t</div>\n\t);\n}\n\nconst logos = [\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/nvidia-wordmark.svg\",\n\t\talt: \"Nvidia Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/supabase-wordmark.svg\",\n\t\talt: \"Supabase Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/openai-wordmark.svg\",\n\t\talt: \"OpenAI Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/turso-wordmark.svg\",\n\t\talt: \"Turso Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/vercel-wordmark.svg\",\n\t\talt: \"Vercel Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/github-wordmark.svg\",\n\t\talt: \"GitHub Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/claude-wordmark.svg\",\n\t\talt: \"Claude AI Logo\",\n\t},\n\t{\n\t\tsrc: \"https://storage.efferd.com/logo/clerk-wordmark.svg\",\n\t\talt: \"Clerk Logo\",\n\t},\n];\n"
+    }
+  ],
+  "categories": [
+    "logo-cloud"
+  ],
+  "type": "registry:block"
+}

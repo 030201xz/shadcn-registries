@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-artifact",
+  "type": "registry:block",
+  "title": "Artifact Example",
+  "description": "Example implementation of artifact.",
+  "files": [
+    {
+      "path": "registry/default/examples/artifact.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  Artifact,\n  ArtifactAction,\n  ArtifactActions,\n  ArtifactContent,\n  ArtifactDescription,\n  ArtifactHeader,\n  ArtifactTitle,\n} from \"@/components/ai-elements/artifact\";\nimport { CodeBlock } from \"@/components/ai-elements/code-block\";\nimport {\n  CopyIcon,\n  DownloadIcon,\n  PlayIcon,\n  RefreshCwIcon,\n  ShareIcon,\n} from \"lucide-react\";\n\nconst code = `# Dijkstra's Algorithm implementation\nimport heapq\n\ndef dijkstra(graph, start):\n    distances = {node: float('inf') for node in graph}\n    distances[start] = 0\n    heap = [(0, start)]\n    visited = set()\n    \n    while heap:\n        current_distance, current_node = heapq.heappop(heap)\n        if current_node in visited:\n            continue\n        visited.add(current_node)\n        \n        for neighbor, weight in graph[current_node].items():\n            distance = current_distance + weight\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                heapq.heappush(heap, (distance, neighbor))\n    \n    return distances\n\n# Example graph\n graph = {\n    'A': {'B': 1, 'C': 4},\n    'B': {'A': 1, 'C': 2, 'D': 5},\n    'C': {'A': 4, 'B': 2, 'D': 1},\n    'D': {'B': 5, 'C': 1}\n}\n\nprint(dijkstra(graph, 'A'))`;\n\nconst Example = () => (\n  <Artifact>\n    <ArtifactHeader>\n      <div>\n        <ArtifactTitle>Dijkstra's Algorithm Implementation</ArtifactTitle>\n        <ArtifactDescription>Updated 1 minute ago</ArtifactDescription>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <ArtifactActions>\n          <ArtifactAction\n            icon={PlayIcon}\n            label=\"Run\"\n            onClick={() => console.log(\"Run\")}\n            tooltip=\"Run code\"\n          />\n          <ArtifactAction\n            icon={CopyIcon}\n            label=\"Copy\"\n            onClick={() => console.log(\"Copy\")}\n            tooltip=\"Copy to clipboard\"\n          />\n          <ArtifactAction\n            icon={RefreshCwIcon}\n            label=\"Regenerate\"\n            onClick={() => console.log(\"Regenerate\")}\n            tooltip=\"Regenerate content\"\n          />\n          <ArtifactAction\n            icon={DownloadIcon}\n            label=\"Download\"\n            onClick={() => console.log(\"Download\")}\n            tooltip=\"Download file\"\n          />\n          <ArtifactAction\n            icon={ShareIcon}\n            label=\"Share\"\n            onClick={() => console.log(\"Share\")}\n            tooltip=\"Share artifact\"\n          />\n        </ArtifactActions>\n      </div>\n    </ArtifactHeader>\n    <ArtifactContent className=\"p-0\">\n      <CodeBlock\n        className=\"border-none\"\n        code={code}\n        language=\"python\"\n        showLineNumbers\n      />\n    </ArtifactContent>\n  </Artifact>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-artifact.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/artifact.json",
+    "https://registry.ai-sdk.dev/code-block.json"
+  ]
+}

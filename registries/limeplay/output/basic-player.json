@@ -1,0 +1,63 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "basic-player",
+  "author": "Rohan Gupta (@winoffrg)",
+  "description": "Limeplay Basic Player",
+  "dependencies": [
+    "@phosphor-icons/react",
+    "zustand",
+    "shaka-player"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/player-layout.json",
+    "https://limeplay.winoffrg.dev/r/root-container.json",
+    "https://limeplay.winoffrg.dev/r/fallback-poster.json",
+    "https://limeplay.winoffrg.dev/r/limeplay-logo.json",
+    "https://limeplay.winoffrg.dev/r/media.json",
+    "https://limeplay.winoffrg.dev/r/utils.json",
+    "button",
+    "https://limeplay.winoffrg.dev/r/playback-control.json",
+    "https://limeplay.winoffrg.dev/r/use-player.json",
+    "https://limeplay.winoffrg.dev/r/use-shaka-player.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/basic-player/page.tsx",
+      "content": "import { LimeplayMediaPlayer } from \"@/registry/default/blocks/basic-player/components/media-player\"\n\nexport default function Page() {\n  return (\n    <section className=\"flex h-dvh w-dvw bg-black\">\n      <LimeplayMediaPlayer src=\"https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com/v1/master/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8\" />\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/player/page.tsx"
+    },
+    {
+      "path": "registry/default/blocks/basic-player/components/media-player.tsx",
+      "content": "import React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { MediaElement } from \"@/registry/default/blocks/basic-player/components/media-element\"\nimport { PlaybackStateControl } from \"@/registry/default/blocks/basic-player/components/playback-state-control\"\nimport { PlayerHooks } from \"@/registry/default/blocks/basic-player/components/player-hooks\"\nimport { FallbackPoster } from \"@/registry/default/ui/fallback-poster\"\nimport { LimeplayLogo } from \"@/registry/default/ui/limeplay-logo\"\nimport { MediaProvider } from \"@/registry/default/ui/media-provider\"\nimport * as Layout from \"@/registry/default/ui/player-layout\"\nimport { RootContainer } from \"@/registry/default/ui/root-container\"\n\nexport interface BasicMediaPlayerProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  className?: string\n  debug?: boolean\n  src: string\n}\n\nexport const LimeplayMediaPlayer = React.forwardRef<\n  HTMLDivElement,\n  BasicMediaPlayerProps\n>((props, ref) => {\n  const { className, src, ...etc } = props\n\n  return (\n    <MediaProvider>\n      <RootContainer\n        className={cn(\n          `\n            m-auto w-full\n            md:min-w-80\n          `,\n          className\n        )}\n        height={720}\n        ref={ref}\n        width={1280}\n        {...etc}\n      >\n        <Layout.PlayerContainer>\n          <FallbackPoster className=\"bg-black\">\n            <LimeplayLogo />\n          </FallbackPoster>\n          <MediaElement src={src} />\n          <PlayerHooks />\n          <Layout.ControlsOverlayContainer />\n          <Layout.ControlsContainer>\n            <Layout.ControlsBottomContainer>\n              <PlaybackStateControl />\n            </Layout.ControlsBottomContainer>\n          </Layout.ControlsContainer>\n        </Layout.PlayerContainer>\n      </RootContainer>\n    </MediaProvider>\n  )\n})\n\nLimeplayMediaPlayer.displayName = \"LimeplayMediaPlayer\"\n",
+      "type": "registry:component",
+      "target": "components/basic-player/components/media-player.tsx"
+    },
+    {
+      "path": "registry/default/blocks/basic-player/components/playback-state-control.tsx",
+      "content": "\"use client\"\n\nimport {\n  CircleNotchIcon,\n  PauseIcon,\n  PlayIcon,\n  RepeatIcon,\n} from \"@phosphor-icons/react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\nimport { PlaybackControl } from \"@/registry/default/ui/playback-control\"\n\nexport function PlaybackStateControl() {\n  const status = useMediaStore((state) => state.status)\n\n  return (\n    <Button asChild size=\"icon\" variant=\"glass\">\n      <PlaybackControl>\n        {status === \"playing\" ? (\n          <PauseIcon size={18} weight=\"fill\" />\n        ) : status === \"ended\" ? (\n          <RepeatIcon size={18} />\n        ) : status === \"buffering\" ? (\n          <CircleNotchIcon className=\"animate-spin\" size={18} weight=\"bold\" />\n        ) : (\n          <PlayIcon size={18} weight=\"fill\" />\n        )}\n      </PlaybackControl>\n    </Button>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/basic-player/components/playback-state-control.tsx"
+    },
+    {
+      "path": "registry/default/blocks/basic-player/components/player-hooks.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\nimport { useShakaPlayer } from \"@/registry/default/hooks/use-shaka-player\"\n\nexport const PlayerHooks = React.memo(() => {\n  useShakaPlayer()\n  usePlayerStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
+      "type": "registry:component",
+      "target": "components/basic-player/components/player-hooks.tsx"
+    },
+    {
+      "path": "registry/default/blocks/basic-player/components/media-element.tsx",
+      "content": "\"use client\"\n\nimport { useEffect } from \"react\"\n\nimport { Media } from \"@/registry/default/ui/media\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\n\nexport function MediaElement({ src }: { src: string }) {\n  const player = useMediaStore((state) => state.player)\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n\n  useEffect(() => {\n    const mediaElement = mediaRef.current\n\n    if (player && mediaElement) {\n      if (src) {\n        try {\n          const parsedUrl = new URL(src)\n\n          if (![\"http:\", \"https:\"].includes(parsedUrl.protocol)) {\n            throw new Error(\"Invalid URL protocol\")\n          }\n        } catch (error) {\n          console.error(\n            \"Invalid playback URL:\",\n            error instanceof Error ? error.message : \"Unknown error\"\n          )\n        }\n      }\n\n      void player\n        .load(src)\n        .then(() => {\n          console.debug(\"[limeplay] media loaded\")\n        })\n        .catch((error: unknown) => {\n          console.error(\"[limeplay] error loading media:\", error)\n        })\n    }\n  }, [player, mediaRef, src])\n\n  return (\n    <Media\n      as=\"video\"\n      autoPlay={false}\n      className=\"size-full bg-background object-cover\"\n      loop\n      muted\n    />\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/basic-player/components/media-element.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px",
+    "props": {
+      "src": "https://ad391cc0d55b44c6a86d232548adc225.mediatailor.us-east-1.amazonaws.com/v1/master/d02fedbbc5a68596164208dd24e9b48aa60dadc7/singssai/master.m3u8"
+    }
+  },
+  "type": "registry:block"
+}

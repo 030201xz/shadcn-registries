@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-code-block-dark",
+  "type": "registry:block",
+  "title": "Code Block Dark Example",
+  "description": "Example implementation of code block-dark.",
+  "files": [
+    {
+      "path": "registry/default/examples/code-block-dark.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { CodeBlock, CodeBlockCopyButton } from \"@/components/ai-elements/code-block\";\n\nconst code = `function MyComponent(props) {\n  return (\n    <div>\n      <h1>Hello, {props.name}!</h1>\n      <p>This is an example React component.</p>\n    </div>\n  );\n}`;\n\nconst Example = () => (\n  <div className=\"dark\">\n    <CodeBlock code={code} language=\"jsx\">\n      <CodeBlockCopyButton\n        onCopy={() => console.log(\"Copied code to clipboard\")}\n        onError={() => console.error(\"Failed to copy code to clipboard\")}\n      />\n    </CodeBlock>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-code-block-dark.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/code-block.json"
+  ]
+}

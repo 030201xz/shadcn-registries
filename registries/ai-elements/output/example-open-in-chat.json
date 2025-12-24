@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-open-in-chat",
+  "type": "registry:block",
+  "title": "Open In Chat Example",
+  "description": "Example implementation of open in-chat.",
+  "files": [
+    {
+      "path": "registry/default/examples/open-in-chat.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  OpenIn,\n  OpenInChatGPT,\n  OpenInClaude,\n  OpenInContent,\n  OpenInCursor,\n  OpenInScira,\n  OpenInT3,\n  OpenInTrigger,\n  OpenInv0,\n} from \"@/components/ai-elements/open-in-chat\";\n\nconst Example = () => {\n  const sampleQuery = \"How can I implement authentication in Next.js?\";\n\n  return (\n    <OpenIn>\n      <OpenInTrigger />\n      <OpenInContent>\n        <OpenInChatGPT query={sampleQuery} />\n        <OpenInClaude query={sampleQuery} />\n        <OpenInCursor query={sampleQuery} />\n        <OpenInT3 query={sampleQuery} />\n        <OpenInScira query={sampleQuery} />\n        <OpenInv0 query={sampleQuery} />\n      </OpenInContent>\n    </OpenIn>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-open-in-chat.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/open-in-chat.json"
+  ]
+}

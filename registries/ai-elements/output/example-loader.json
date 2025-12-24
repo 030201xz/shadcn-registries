@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-loader",
+  "type": "registry:block",
+  "title": "Loader Example",
+  "description": "Example implementation of loader.",
+  "files": [
+    {
+      "path": "registry/default/examples/loader.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Loader } from \"@/components/ai-elements/loader\";\n\nconst Example = () => (\n  <div className=\"flex items-center justify-center p-8\">\n    <Loader />\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-loader.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/loader.json"
+  ]
+}

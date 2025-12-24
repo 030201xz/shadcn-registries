@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-loader-custom",
+  "type": "registry:block",
+  "title": "Loader Custom Example",
+  "description": "Example implementation of loader custom.",
+  "files": [
+    {
+      "path": "registry/default/examples/loader-custom.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Loader } from \"@/components/ai-elements/loader\";\n\nconst Example = () => (\n  <div className=\"grid grid-cols-2 gap-6 p-8 md:grid-cols-4\">\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Blue</p>\n      <Loader className=\"text-blue-500\" size={24} />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Green</p>\n      <Loader className=\"text-green-500\" size={24} />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Purple</p>\n      <Loader className=\"text-purple-500\" size={24} />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Orange</p>\n      <Loader className=\"text-orange-500\" size={24} />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Slow Animation</p>\n      <Loader\n        className=\"animate-spin text-blue-500\"\n        size={24}\n        style={{ animationDuration: \"3s\" }}\n      />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Fast Animation</p>\n      <Loader\n        className=\"animate-spin text-red-500\"\n        size={24}\n        style={{ animationDuration: \"0.5s\" }}\n      />\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">With Background</p>\n      <div className=\"flex items-center justify-center rounded-lg bg-gray-100 p-3\">\n        <Loader className=\"text-gray-700\" size={24} />\n      </div>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-2 text-gray-600 text-sm\">Dark Background</p>\n      <div className=\"flex items-center justify-center rounded-lg bg-gray-800 p-3\">\n        <Loader className=\"text-white\" size={24} />\n      </div>\n    </div>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-loader-custom.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/loader.json"
+  ]
+}

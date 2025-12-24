@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fallback-poster",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/fallback-poster.tsx",
+      "content": "import type { ComponentPropsWithoutRef } from \"react\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport const FallbackPoster = React.forwardRef<\n  HTMLDivElement,\n  ComponentPropsWithoutRef<\"div\">\n>(({ children, className, ...props }, ref) => {\n  return (\n    <div\n      className={cn(\n        \"absolute inset-0 -z-1 flex flex-col items-center justify-center bg-background\",\n        className\n      )}\n      ref={ref}\n      {...props}\n    >\n      {children}\n    </div>\n  )\n})\n\nFallbackPoster.displayName = \"FallbackPoster\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/fallback-poster.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

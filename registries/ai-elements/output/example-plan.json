@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-plan",
+  "type": "registry:block",
+  "title": "Plan Example",
+  "description": "Example implementation of plan.",
+  "files": [
+    {
+      "path": "registry/default/examples/plan.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  Plan,\n  PlanAction,\n  PlanContent,\n  PlanDescription,\n  PlanFooter,\n  PlanHeader,\n  PlanTitle,\n  PlanTrigger,\n} from \"@/components/ai-elements/plan\";\nimport { Button } from \"@/components/ui/button\";\nimport { FileText } from \"lucide-react\";\n\nconst Example = () => (\n  <Plan defaultOpen={false}>\n    <PlanHeader>\n      <div>\n        <div className=\"mb-4 flex items-center gap-2\">\n          <FileText className=\"size-4\" />\n          <PlanTitle>Rewrite AI Elements to SolidJS</PlanTitle>\n        </div>\n        <PlanDescription>\n          Rewrite the AI Elements component library from React to SolidJS while\n          maintaining compatibility with existing React-based shadcn/ui\n          components using solid-js/compat, updating all 29 components and their\n          test suite.\n        </PlanDescription>\n      </div>\n      <PlanTrigger />\n    </PlanHeader>\n    <PlanContent>\n      <div className=\"space-y-4 text-sm\">\n        <div>\n          <h3 className=\"mb-2 font-semibold\">Overview</h3>\n          <p>\n            This plan outlines the migration strategy for converting the AI\n            Elements library from React to SolidJS, ensuring compatibility and\n            maintaining existing functionality.\n          </p>\n        </div>\n        <div>\n          <h3 className=\"mb-2 font-semibold\">Key Steps</h3>\n          <ul className=\"list-inside list-disc space-y-1\">\n            <li>Set up SolidJS project structure</li>\n            <li>Install solid-js/compat for React compatibility</li>\n            <li>Migrate components one by one</li>\n            <li>Update test suite for each component</li>\n            <li>Verify compatibility with shadcn/ui</li>\n          </ul>\n        </div>\n      </div>\n    </PlanContent>\n    <PlanFooter className=\"justify-end\">\n      <PlanAction>\n        <Button size=\"sm\">\n          Build <kbd className=\"font-mono\">⌘↩</kbd>\n        </Button>\n      </PlanAction>\n    </PlanFooter>\n  </Plan>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-plan.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/plan.json",
+    "button"
+  ]
+}

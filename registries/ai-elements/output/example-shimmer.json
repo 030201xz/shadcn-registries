@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-shimmer",
+  "type": "registry:block",
+  "title": "Shimmer Example",
+  "description": "Example implementation of shimmer.",
+  "files": [
+    {
+      "path": "registry/default/examples/shimmer.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Shimmer } from \"@/components/ai-elements/shimmer\";\n\nconst Example = () => (\n  <div className=\"flex flex-col items-center justify-center gap-4 p-8\">\n    <Shimmer>This text has a shimmer effect</Shimmer>\n    <Shimmer as=\"h1\" className=\"font-bold text-4xl\">\n      Large Heading\n    </Shimmer>\n    <Shimmer duration={3} spread={3}>\n      Slower shimmer with wider spread\n    </Shimmer>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-shimmer.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/shimmer.json"
+  ]
+}

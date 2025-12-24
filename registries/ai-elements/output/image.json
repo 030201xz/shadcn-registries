@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "image",
+  "type": "registry:component",
+  "title": "Image",
+  "description": "AI-powered image component.",
+  "files": [
+    {
+      "path": "registry/default/ai-elements/image.tsx",
+      "type": "registry:component",
+      "content": "/** biome-ignore-all lint/nursery/useImageSize: \"size will be handled by props\" */\n\nimport { cn } from \"@/lib/utils\";\nimport type { Experimental_GeneratedImage } from \"ai\";\n\nexport type ImageProps = Experimental_GeneratedImage & {\n  className?: string;\n  alt?: string;\n};\n\nexport const Image = ({\n  base64,\n  uint8Array,\n  mediaType,\n  ...props\n}: ImageProps) => (\n  <img\n    {...props}\n    alt={props.alt}\n    className={cn(\n      \"h-auto max-w-full overflow-hidden rounded-md\",\n      props.className\n    )}\n    src={`data:${mediaType};base64,${base64}`}\n  />\n);\n",
+      "target": "components/ai-elements/image.tsx"
+    }
+  ],
+  "dependencies": [
+    "ai"
+  ],
+  "devDependencies": [],
+  "registryDependencies": []
+}

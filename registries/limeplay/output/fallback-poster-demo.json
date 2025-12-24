@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fallback-poster-demo",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/fallback-poster.json",
+    "https://limeplay.winoffrg.dev/r/limeplay-logo.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/fallback-poster-demo.tsx",
+      "content": "import { FallbackPoster } from \"@/registry/default/ui/fallback-poster\"\nimport { LimeplayLogo } from \"@/registry/default/ui/limeplay-logo\"\n\nexport function FallbackPosterDemo() {\n  return (\n    <FallbackPoster>\n      <LimeplayLogo />\n    </FallbackPoster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

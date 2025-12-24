@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-tool-input-streaming",
+  "type": "registry:block",
+  "title": "Tool Input Streaming Example",
+  "description": "Example implementation of tool input-streaming.",
+  "files": [
+    {
+      "path": "registry/default/examples/tool-input-streaming.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Tool, ToolContent, ToolHeader, ToolInput } from \"@/components/ai-elements/tool\";\nimport { nanoid } from \"nanoid\";\n\nconst toolCall = {\n  type: \"tool-web_search\" as const,\n  toolCallId: nanoid(),\n  state: \"input-streaming\" as const,\n  input: {\n    query: \"latest AI market trends 2024\",\n    max_results: 10,\n    include_snippets: true,\n  },\n  output: undefined,\n  errorText: undefined,\n};\n\nconst Example = () => (\n  <div style={{ height: \"500px\" }}>\n    <Tool>\n      <ToolHeader state={toolCall.state} type={toolCall.type} />\n      <ToolContent>\n        <ToolInput input={toolCall.input} />\n      </ToolContent>\n    </Tool>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-tool-input-streaming.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/tool.json"
+  ]
+}

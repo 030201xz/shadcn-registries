@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-confirmation",
+  "type": "registry:block",
+  "title": "Confirmation Example",
+  "description": "Example implementation of confirmation.",
+  "files": [
+    {
+      "path": "registry/default/examples/confirmation.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  Confirmation,\n  ConfirmationAccepted,\n  ConfirmationAction,\n  ConfirmationActions,\n  ConfirmationRejected,\n  ConfirmationRequest,\n  ConfirmationTitle,\n} from \"@/components/ai-elements/confirmation\";\nimport { CheckIcon, XIcon } from \"lucide-react\";\nimport { nanoid } from \"nanoid\";\n\nconst Example = () => (\n  <div className=\"w-full max-w-2xl\">\n    <Confirmation approval={{ id: nanoid() }} state=\"approval-requested\">\n      <ConfirmationTitle>\n        <ConfirmationRequest>\n          This tool wants to delete the file{\" \"}\n          <code className=\"inline rounded bg-muted px-1.5 py-0.5 text-sm\">\n            /tmp/example.txt\n          </code>\n          . Do you approve this action?\n        </ConfirmationRequest>\n        <ConfirmationAccepted>\n          <CheckIcon className=\"size-4 text-green-600 dark:text-green-400\" />\n          <span>You approved this tool execution</span>\n        </ConfirmationAccepted>\n        <ConfirmationRejected>\n          <XIcon className=\"size-4 text-destructive\" />\n          <span>You rejected this tool execution</span>\n        </ConfirmationRejected>\n      </ConfirmationTitle>\n      <ConfirmationActions>\n        <ConfirmationAction\n          onClick={() => {\n            // In production, call respondToConfirmationRequest with approved: false\n          }}\n          variant=\"outline\"\n        >\n          Reject\n        </ConfirmationAction>\n        <ConfirmationAction\n          onClick={() => {\n            // In production, call respondToConfirmationRequest with approved: true\n          }}\n          variant=\"default\"\n        >\n          Approve\n        </ConfirmationAction>\n      </ConfirmationActions>\n    </Confirmation>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-confirmation.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react",
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/confirmation.json"
+  ]
+}

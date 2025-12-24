@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "create-media-store",
+  "dependencies": [
+    "zustand"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/use-player.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/lib/create-media-store.ts",
+      "content": "import { create } from \"zustand\"\n\nimport type { PlayerStore } from \"@/registry/default/hooks/use-player\"\n\nimport { createPlayerStore } from \"@/registry/default/hooks/use-player\"\n\nexport interface CreateMediaStoreProps {\n  debug?: boolean\n}\n\nexport type TypeMediaStore = PlayerStore & {}\n\nexport function createMediaStore(initProps?: Partial<CreateMediaStoreProps>) {\n  const mediaStore = create<TypeMediaStore>()((...etc) => ({\n    ...createPlayerStore(...etc),\n    ...initProps,\n  }))\n  return mediaStore\n}\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:lib"
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "media-provider",
+  "dependencies": [
+    "zustand"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/create-media-store.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/media-provider.tsx",
+      "content": "\"use client\"\n\nimport { createContext, useContext, useRef } from \"react\"\nimport { useStore } from \"zustand\"\n\nimport type {\n  CreateMediaStoreProps,\n  TypeMediaStore,\n} from \"@/registry/default/internal/create-media-store\"\n\nimport { createMediaStore } from \"@/registry/default/internal/create-media-store\"\n\ntype MediaProviderContext = ReturnType<typeof createMediaStore>\n\nconst MediaProviderContext = createContext<MediaProviderContext | null>(null)\n\nexport function MediaProvider({\n  children,\n  ...props\n}: React.PropsWithChildren<CreateMediaStoreProps>) {\n  const store = useRef(createMediaStore(props)).current\n\n  return (\n    <MediaProviderContext.Provider value={store}>\n      {children}\n    </MediaProviderContext.Provider>\n  )\n}\n\nfunction useMediaStoreWithContext<T>(\n  selector: (state: TypeMediaStore) => T\n): T {\n  const storeFromCtx = useContext(MediaProviderContext)\n\n  if (!storeFromCtx) {\n    throw new Error(\"Missing MediaProvider in root\")\n  }\n\n  return useStore(storeFromCtx, selector)\n}\n\nlet globalStore: null | ReturnType<typeof createMediaStore> = null\n\nexport function useGetStore() {\n  const storeFromCtx = useContext(MediaProviderContext)\n\n  if (!storeFromCtx) {\n    throw new Error(\"Missing MediaProvider in root\")\n  }\n\n  return storeFromCtx\n}\n\n// DEV: Migrate to conditional calling without context\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nfunction useMediaStoreWithoutContext<T>(\n  selector: (state: TypeMediaStore) => T,\n  options?: CreateMediaStoreProps\n): T {\n  globalStore ??= createMediaStore(options ?? {})\n\n  return useStore(globalStore, selector)\n}\n\nexport const useMediaStore = useMediaStoreWithContext\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/media-provider.tsx"
+    }
+  ],
+  "cssVars": {
+    "light": {
+      "lp-accent": "oklch(0.269 0 0)",
+      "lp-primary": "oklch(0.205 0 0)",
+      "lp-primary-foreground": "oklch(0.985 0 0)"
+    },
+    "dark": {
+      "lp-accent": "oklch(0.97 0 0)",
+      "lp-primary": "oklch(0.205 0 0)",
+      "lp-primary-foreground": "oklch(0.985 0 0)"
+    }
+  },
+  "css": {
+    "@utility -focus-area-x-*": {
+      "--x": "--value(number) * -1"
+    },
+    "@utility -focus-area-y-*": {
+      "--y": "--value(number) * -1"
+    },
+    "@utility focus-area": {
+      "&:before": {
+        "content": "\"\"",
+        "inset": "calc(var(--y) * 1px) calc(var(--x) * 1px)",
+        "position": "absolute"
+      },
+      "position": "relative"
+    },
+    "@utility focus-area-x-*": {
+      "--x": "--value(number)"
+    },
+    "@utility focus-area-y-*": {
+      "--y": "--value(number)"
+    }
+  },
+  "type": "registry:ui"
+}

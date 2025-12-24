@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-task",
+  "type": "registry:block",
+  "title": "Task Example",
+  "description": "Example implementation of task.",
+  "files": [
+    {
+      "path": "registry/default/examples/task.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { SiReact } from \"@icons-pack/react-simple-icons\";\nimport {\n  Task,\n  TaskContent,\n  TaskItem,\n  TaskItemFile,\n  TaskTrigger,\n} from \"@/components/ai-elements/task\";\nimport { nanoid } from \"nanoid\";\nimport type { ReactNode } from \"react\";\n\nconst Example = () => {\n  const tasks: { key: string; value: ReactNode }[] = [\n    { key: nanoid(), value: 'Searching \"app/page.tsx, components structure\"' },\n    {\n      key: nanoid(),\n      value: (\n        <span className=\"inline-flex items-center gap-1\" key=\"read-page-tsx\">\n          Read\n          <TaskItemFile>\n            <SiReact className=\"size-4\" color=\"#149ECA\" />\n            <span>page.tsx</span>\n          </TaskItemFile>\n        </span>\n      ),\n    },\n    { key: nanoid(), value: \"Scanning 52 files\" },\n    { key: nanoid(), value: \"Scanning 2 files\" },\n    {\n      key: nanoid(),\n      value: (\n        <span className=\"inline-flex items-center gap-1\" key=\"read-layout-tsx\">\n          Reading files\n          <TaskItemFile>\n            <SiReact className=\"size-4\" color=\"#149ECA\" />\n            <span>layout.tsx</span>\n          </TaskItemFile>\n        </span>\n      ),\n    },\n  ];\n\n  return (\n    <div style={{ height: \"200px\" }}>\n      <Task className=\"w-full\">\n        <TaskTrigger title=\"Found project files\" />\n        <TaskContent>\n          {tasks.map((task) => (\n            <TaskItem key={task.key}>{task.value}</TaskItem>\n          ))}\n        </TaskContent>\n      </Task>\n    </div>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-task.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/task.json"
+  ]
+}

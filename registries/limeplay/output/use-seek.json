@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-seek",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/hooks/use-seek.ts",
+      "content": "import {\n  useGetStore,\n  useMediaStore,\n} from \"@/registry/default/ui/media-provider\"\n\nexport function useSeek() {\n  const store = useGetStore()\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n\n  function seek(offset: number) {\n    if (!mediaRef.current) {\n      return\n    }\n\n    const media = mediaRef.current\n    const newTime = media.currentTime + offset\n\n    media.currentTime = Math.max(0, Math.min(newTime, media.duration || 0))\n\n    store.setState({\n      idle: false,\n    })\n  }\n\n  return {\n    seek,\n  }\n}\n",
+      "type": "registry:hook",
+      "target": "hooks/limeplay/use-seek.ts"
+    }
+  ],
+  "type": "registry:hook"
+}

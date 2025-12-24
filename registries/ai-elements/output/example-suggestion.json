@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-suggestion",
+  "type": "registry:block",
+  "title": "Suggestion Example",
+  "description": "Example implementation of suggestion.",
+  "files": [
+    {
+      "path": "registry/default/examples/suggestion.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Suggestion, Suggestions } from \"@/components/ai-elements/suggestion\";\n\nconst suggestions = [\n  \"What are the latest trends in AI?\",\n  \"How does machine learning work?\",\n  \"Explain quantum computing\",\n  \"Best practices for React development\",\n  \"Tell me about TypeScript benefits\",\n  \"How to optimize database queries?\",\n  \"What is the difference between SQL and NoSQL?\",\n  \"Explain cloud computing basics\",\n];\n\nconst Example = () => {\n  const handleSuggestionClick = (suggestion: string) => {\n    console.log(\"Selected suggestion:\", suggestion);\n  };\n\n  return (\n    <Suggestions>\n      {suggestions.map((suggestion) => (\n        <Suggestion\n          key={suggestion}\n          onClick={handleSuggestionClick}\n          suggestion={suggestion}\n        />\n      ))}\n    </Suggestions>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-suggestion.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/suggestion.json"
+  ]
+}

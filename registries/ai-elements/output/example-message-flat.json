@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-message-flat",
+  "type": "registry:block",
+  "title": "Message Flat Example",
+  "description": "Example implementation of message flat.",
+  "files": [
+    {
+      "path": "registry/default/examples/message-flat.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Message, MessageContent } from \"@/components/ai-elements/message\";\nimport { nanoid } from \"nanoid\";\n\nconst messages: {\n  key: string;\n  from: \"user\" | \"assistant\";\n  content: string;\n  avatar: string;\n  name: string;\n}[] = [\n  {\n    key: nanoid(),\n    from: \"user\",\n    content: \"Can you explain what the flat variant does?\",\n    avatar: \"https://github.com/haydenbleasel.png\",\n    name: \"Hayden Bleasel\",\n  },\n  {\n    key: nanoid(),\n    from: \"assistant\",\n    content:\n      \"The flat variant provides a minimalist design for messages. User messages appear with subtle secondary colors and borders, while assistant messages display full-width without background padding. This creates a cleaner, more modern conversation interface similar to ChatGPT and other contemporary AI assistants.\",\n    avatar: \"https://github.com/anthropics.png\",\n    name: \"Claude\",\n  },\n  {\n    key: nanoid(),\n    from: \"user\",\n    content:\n      \"That looks much cleaner! I like how it matches modern AI interfaces.\",\n    avatar: \"https://github.com/haydenbleasel.png\",\n    name: \"Hayden Bleasel\",\n  },\n  {\n    key: nanoid(),\n    from: \"assistant\",\n    content:\n      \"Exactly! The flat variant is perfect when you want a more streamlined appearance that puts focus on the conversation content rather than visual containers. It works especially well in full-width layouts and professional applications.\",\n    avatar: \"https://github.com/anthropics.png\",\n    name: \"Claude\",\n  },\n];\n\nconst Example = () => (\n  <div className=\"space-y-2\">\n    {messages.map(({ content, ...message }) => (\n      <Message from={message.from} key={message.key}>\n        <MessageContent variant=\"flat\">{content}</MessageContent>\n      </Message>\n    ))}\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-message-flat.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/message.json"
+  ]
+}

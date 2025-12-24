@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-confirmation-rejected",
+  "type": "registry:block",
+  "title": "Confirmation Rejected Example",
+  "description": "Example implementation of confirmation rejected.",
+  "files": [
+    {
+      "path": "registry/default/examples/confirmation-rejected.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  Confirmation,\n  ConfirmationAccepted,\n  ConfirmationRejected,\n  ConfirmationRequest,\n  ConfirmationTitle,\n} from \"@/components/ai-elements/confirmation\";\nimport { CheckIcon, XIcon } from \"lucide-react\";\nimport { nanoid } from \"nanoid\";\n\nconst Example = () => (\n  <div className=\"w-full max-w-2xl\">\n    <Confirmation\n      approval={{ id: nanoid(), approved: false }}\n      state=\"output-denied\"\n    >\n      <ConfirmationTitle>\n        <ConfirmationRequest>\n          This tool wants to delete the file{\" \"}\n          <code className=\"rounded bg-muted px-1.5 py-0.5 text-sm\">\n            /tmp/example.txt\n          </code>\n          . Do you approve this action?\n        </ConfirmationRequest>\n        <ConfirmationAccepted>\n          <CheckIcon className=\"size-4 text-green-600 dark:text-green-400\" />\n          <span>You approved this tool execution</span>\n        </ConfirmationAccepted>\n        <ConfirmationRejected>\n          <XIcon className=\"size-4 text-destructive\" />\n          <span>You rejected this tool execution</span>\n        </ConfirmationRejected>\n      </ConfirmationTitle>\n    </Confirmation>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-confirmation-rejected.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react",
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/confirmation.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-1",
+  "description": "Centered call-to-action bar with bold heading and dual action buttons.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/cta/1/cta.tsx",
+      "type": "registry:component",
+      "content": "import { Button } from \"@/components/ui/button\";\n\nexport function CallToAction() {\n\treturn (\n\t\t<div className=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between border-x md:flex-row\">\n\t\t\t<div className=\"-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t\" />\n\t\t\t<div className=\"border-b p-4 md:border-b-0\">\n\t\t\t\t<h2 className=\"text-center font-bold text-lg md:text-left md:text-2xl\">\n\t\t\t\t\tLet your plans shape the future.\n\t\t\t\t</h2>\n\t\t\t</div>\n\t\t\t<div className=\"flex items-center justify-center gap-2 p-4 md:border-l\">\n\t\t\t\t<Button variant=\"secondary\">Contact Sales</Button>\n\t\t\t\t<Button>Get Started</Button>\n\t\t\t</div>\n\t\t\t<div className=\"-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b\" />\n\t\t</div>\n\t);\n}\n"
+    }
+  ],
+  "categories": [
+    "cta"
+  ],
+  "type": "registry:block"
+}

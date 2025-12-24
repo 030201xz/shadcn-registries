@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "captions",
+  "dependencies": [
+    "@radix-ui/react-compose-refs",
+    "@radix-ui/react-slot"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/use-captions.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/captions.tsx",
+      "content": "\"use client\"\n\nimport { composeRefs } from \"@radix-ui/react-compose-refs\"\nimport { Slot } from \"@radix-ui/react-slot\"\nimport React, { useEffect } from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { cn } from \"@/lib/utils\"\nimport { useCaptions } from \"@/registry/default/hooks/use-captions\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\n\nexport interface CaptionsControlProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  /**\n   * Render as child component using Radix Slot\n   * @default false\n   */\n  asChild?: boolean\n  /**\n   * Keyboard shortcut hint displayed in aria-label\n   * @example \"C\"\n   */\n  shortcut?: string\n}\n\nexport type CaptionsControlPropsDocs = Pick<\n  CaptionsControlProps,\n  \"asChild\" | \"shortcut\"\n>\n\nexport const CaptionsControl = React.forwardRef<\n  HTMLButtonElement,\n  CaptionsControlProps\n>((props, forwardedRef) => {\n  const textTracks = useMediaStore((state) => state.textTracks)\n  const { toggleCaptionVisibility } = useCaptions()\n\n  const {\n    \"aria-label\": ariaLabelProp,\n    asChild = false,\n    children,\n    disabled: userDisabled,\n    onClick,\n    shortcut,\n    ...restProps\n  } = props\n\n  const Comp = asChild ? Slot : Button\n\n  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {\n    onClick?.(event)\n    if (!event.defaultPrevented) {\n      toggleCaptionVisibility()\n    }\n  }\n\n  const isDisabled = !textTracks || textTracks.length === 0 || userDisabled\n\n  const getDefaultAriaLabel = () => {\n    const shortcutText = shortcut ? ` (keyboard shortcut ${shortcut})` : \"\"\n    return `Captions${shortcutText}`\n  }\n\n  return (\n    <Comp\n      aria-keyshortcuts={shortcut}\n      aria-label={ariaLabelProp ?? getDefaultAriaLabel()}\n      data-label=\"lp-captions-control\"\n      disabled={isDisabled}\n      {...restProps}\n      onClick={handleClick}\n      ref={forwardedRef}\n    >\n      {children}\n    </Comp>\n  )\n})\n\nCaptionsControl.displayName = \"CaptionsControl\"\n\nexport type CaptionsContainerPropsDocs = Pick<\n  CaptionsContainerProps,\n  \"fontScale\"\n>\n\ninterface CaptionsContainerProps extends React.ComponentPropsWithoutRef<\"div\"> {\n  /**\n   * Font scale factor for caption text size\n   * @default 1\n   */\n  fontScale?: number\n}\n\nexport const CaptionsContainer = React.forwardRef<\n  HTMLDivElement,\n  CaptionsContainerProps\n>((props, ref) => {\n  const { className, fontScale, ...etc } = props\n  const player = useMediaStore((state) => state.player)\n  const setContainerElement = useMediaStore(\n    (state) => state.setTextTrackContainerElement\n  )\n\n  useEffect(() => {\n    if (player && fontScale) {\n      player.configure({\n        textDisplayer: {\n          fontScaleFactor: fontScale,\n        },\n      })\n    }\n  }, [player, fontScale])\n\n  return (\n    <div\n      className={cn(\n        \"relative flex w-full grow flex-col justify-end text-lg\",\n        className\n      )}\n      ref={composeRefs(ref, setContainerElement)}\n      {...etc}\n    />\n  )\n})\n\nCaptionsContainer.displayName = \"CaptionsContainer\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/captions.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

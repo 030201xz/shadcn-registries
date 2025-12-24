@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "volume-state-control-demo",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/mute-control.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/volume-state-control-demo.tsx",
+      "content": "\"use client\"\n\nimport {\n  SpeakerHighIcon,\n  SpeakerLowIcon,\n  SpeakerXIcon,\n} from \"@phosphor-icons/react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\nimport { MuteControl } from \"@/registry/default/ui/mute-control\"\n\nexport function VolumeStateControlDemo() {\n  const muted = useMediaStore((state) => state.muted)\n  const volume = useMediaStore((state) => state.volume)\n\n  return (\n    <MuteControl asChild>\n      <Button size=\"icon\" variant=\"ghost\">\n        {muted || volume === 0 ? (\n          <SpeakerXIcon weight=\"fill\" />\n        ) : volume < 0.5 ? (\n          <SpeakerLowIcon weight=\"fill\" />\n        ) : (\n          <SpeakerHighIcon weight=\"fill\" />\n        )}\n      </Button>\n    </MuteControl>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

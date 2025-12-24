@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "playback-control",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/use-player.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/playback-control.tsx",
+      "content": "\"use client\"\n\nimport { Slot } from \"@radix-ui/react-slot\"\nimport * as React from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { MediaReadyState, usePlayer } from \"@/registry/default/hooks/use-player\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\n\nexport type PlaybackControlPropsDocs = Pick<\n  PlaybackControlProps,\n  \"asChild\" | \"shortcut\"\n>\n\ninterface PlaybackControlProps extends React.ComponentProps<typeof Button> {\n  /**\n   * Render as child component using Radix Slot\n   * @default false\n   */\n  asChild?: boolean\n  /**\n   * Keyboard shortcut hint displayed in aria-label\n   * @example \"Space\"\n   */\n  shortcut?: string\n}\n\nexport const PlaybackControl = React.forwardRef<\n  HTMLButtonElement,\n  PlaybackControlProps\n>((props, forwardedRef) => {\n  const status = useMediaStore((state) => state.status)\n  const readyState = useMediaStore((state) => state.readyState)\n  const { togglePaused } = usePlayer()\n\n  const {\n    \"aria-label\": ariaLabelProp,\n    asChild = false,\n    children,\n    disabled: userDisabled,\n    onClick,\n    shortcut,\n    ...restProps\n  } = props\n\n  const Comp = asChild ? Slot : Button\n\n  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {\n    onClick?.(event)\n    if (!event.defaultPrevented) {\n      togglePaused()\n    }\n  }\n\n  const isDisabled =\n    readyState < MediaReadyState.HAVE_CURRENT_DATA ||\n    status === \"buffering\" ||\n    userDisabled\n\n  const getDefaultAriaLabel = () => {\n    const shortcutText = shortcut ? ` (keyboard shortcut ${shortcut})` : \"\"\n    const labels = {\n      default: \"Play\",\n      ended: \"Replay\",\n      playing: \"Pause\",\n    }\n\n    const label =\n      status === \"ended\"\n        ? labels.ended\n        : status === \"playing\"\n          ? labels.playing\n          : labels.default\n    return `${label}${shortcutText}`\n  }\n\n  return (\n    <Comp\n      aria-keyshortcuts={shortcut}\n      aria-label={ariaLabelProp ?? getDefaultAriaLabel()}\n      data-label=\"lp-playback-control\"\n      disabled={isDisabled}\n      {...restProps}\n      onClick={handleClick}\n      ref={forwardedRef}\n    >\n      {children}\n    </Comp>\n  )\n})\n\nPlaybackControl.displayName = \"PlaybackControl\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/playback-control.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

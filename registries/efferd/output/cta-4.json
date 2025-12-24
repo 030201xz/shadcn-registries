@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-4",
+  "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/cta/4/cta.tsx",
+      "type": "registry:component",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ArrowRightIcon, CreditCardIcon } from \"lucide-react\";\n\nexport function CallToAction() {\n\treturn (\n\t\t<div className=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-6 rounded-4xl border bg-card px-4 py-8 shadow-sm md:py-10 dark:bg-card/50\">\n\t\t\t<div className=\"space-y-2\">\n\t\t\t\t<h2 className=\"text-center font-semibold text-lg tracking-tight md:text-2xl\">\n\t\t\t\t\tLet your plans shape the future.\n\t\t\t\t</h2>\n\t\t\t\t<p className=\"text-balance text-center text-muted-foreground text-sm md:text-base\">\n\t\t\t\t\tStart your free trial today. No credit card{\" \"}\n\t\t\t\t\t<CreditCardIcon className=\"inline-block size-4\" /> required.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div className=\"flex items-center justify-center gap-2\">\n\t\t\t\t<Button className=\"shadow\" variant=\"secondary\">\n\t\t\t\t\tContact Sales\n\t\t\t\t</Button>\n\t\t\t\t<Button className=\"shadow\">\n\t\t\t\t\tGet Started <ArrowRightIcon />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n"
+    }
+  ],
+  "categories": [
+    "cta"
+  ],
+  "type": "registry:block"
+}

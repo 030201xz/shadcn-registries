@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-2",
+  "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/cta/2/cta.tsx",
+      "type": "registry:component",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ArrowRightIcon } from \"lucide-react\";\n\nexport function CallToAction() {\n\treturn (\n\t\t<div className=\"relative mx-auto flex w-full max-w-3xl flex-col justify-between border-x\">\n\t\t\t<div className=\"-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t\" />\n\t\t\t<div className=\"border-b px-2 py-8\">\n\t\t\t\t<h2 className=\"text-center font-semibold text-lg md:text-2xl\">\n\t\t\t\t\tPlan the present. Build the future.\n\t\t\t\t</h2>\n\t\t\t\t<p className=\"text-balance text-center text-muted-foreground text-sm md:text-base\">\n\t\t\t\t\tStart your journey today by clicking the button below.\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div className=\"flex items-center justify-center gap-2 bg-secondary/80 p-4 dark:bg-secondary/40\">\n\t\t\t\t<Button variant=\"outline\">Contact Sales</Button>\n\t\t\t\t<Button>\n\t\t\t\t\tGet Started <ArrowRightIcon />\n\t\t\t\t</Button>\n\t\t\t</div>\n\t\t\t<div className=\"-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b\" />\n\t\t</div>\n\t);\n}\n"
+    }
+  ],
+  "categories": [
+    "cta"
+  ],
+  "type": "registry:block"
+}

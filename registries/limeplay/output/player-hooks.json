@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "player-hooks",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/use-shaka-player.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/player-hooks.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { useShakaPlayer } from \"@/registry/default/hooks/use-shaka-player\"\n\nexport const PlayerHooks = React.memo(() => {\n  useShakaPlayer()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/player-hooks.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

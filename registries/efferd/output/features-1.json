@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-1",
+  "description": "Minimal feature card with icon, title, and subtle grid background.",
+  "registryDependencies": [
+    "https://magicui.design/r/grid-pattern.json"
+  ],
+  "files": [
+    {
+      "path": "registry/features/1/feature-section.tsx",
+      "type": "registry:component",
+      "content": "// https://magicui.design/docs/components/grid-pattern\nimport { GridPattern } from \"@/components/ui/grid-pattern\";\nimport { cn } from \"@/lib/utils\";\nimport {\n\tCpu,\n\tFingerprint,\n\tPencil,\n\tSettings2,\n\tSparkles,\n\tZap,\n} from \"lucide-react\";\nimport type React from \"react\";\n\ntype FeatureType = {\n\ttitle: string;\n\ticon: React.ComponentType<React.SVGProps<SVGSVGElement>>;\n\tdescription: string;\n};\n\nexport function FeatureSection() {\n\treturn (\n\t\t<div className=\"mx-auto w-full max-w-5xl space-y-8\">\n\t\t\t<div className=\"mx-auto max-w-3xl text-center\">\n\t\t\t\t<h2 className=\"text-balance font-medium text-2xl md:text-4xl lg:text-5xl\">\n\t\t\t\t\tPower. Speed. Control.\n\t\t\t\t</h2>\n\t\t\t\t<p className=\"mt-4 text-balance text-muted-foreground text-sm md:text-base\">\n\t\t\t\t\tEverything you need to build fast, secure, scalable apps.\n\t\t\t\t</p>\n\t\t\t</div>\n\n\t\t\t<div className=\"overflow-hidden rounded-lg border\">\n\t\t\t\t<div className=\"grid grid-cols-1 gap-px bg-border sm:grid-cols-2 md:grid-cols-3\">\n\t\t\t\t\t{features.map((feature) => (\n\t\t\t\t\t\t<FeatureCard feature={feature} key={feature.title} />\n\t\t\t\t\t))}\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n\nexport function FeatureCard({\n\tfeature,\n\tclassName,\n\t...props\n}: React.ComponentProps<\"div\"> & {\n\tfeature: FeatureType;\n}) {\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\"relative overflow-hidden bg-background p-6\", className)}\n\t\t\t{...props}\n\t\t>\n\t\t\t<div className=\"-mt-2 -ml-20 mask-[radial-gradient(farthest-side_at_top,white,transparent)] pointer-events-none absolute top-0 left-1/2 size-full\">\n\t\t\t\t<GridPattern\n\t\t\t\t\tclassName=\"absolute inset-0 size-full stroke-foreground/20\"\n\t\t\t\t\theight={40}\n\t\t\t\t\twidth={40}\n\t\t\t\t\tx={5}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t\t<feature.icon\n\t\t\t\taria-hidden\n\t\t\t\tclassName=\"size-6 text-foreground/75\"\n\t\t\t\tstrokeWidth={1}\n\t\t\t/>\n\t\t\t<h3 className=\"mt-10 text-sm md:text-base\">{feature.title}</h3>\n\t\t\t<p className=\"relative z-20 mt-2 font-light text-muted-foreground text-xs\">\n\t\t\t\t{feature.description}\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n\nconst features: FeatureType[] = [\n\t{\n\t\ttitle: \"Faaast\",\n\t\ticon: Zap,\n\t\tdescription: \"It supports an entire helping developers and innovate.\",\n\t},\n\t{\n\t\ttitle: \"Powerful\",\n\t\ticon: Cpu,\n\t\tdescription: \"It supports an entire helping developers and businesses.\",\n\t},\n\t{\n\t\ttitle: \"Security\",\n\t\ticon: Fingerprint,\n\t\tdescription: \"It supports an helping developers businesses.\",\n\t},\n\t{\n\t\ttitle: \"Customization\",\n\t\ticon: Pencil,\n\t\tdescription: \"It supports helping developers and businesses innovate.\",\n\t},\n\t{\n\t\ttitle: \"Control\",\n\t\ticon: Settings2,\n\t\tdescription: \"It supports helping developers and businesses innovate.\",\n\t},\n\t{\n\t\ttitle: \"Built for AI\",\n\t\ticon: Sparkles,\n\t\tdescription: \"It supports helping developers and businesses innovate.\",\n\t},\n];\n"
+    }
+  ],
+  "categories": [
+    "features"
+  ],
+  "type": "registry:block"
+}

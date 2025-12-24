@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-1",
+  "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/testimonials/1/testimonials-columns.tsx",
+      "type": "registry:component",
+      "content": "\"use client\";\nimport { motion } from \"motion/react\";\nimport React from \"react\";\n\nexport type Testimonial = {\n\ttext: string;\n\timage: string;\n\tname: string;\n\trole: string;\n};\n\nexport const TestimonialsColumn = (props: {\n\tclassName?: string;\n\ttestimonials: Testimonial[];\n\tduration?: number;\n}) => (\n\t<div className={props.className}>\n\t\t<motion.div\n\t\t\tanimate={{\n\t\t\t\ttranslateY: \"-50%\",\n\t\t\t}}\n\t\t\tclassName=\"flex flex-col gap-6 pb-6\"\n\t\t\ttransition={{\n\t\t\t\tduration: props.duration || 10,\n\t\t\t\trepeat: Number.POSITIVE_INFINITY,\n\t\t\t\tease: \"linear\",\n\t\t\t\trepeatType: \"loop\",\n\t\t\t}}\n\t\t>\n\t\t\t{[\n\t\t\t\t...new Array(2).fill(0).map((_, index) => (\n\t\t\t\t\t<React.Fragment key={`column-${index}`}>\n\t\t\t\t\t\t{props.testimonials.map(({ text, image, name, role }) => (\n\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\tclassName=\"w-full max-w-xs rounded-3xl border bg-card p-8 shadow-lg dark:bg-card/20 dark:shadow-foreground/10\"\n\t\t\t\t\t\t\t\tkey={name}\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<div>{text}</div>\n\t\t\t\t\t\t\t\t<div className=\"mt-5 flex items-center gap-2\">\n\t\t\t\t\t\t\t\t\t<img\n\t\t\t\t\t\t\t\t\t\talt={name}\n\t\t\t\t\t\t\t\t\t\tclassName=\"h-10 w-10 rounded-full\"\n\t\t\t\t\t\t\t\t\t\theight={40}\n\t\t\t\t\t\t\t\t\t\tsrc={image}\n\t\t\t\t\t\t\t\t\t\twidth={40}\n\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t<div className=\"flex flex-col\">\n\t\t\t\t\t\t\t\t\t\t<div className=\"font-medium leading-5 tracking-tight\">\n\t\t\t\t\t\t\t\t\t\t\t{name}\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div className=\"leading-5 tracking-tight opacity-60\">\n\t\t\t\t\t\t\t\t\t\t\t{role}\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t))}\n\t\t\t\t\t</React.Fragment>\n\t\t\t\t)),\n\t\t\t]}\n\t\t</motion.div>\n\t</div>\n);\n"
+    }
+  ],
+  "categories": [
+    "testimonials"
+  ],
+  "type": "registry:block"
+}

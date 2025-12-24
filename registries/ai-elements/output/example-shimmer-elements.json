@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-shimmer-elements",
+  "type": "registry:block",
+  "title": "Shimmer Elements Example",
+  "description": "Example implementation of shimmer elements.",
+  "files": [
+    {
+      "path": "registry/default/examples/shimmer-elements.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Shimmer } from \"@/components/ai-elements/shimmer\";\n\nconst Example = () => (\n  <div className=\"flex flex-col gap-6 p-8\">\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">\n        As paragraph (default)\n      </p>\n      <Shimmer as=\"p\">This is rendered as a paragraph</Shimmer>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">As heading</p>\n      <Shimmer as=\"h2\" className=\"font-bold text-2xl\">\n        Large Heading with Shimmer\n      </Shimmer>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">As span (inline)</p>\n      <div>\n        Processing your request{\" \"}\n        <Shimmer as=\"span\" className=\"inline\">\n          with AI magic\n        </Shimmer>\n        ...\n      </div>\n    </div>\n\n    <div className=\"text-center\">\n      <p className=\"mb-3 text-muted-foreground text-sm\">\n        As div with custom styling\n      </p>\n      <Shimmer as=\"div\" className=\"font-semibold text-lg\">\n        Custom styled shimmer text\n      </Shimmer>\n    </div>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-shimmer-elements.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/shimmer.json"
+  ]
+}

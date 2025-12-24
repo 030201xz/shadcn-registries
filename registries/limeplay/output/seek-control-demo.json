@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "seek-control-demo",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/seek-controls.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/seek-control-demo.tsx",
+      "content": "import {\n  CaretCircleDoubleLeftIcon,\n  CaretCircleDoubleRightIcon,\n} from \"@phosphor-icons/react/dist/ssr\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { SeekControl } from \"@/registry/default/ui/seek-controls\"\n\nexport function SeekControlDemo() {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <SeekControl asChild offset={-10}>\n        <Button size=\"icon\" variant=\"ghost\">\n          <CaretCircleDoubleLeftIcon />\n        </Button>\n      </SeekControl>\n      <SeekControl asChild offset={10}>\n        <Button size=\"icon\" variant=\"ghost\">\n          <CaretCircleDoubleRightIcon />\n        </Button>\n      </SeekControl>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

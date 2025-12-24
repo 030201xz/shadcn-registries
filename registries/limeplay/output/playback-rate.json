@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "playback-rate",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/use-playback-rate.json",
+    "@basecn/select"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/playback-rate.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  SelectGroup as SelectGroupPrimitive,\n  SelectItem,\n  Select as SelectPrimitive,\n  SelectTrigger as SelectTriggerPrimitive,\n  SelectValue,\n} from \"@/components/ui/select\"\nimport { usePlaybackRate } from \"@/registry/default/hooks/use-playback-rate\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\n\nexport const SelectRoot = React.forwardRef<\n  HTMLDivElement,\n  React.ComponentProps<typeof SelectPrimitive>\n>((props, _) => {\n  const playbackRate = useMediaStore((state) => state.playbackRate)\n  const { setPlaybackRate } = usePlaybackRate()\n\n  return (\n    <SelectPrimitive\n      onValueChange={(value) => setPlaybackRate(Number(value))}\n      value={playbackRate.toString()}\n      {...props}\n    />\n  )\n})\n\nSelectRoot.displayName = \"PlaybackRateSelectRoot\"\n\nexport const SelectTrigger = React.forwardRef<\n  HTMLButtonElement,\n  React.ComponentProps<typeof SelectTriggerPrimitive>\n>((props, forwardedRef) => {\n  const playbackRate = useMediaStore((state) => state.playbackRate)\n\n  return (\n    <SelectTriggerPrimitive ref={forwardedRef} {...props}>\n      <SelectValue\n        placeholder={playbackRate.toString()}\n        render={(_, { value }) => {\n          return <span>{value}x</span>\n        }}\n      />\n    </SelectTriggerPrimitive>\n  )\n})\n\nSelectTrigger.displayName = \"PlaybackRateSelectTrigger\"\n\ninterface SelectGroupProps\n  extends React.ComponentProps<typeof SelectGroupPrimitive> {\n  suffix?: string\n}\n\nexport const SelectGroup = React.forwardRef<HTMLDivElement, SelectGroupProps>(\n  (props, forwardedRef) => {\n    const playbackRates = useMediaStore((state) => state.playbackRates)\n    const { suffix = \"x\" } = props\n\n    return (\n      <SelectGroupPrimitive ref={forwardedRef} {...props}>\n        {playbackRates.map((rate) => (\n          <SelectItem key={rate} value={rate.toString()}>\n            {rate}\n            {suffix && <span className=\"text-xs\">{suffix}</span>}\n          </SelectItem>\n        ))}\n      </SelectGroupPrimitive>\n    )\n  }\n)\n\nSelectGroup.displayName = \"PlaybackRateSelectGroup\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/playback-rate.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

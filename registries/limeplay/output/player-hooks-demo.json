@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "player-hooks-demo",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/use-player.json",
+    "https://limeplay.winoffrg.dev/r/use-shaka-player.json",
+    "https://limeplay.winoffrg.dev/r/use-timeline.json",
+    "https://limeplay.winoffrg.dev/r/use-volume.json",
+    "https://limeplay.winoffrg.dev/r/use-captions.json",
+    "https://limeplay.winoffrg.dev/r/use-playback-rate.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/internal/player-hooks-demo.tsx",
+      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { useCaptionsStates } from \"@/registry/default/hooks/use-captions\"\nimport { usePlaybackRateStates } from \"@/registry/default/hooks/use-playback-rate\"\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\nimport { useShakaPlayer } from \"@/registry/default/hooks/use-shaka-player\"\nimport { useTimelineStates } from \"@/registry/default/hooks/use-timeline\"\nimport { useVolumeStates } from \"@/registry/default/hooks/use-volume\"\n\nexport const PlayerHooks = React.memo(() => {\n  usePlayerStates()\n  useShakaPlayer()\n  useVolumeStates()\n  useTimelineStates()\n  useCaptionsStates()\n  usePlaybackRateStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

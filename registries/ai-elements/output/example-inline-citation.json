@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-inline-citation",
+  "type": "registry:block",
+  "title": "Inline Citation Example",
+  "description": "Example implementation of inline citation.",
+  "files": [
+    {
+      "path": "registry/default/examples/inline-citation.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  InlineCitation,\n  InlineCitationCard,\n  InlineCitationCardBody,\n  InlineCitationCardTrigger,\n  InlineCitationCarousel,\n  InlineCitationCarouselContent,\n  InlineCitationCarouselHeader,\n  InlineCitationCarouselIndex,\n  InlineCitationCarouselItem,\n  InlineCitationCarouselNext,\n  InlineCitationCarouselPrev,\n  InlineCitationSource,\n  InlineCitationText,\n} from \"@/components/ai-elements/inline-citation\";\n\nconst citation = {\n  text: \"The technology continues to evolve rapidly, with new breakthroughs being announced regularly\",\n  sources: [\n    {\n      title: \"Advances in Natural Language Processing\",\n      url: \"https://example.com/nlp-advances\",\n      description:\n        \"A comprehensive study on the recent developments in natural language processing technologies and their applications.\",\n    },\n    {\n      title: \"Breakthroughs in Machine Learning\",\n      url: \"https://mlnews.org/breakthroughs\",\n      description:\n        \"An overview of the most significant machine learning breakthroughs in the past year.\",\n    },\n    {\n      title: \"AI in Healthcare: Current Trends\",\n      url: \"https://healthai.com/trends\",\n      description:\n        \"A report on how artificial intelligence is transforming healthcare and diagnostics.\",\n    },\n    {\n      title: \"Ethics of Artificial Intelligence\",\n      url: \"https://aiethics.org/overview\",\n      description:\n        \"A discussion on the ethical considerations and challenges in the development of AI.\",\n    },\n    {\n      title: \"Scaling Deep Learning Models\",\n      url: \"https://deeplearninghub.com/scaling-models\",\n      description:\n        \"Insights into the technical challenges and solutions for scaling deep learning architectures.\",\n    },\n    {\n      title: \"Natural Language Understanding Benchmarks\",\n      url: \"https://nlubenchmarks.com/latest\",\n      description:\n        \"A summary of the latest benchmarks and evaluation metrics for natural language understanding systems.\",\n    },\n  ],\n};\n\nconst Example = () => (\n  <p className=\"text-sm leading-relaxed\">\n    According to recent studies, artificial intelligence has shown remarkable\n    progress in natural language processing.{\" \"}\n    <InlineCitation>\n      <InlineCitationText>{citation.text}</InlineCitationText>\n      <InlineCitationCard>\n        <InlineCitationCardTrigger\n          sources={citation.sources.map((source) => source.url)}\n        />\n        <InlineCitationCardBody>\n          <InlineCitationCarousel>\n            <InlineCitationCarouselHeader>\n              <InlineCitationCarouselPrev />\n              <InlineCitationCarouselNext />\n              <InlineCitationCarouselIndex />\n            </InlineCitationCarouselHeader>\n            <InlineCitationCarouselContent>\n              {citation.sources.map((source) => (\n                <InlineCitationCarouselItem key={source.url}>\n                  <InlineCitationSource\n                    description={source.description}\n                    title={source.title}\n                    url={source.url}\n                  />\n                </InlineCitationCarouselItem>\n              ))}\n            </InlineCitationCarouselContent>\n          </InlineCitationCarousel>\n        </InlineCitationCardBody>\n      </InlineCitationCard>\n    </InlineCitation>\n    .\n  </p>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-inline-citation.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/inline-citation.json"
+  ]
+}

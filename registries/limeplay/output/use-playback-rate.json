@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-playback-rate",
+  "dependencies": [
+    "zustand"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/use-player.json",
+    "https://limeplay.winoffrg.dev/r/utils.json",
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/player-hooks.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/hooks/use-playback-rate.ts",
+      "content": "\"use client\"\n\nimport type { StateCreator } from \"zustand\"\n\nimport { useEffect } from \"react\"\n\nimport { type PlayerStore } from \"@/registry/default/hooks/use-player\"\nimport { off, on } from \"@/registry/default/lib/utils\"\nimport {\n  useGetStore,\n  useMediaStore,\n} from \"@/registry/default/ui/media-provider\"\n\nexport interface PlaybackRateStore {\n  playbackRate: number\n  playbackRates: number[]\n}\n\nexport function usePlaybackRateStates() {\n  const store = useGetStore()\n  const player = useMediaStore((state) => state.player)\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n  const canPlay = useMediaStore((state) => state.canPlay)\n\n  const onPlaybackRateChange = () => {\n    if (!player) return\n\n    const rate = player.getPlaybackRate()\n\n    store.setState({\n      playbackRate: rate === 0 ? 1 : rate,\n    })\n  }\n\n  useEffect(() => {\n    if (!mediaRef.current || !player) return\n\n    const media = mediaRef.current\n\n    if (canPlay) {\n      onPlaybackRateChange()\n    }\n\n    on(player, \"loading\", onPlaybackRateChange)\n    on(player, \"ratechange\", onPlaybackRateChange)\n    on(media, \"ratechange\", onPlaybackRateChange)\n\n    return () => {\n      off(player, \"loading\", onPlaybackRateChange)\n      off(player, \"ratechange\", onPlaybackRateChange)\n      off(media, \"ratechange\", onPlaybackRateChange)\n    }\n  }, [player, mediaRef, canPlay])\n}\n\nexport const createPlaybackRateStore: StateCreator<\n  PlaybackRateStore & PlayerStore,\n  [],\n  [],\n  PlaybackRateStore\n> = () => ({\n  playbackRate: 1,\n  playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],\n})\n\nexport function usePlaybackRate() {\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n  const player = useMediaStore((state) => state.player)\n\n  function setPlaybackRate(playbackRate: number) {\n    if (!mediaRef.current) return\n\n    const media = mediaRef.current\n    media.playbackRate = playbackRate\n  }\n\n  function setTrickplayRate(playbackRate: number, forced: boolean = false) {\n    if (!player) return\n\n    player.trickPlay(playbackRate, forced)\n  }\n\n  return {\n    setPlaybackRate,\n    setTrickplayRate,\n  }\n}\n",
+      "type": "registry:hook",
+      "target": "hooks/limeplay/use-playback-rate.ts"
+    }
+  ],
+  "type": "registry:hook"
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-workflow",
+  "type": "registry:block",
+  "title": "Workflow Example",
+  "description": "Example implementation of workflow.",
+  "files": [
+    {
+      "path": "registry/default/examples/workflow.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Canvas } from \"@/components/ai-elements/canvas\";\nimport { Edge } from \"@/components/ai-elements/edge\";\nimport {\n  Node,\n  NodeContent,\n  NodeDescription,\n  NodeFooter,\n  NodeHeader,\n  NodeTitle,\n} from \"@/components/ai-elements/node\";\nimport { nanoid } from \"nanoid\";\n\nconst nodeIds = {\n  start: nanoid(),\n  process1: nanoid(),\n  process2: nanoid(),\n  decision: nanoid(),\n  output1: nanoid(),\n  output2: nanoid(),\n};\n\nconst nodes = [\n  {\n    id: nodeIds.start,\n    type: \"workflow\",\n    position: { x: 0, y: 0 },\n    data: {\n      label: \"Start\",\n      description: \"Initialize workflow\",\n      handles: { target: false, source: true },\n    },\n  },\n  {\n    id: nodeIds.process1,\n    type: \"workflow\",\n    position: { x: 500, y: 0 },\n    data: {\n      label: \"Process Data\",\n      description: \"Transform input\",\n      handles: { target: true, source: true },\n    },\n  },\n  {\n    id: nodeIds.decision,\n    type: \"workflow\",\n    position: { x: 1000, y: 0 },\n    data: {\n      label: \"Decision Point\",\n      description: \"Route based on conditions\",\n      handles: { target: true, source: true },\n    },\n  },\n  {\n    id: nodeIds.output1,\n    type: \"workflow\",\n    position: { x: 1500, y: -100 },\n    data: {\n      label: \"Success Path\",\n      description: \"Handle success case\",\n      handles: { target: true, source: true },\n    },\n  },\n  {\n    id: nodeIds.output2,\n    type: \"workflow\",\n    position: { x: 1500, y: 100 },\n    data: {\n      label: \"Error Path\",\n      description: \"Handle error case\",\n      handles: { target: true, source: true },\n    },\n  },\n  {\n    id: nodeIds.process2,\n    type: \"workflow\",\n    position: { x: 2000, y: 0 },\n    data: {\n      label: \"Complete\",\n      description: \"Finalize workflow\",\n      handles: { target: true, source: false },\n    },\n  },\n];\n\nconst edges = [\n  {\n    id: nanoid(),\n    source: nodeIds.start,\n    target: nodeIds.process1,\n    type: \"animated\",\n  },\n  {\n    id: nanoid(),\n    source: nodeIds.process1,\n    target: nodeIds.decision,\n    type: \"animated\",\n  },\n  {\n    id: nanoid(),\n    source: nodeIds.decision,\n    target: nodeIds.output1,\n    type: \"animated\",\n  },\n  {\n    id: nanoid(),\n    source: nodeIds.decision,\n    target: nodeIds.output2,\n    type: \"temporary\",\n  },\n  {\n    id: nanoid(),\n    source: nodeIds.output1,\n    target: nodeIds.process2,\n    type: \"animated\",\n  },\n  {\n    id: nanoid(),\n    source: nodeIds.output2,\n    target: nodeIds.process2,\n    type: \"temporary\",\n  },\n];\n\nconst nodeTypes = {\n  workflow: ({\n    data,\n  }: {\n    data: {\n      label: string;\n      description: string;\n      handles: { target: boolean; source: boolean };\n    };\n  }) => (\n    <Node handles={data.handles}>\n      <NodeHeader>\n        <NodeTitle>{data.label}</NodeTitle>\n        <NodeDescription>{data.description}</NodeDescription>\n      </NodeHeader>\n      <NodeContent>\n        <p>test</p>\n      </NodeContent>\n      <NodeFooter>\n        <p>test</p>\n      </NodeFooter>\n    </Node>\n  ),\n};\n\nconst edgeTypes = {\n  animated: Edge.Animated,\n  temporary: Edge.Temporary,\n};\n\nconst Example = () => (\n  <Canvas\n    edges={edges}\n    edgeTypes={edgeTypes}\n    fitView\n    nodes={nodes}\n    nodeTypes={nodeTypes}\n  />\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-workflow.tsx"
+    }
+  ],
+  "dependencies": [
+    "nanoid"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/canvas.json",
+    "https://registry.ai-sdk.dev/edge.json",
+    "https://registry.ai-sdk.dev/node.json"
+  ]
+}
