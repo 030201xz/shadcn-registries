@@ -42,7 +42,10 @@ async function verifyRegistryOutput(
 
   const files = await readdir(outputDir);
   const jsonFiles = files.filter(
-    f => f.endsWith('.json') && f !== 'index.json' && f !== 'registry.json'
+    f =>
+      f.endsWith('.json') &&
+      f !== 'index.json' &&
+      f !== 'registry.json'
   );
 
   for (const file of jsonFiles) {
@@ -61,7 +64,10 @@ async function verifyRegistryOutput(
           );
         }
       } else {
-        result.invalid.push({ file, error: validation.error ?? 'Unknown error' });
+        result.invalid.push({
+          file,
+          error: validation.error ?? 'Unknown error',
+        });
       }
     } catch (error) {
       result.invalid.push({
@@ -93,7 +99,11 @@ async function main(): Promise<void> {
 
   let totalValid = 0;
   let totalInvalid = 0;
-  const allInvalid: { registry: string; file: string; error: string }[] = [];
+  const allInvalid: {
+    registry: string;
+    file: string;
+    error: string;
+  }[] = [];
 
   for (const name of registryNames) {
     console.log(`\n📦 Verifying ${name}...`);

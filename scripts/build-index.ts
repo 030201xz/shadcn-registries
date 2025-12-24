@@ -64,7 +64,9 @@ async function main(): Promise<void> {
 
     // Load config
     try {
-      const configModule = await import(join(registryDir, 'config.ts'));
+      const configModule = await import(
+        join(registryDir, 'config.ts')
+      );
       const config = configModule.config;
 
       let itemCount = 0;
@@ -103,12 +105,21 @@ async function main(): Promise<void> {
 
   // Write to root directory
   const outputPath = join(ROOT_DIR, 'index.json');
-  await writeFile(outputPath, JSON.stringify(globalIndex, null, 2), 'utf-8');
+  await writeFile(
+    outputPath,
+    JSON.stringify(globalIndex, null, 2),
+    'utf-8'
+  );
 
   console.log();
   logSuccess(`Global index generated: index.json`);
   console.log(`   Total registries: ${registries.length}`);
-  console.log(`   Total components: ${registries.reduce((sum, r) => sum + r.itemCount, 0)}`);
+  console.log(
+    `   Total components: ${registries.reduce(
+      (sum, r) => sum + r.itemCount,
+      0
+    )}`
+  );
 }
 
 main().catch(error => {

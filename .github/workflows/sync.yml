@@ -1,3 +1,24 @@
+# ============================================================================
+# Sync Registries Workflow
+# ============================================================================
+#
+# Responsibilities:
+# 1. Sync all/specified registry on schedule (daily) or manual trigger
+# 2. Download component JSON from source registries (preserve as-is)
+# 3. Build global index
+# 4. Verify all outputs
+# 5. Auto-commit changes
+#
+# Trigger Methods:
+# - Schedule: Daily at UTC 00:00
+# - Manual: GitHub Actions → Run workflow
+#
+# Manual Parameters:
+# - registry: Specify which registry to sync (leave empty for all)
+# - dry_run: Preview mode, no files written
+#
+# ============================================================================
+
 name: Sync Registries
 
 on:
@@ -37,6 +58,11 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      # ========================================
+      # Step 1: Sync registries
+      # - Download component JSON from source registries
+      # - Save as-is to registries/*/output/
+      # ========================================
       - name: Sync registries
         run: |
           if [ -n "${{ github.event.inputs.registry }}" ]; then
@@ -55,14 +81,29 @@ jobs:
             fi
           fi
 
+      # ========================================
+      # Step 2: Build global index
+      # - Aggregate index.json from all registries
+      # - Generate root index.json
+      # ========================================
       - name: Build global index
         if: github.event.inputs.dry_run != 'true'
         run: bun run build:index
 
+      # ========================================
+      # Step 3: Verify registries
+      # - Validate JSON structure of all registries
+      # - Check if required files exist
+      # ========================================
       - name: Verify registries
         if: github.event.inputs.dry_run != 'true'
         run: bun run verify
 
+      # ========================================
+      # Step 4: Commit and push changes
+      # - Auto-commit changes to repository
+      # - [skip ci] prevents circular triggers
+      # ========================================
       - name: Commit and push changes
         if: github.event.inputs.dry_run != 'true'
         run: |

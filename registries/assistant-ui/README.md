@@ -45,24 +45,24 @@ bun run registries/assistant-ui/scripts/verify.ts
 
 ## Components
 
-| Component | Type | Description |
-|-----------|------|-------------|
-| thread | component | Main chat thread component |
-| thread-list | component | List of chat threads |
-| attachment | component | File attachment component |
-| markdown-text | component | Markdown text renderer |
-| reasoning | component | AI reasoning display |
-| tooltip-icon-button | component | Icon button with tooltip |
-| tool-fallback | component | Fallback for unknown tools |
-| ai-sdk-backend | page | AI SDK backend setup |
-| shiki-highlighter | component | Syntax highlighter |
-| syntax-highlighter | component | Code syntax highlighting |
-| mermaid-diagram | component | Mermaid diagram renderer |
+| Component             | Type      | Description                 |
+| --------------------- | --------- | --------------------------- |
+| thread                | component | Main chat thread component  |
+| thread-list           | component | List of chat threads        |
+| attachment            | component | File attachment component   |
+| markdown-text         | component | Markdown text renderer      |
+| reasoning             | component | AI reasoning display        |
+| tooltip-icon-button   | component | Icon button with tooltip    |
+| tool-fallback         | component | Fallback for unknown tools  |
+| ai-sdk-backend        | page      | AI SDK backend setup        |
+| shiki-highlighter     | component | Syntax highlighter          |
+| syntax-highlighter    | component | Code syntax highlighting    |
+| mermaid-diagram       | component | Mermaid diagram renderer    |
 | follow-up-suggestions | component | Suggested follow-up prompts |
-| shimmer-style | style | Loading shimmer animation |
-| assistant-modal | component | Modal chat interface |
-| assistant-sidebar | component | Sidebar chat interface |
-| threadlist-sidebar | component | Thread list in sidebar |
+| shimmer-style         | style     | Loading shimmer animation   |
+| assistant-modal       | component | Modal chat interface        |
+| assistant-sidebar     | component | Sidebar chat interface      |
+| threadlist-sidebar    | component | Thread list in sidebar      |
 
 ## License
 

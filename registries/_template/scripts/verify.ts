@@ -37,7 +37,10 @@ async function main(): Promise<void> {
 
   const files = await readdir(OUTPUT_DIR);
   const jsonFiles = files.filter(
-    f => f.endsWith('.json') && f !== 'index.json' && f !== 'registry.json'
+    f =>
+      f.endsWith('.json') &&
+      f !== 'index.json' &&
+      f !== 'registry.json'
   );
 
   if (jsonFiles.length === 0) {
@@ -60,10 +63,15 @@ async function main(): Promise<void> {
       if (validation.valid) {
         result.valid.push(file);
         if (validation.warnings) {
-          validation.warnings.forEach(w => logWarning(`${file}: ${w}`));
+          validation.warnings.forEach(w =>
+            logWarning(`${file}: ${w}`)
+          );
         }
       } else {
-        result.invalid.push({ file, error: validation.error ?? 'Unknown error' });
+        result.invalid.push({
+          file,
+          error: validation.error ?? 'Unknown error',
+        });
       }
     } catch (error) {
       result.invalid.push({
@@ -74,7 +82,9 @@ async function main(): Promise<void> {
   }
 
   // Print results
-  console.log(`\n📊 Result: ${result.valid.length} valid, ${result.invalid.length} invalid`);
+  console.log(
+    `\n📊 Result: ${result.valid.length} valid, ${result.invalid.length} invalid`
+  );
 
   if (result.invalid.length > 0) {
     console.log('\n❌ Invalid files:');

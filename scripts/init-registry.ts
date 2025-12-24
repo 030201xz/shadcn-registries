@@ -6,7 +6,12 @@
  */
 
 import { join } from 'node:path';
-import { mkdir, writeFile, copyFile, readdir } from 'node:fs/promises';
+import {
+  mkdir,
+  writeFile,
+  copyFile,
+  readdir,
+} from 'node:fs/promises';
 import {
   printHeader,
   logSuccess,
@@ -64,7 +69,10 @@ Examples:
 // Template Generation
 // ============================================================================
 
-function generateConfigContent(name: string, displayName: string): string {
+function generateConfigContent(
+  name: string,
+  displayName: string
+): string {
   return `/**
  * Registry Configuration: ${displayName}
  */
@@ -425,7 +433,10 @@ main().catch(error => {
 `;
 }
 
-function generateReadmeContent(name: string, displayName: string): string {
+function generateReadmeContent(
+  name: string,
+  displayName: string
+): string {
   return `# ${displayName}
 
 ## Source

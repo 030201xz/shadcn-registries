@@ -10,7 +10,8 @@ import type { RegistryConfig } from '../../shared/types';
 export const config: RegistryConfig = {
   name: 'assistant-ui',
   displayName: 'Assistant UI',
-  description: 'AI Chat UI Library - React components for building AI chat interfaces',
+  description:
+    'AI Chat UI Library - React components for building AI chat interfaces',
 
   source: {
     baseUrl: 'https://r.assistant-ui.com',

@@ -22,9 +22,10 @@ npx shadcn@latest add @assistant-ui-x/thread
 
 ## Available Registries
 
-| Registry | Source | Description |
-|----------|--------|-------------|
-| `assistant-ui` | [assistant-ui.com](https://assistant-ui.com) | AI Chat UI Library |
+| Registry       | Source                                         | Description              |
+| -------------- | ---------------------------------------------- | ------------------------ |
+| `assistant-ui` | [assistant-ui.com](https://assistant-ui.com)   | AI Chat UI Library       |
+| `aceternity`   | [ui.aceternity.com](https://ui.aceternity.com) | Aceternity UI Components |
 
 ## Commands
 
@@ -69,16 +70,19 @@ shadcn-registries/
 ## Adding a New Registry
 
 1. Initialize template:
+
    ```bash
    bun run init my-registry
    ```
 
 2. Edit configuration:
+
    ```
    registries/my-registry/config.ts
    ```
 
 3. Customize sync script if needed:
+
    ```
    registries/my-registry/scripts/sync.ts
    ```

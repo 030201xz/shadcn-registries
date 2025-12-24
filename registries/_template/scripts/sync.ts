@@ -21,7 +21,11 @@ import {
   formatDuration,
   getUtcTimestamp,
 } from '../../../shared';
-import type { RegistryItem, RegistryIndex, SyncResult } from '../../../shared';
+import type {
+  RegistryItem,
+  RegistryIndex,
+  SyncResult,
+} from '../../../shared';
 
 // ============================================================================
 // Configuration
@@ -47,7 +51,12 @@ function parseArgs(): SyncOptions {
     if (arg === '--dry-run') {
       dryRun = true;
     } else if (arg.startsWith('--only=')) {
-      only.push(...arg.slice(7).split(',').map(s => s.trim()));
+      only.push(
+        ...arg
+          .slice(7)
+          .split(',')
+          .map(s => s.trim())
+      );
     }
   }
 
@@ -69,7 +78,9 @@ function parseArgs(): SyncOptions {
  * - Need to merge multiple sources
  */
 async function fetchRegistryIndex(): Promise<RegistryItem[]> {
-  const data = await fetchWithRetry<RegistryIndex>(config.source.indexUrl);
+  const data = await fetchWithRetry<RegistryIndex>(
+    config.source.indexUrl
+  );
   return data.items as RegistryItem[];
 }
 
@@ -82,7 +93,9 @@ async function fetchRegistryIndex(): Promise<RegistryItem[]> {
  * - Need authentication
  * - Need to transform URL (e.g., handle nested paths)
  */
-async function fetchComponentDetail(name: string): Promise<RegistryItem> {
+async function fetchComponentDetail(
+  name: string
+): Promise<RegistryItem> {
   const url = `${config.source.baseUrl}/${name}.json`;
   return await fetchWithRetry<RegistryItem>(url);
 }
@@ -105,7 +118,9 @@ function transformItem(item: RegistryItem): RegistryItem {
 // Core Sync Logic
 // ============================================================================
 
-export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> {
+export async function sync(
+  options?: Partial<SyncOptions>
+): Promise<SyncResult> {
   const opts: SyncOptions = {
     only: options?.only ?? [],
     dryRun: options?.dryRun ?? false,
@@ -131,10 +146,14 @@ export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> 
     logInfo(`Filtering to: ${opts.only.join(', ')}`);
   }
   if (config.sync.include.length > 0) {
-    filtered = filtered.filter(i => config.sync.include.includes(i.name));
+    filtered = filtered.filter(i =>
+      config.sync.include.includes(i.name)
+    );
   }
   if (config.sync.exclude.length > 0) {
-    filtered = filtered.filter(i => !config.sync.exclude.includes(i.name));
+    filtered = filtered.filter(
+      i => !config.sync.exclude.includes(i.name)
+    );
   }
 
   console.log(`📦 Processing ${filtered.length} components...\n`);
@@ -149,7 +168,13 @@ export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> 
     success: [],
     failed: [],
     skipped: [],
-    stats: { total: items.length, synced: 0, failed: 0, skipped: 0, duration: 0 },
+    stats: {
+      total: items.length,
+      synced: 0,
+      failed: 0,
+      skipped: 0,
+      duration: 0,
+    },
   };
 
   for (const item of filtered) {
@@ -175,12 +200,17 @@ export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> 
       // Save JSON file
       const filePath = join(OUTPUT_DIR, `${item.name}.json`);
       await ensureParentDir(filePath);
-      await writeFile(filePath, JSON.stringify(transformed, null, 2), 'utf-8');
+      await writeFile(
+        filePath,
+        JSON.stringify(transformed, null, 2),
+        'utf-8'
+      );
 
       console.log('✅');
       result.success.push(item.name);
     } catch (error) {
-      const errorMsg = error instanceof Error ? error.message : String(error);
+      const errorMsg =
+        error instanceof Error ? error.message : String(error);
       console.log(`❌ ${errorMsg}`);
       result.failed.push({ name: item.name, error: errorMsg });
     }
@@ -205,8 +235,16 @@ export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> 
         })),
     };
 
-    await writeFile(join(OUTPUT_DIR, 'index.json'), JSON.stringify(index, null, 2), 'utf-8');
-    await writeFile(join(OUTPUT_DIR, 'registry.json'), JSON.stringify(index, null, 2), 'utf-8');
+    await writeFile(
+      join(OUTPUT_DIR, 'index.json'),
+      JSON.stringify(index, null, 2),
+      'utf-8'
+    );
+    await writeFile(
+      join(OUTPUT_DIR, 'registry.json'),
+      JSON.stringify(index, null, 2),
+      'utf-8'
+    );
     console.log('\n📋 Generated index.json and registry.json');
   }
 
@@ -220,7 +258,9 @@ export async function sync(options?: Partial<SyncOptions>): Promise<SyncResult> 
     duration,
   };
 
-  console.log(`\n📊 Result: ${result.success.length} success, ${result.failed.length} failed`);
+  console.log(
+    `\n📊 Result: ${result.success.length} success, ${result.failed.length} failed`
+  );
   console.log(`   Duration: ${formatDuration(duration)}`);
 
   return result;
