@@ -2,9 +2,25 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2025-12-26T00:03:44.196Z",
+  "syncedAt": "2025-12-27T00:03:57.148Z",
   "itemCount": 38,
   "items": [
+    {
+      "name": "contact-1",
+      "type": "registry:block",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
+      "categories": [
+        "contact"
+      ]
+    },
+    {
+      "name": "contact-2",
+      "type": "registry:block",
+      "description": "Modern contact card with info section and built-in form area.",
+      "categories": [
+        "contact"
+      ]
+    },
     {
       "name": "auth-1",
       "type": "registry:block",
@@ -33,9 +49,9 @@
       ]
     },
     {
-      "name": "cta-3",
+      "name": "cta-2",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
       "categories": [
         "cta"
       ],
@@ -67,22 +83,6 @@
       ]
     },
     {
-      "name": "contact-2",
-      "type": "registry:block",
-      "description": "Modern contact card with info section and built-in form area.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
       "name": "cta-1",
       "type": "registry:block",
       "description": "Centered call-to-action bar with bold heading and dual action buttons.",
@@ -94,9 +94,9 @@
       ]
     },
     {
-      "name": "cta-2",
+      "name": "cta-3",
       "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
       "categories": [
         "cta"
       ],
@@ -116,9 +116,9 @@
       ]
     },
     {
-      "name": "faqs-2",
+      "name": "faqs-3",
       "type": "registry:block",
-      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
+      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
       "categories": [
         "faqs"
       ],
@@ -127,9 +127,9 @@
       ]
     },
     {
-      "name": "faqs-3",
+      "name": "faqs-2",
       "type": "registry:block",
-      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
+      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
       "categories": [
         "faqs"
       ],
@@ -164,28 +164,6 @@
       ]
     },
     {
-      "name": "features-1",
-      "type": "registry:block",
-      "description": "Minimal feature card with icon, title, and subtle grid background.",
-      "categories": [
-        "features"
-      ],
-      "registryDependencies": [
-        "https://magicui.design/r/grid-pattern.json"
-      ]
-    },
-    {
-      "name": "footer-1",
-      "type": "registry:block",
-      "description": "Clean footer with company links, resources, and social icons.",
-      "categories": [
-        "footer"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "footer-2",
       "type": "registry:block",
       "description": "Animated footer with link sections, brand logo, and social icons.",
@@ -205,14 +183,14 @@
       ]
     },
     {
-      "name": "footer-4",
+      "name": "features-1",
       "type": "registry:block",
-      "description": "Multi-column footer with app store buttons, social icons, and link groups.",
+      "description": "Minimal feature card with icon, title, and subtle grid background.",
       "categories": [
-        "footer"
+        "features"
       ],
       "registryDependencies": [
-        "button"
+        "https://magicui.design/r/grid-pattern.json"
       ]
     },
     {
@@ -224,6 +202,28 @@
       ],
       "dependencies": [
         "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "footer-1",
+      "type": "registry:block",
+      "description": "Clean footer with company links, resources, and social icons.",
+      "categories": [
+        "footer"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "footer-4",
+      "type": "registry:block",
+      "description": "Multi-column footer with app store buttons, social icons, and link groups.",
+      "categories": [
+        "footer"
       ],
       "registryDependencies": [
         "button"
@@ -261,21 +261,6 @@
       ]
     },
     {
-      "name": "form-3",
-      "type": "registry:block",
-      "description": "Comprehensive account settings form with structured fields for name, email, password, and phone number, featuring icons, grouped inputs, and save actions.",
-      "categories": [
-        "form"
-      ],
-      "registryDependencies": [
-        "button",
-        "button-group",
-        "field",
-        "input",
-        "input-group"
-      ]
-    },
-    {
       "name": "header-1",
       "type": "registry:block",
       "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
@@ -295,6 +280,21 @@
       ],
       "registryDependencies": [
         "button"
+      ]
+    },
+    {
+      "name": "form-3",
+      "type": "registry:block",
+      "description": "Comprehensive account settings form with structured fields for name, email, password, and phone number, featuring icons, grouped inputs, and save actions.",
+      "categories": [
+        "form"
+      ],
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "field",
+        "input",
+        "input-group"
       ]
     },
     {
@@ -340,6 +340,17 @@
       ]
     },
     {
+      "name": "logo-cloud-3",
+      "type": "registry:block",
+      "description": "Smooth infinite-scrolling logo showcase highlighting trusted brands with gradient masking and elegant motion effects.",
+      "categories": [
+        "logo-cloud"
+      ],
+      "registryDependencies": [
+        "https://motion-primitives.com/c/infinite-slider.json"
+      ]
+    },
+    {
       "name": "logo-cloud-4",
       "type": "registry:block",
       "description": "Animated logo carousel with soft edge blurs and gradient accents for a sleek, modern brand showcase.",
@@ -349,17 +360,6 @@
       "registryDependencies": [
         "https://motion-primitives.com/c/infinite-slider.json",
         "https://motion-primitives.com/c/progressive-blur.json"
-      ]
-    },
-    {
-      "name": "logo-cloud-3",
-      "type": "registry:block",
-      "description": "Smooth infinite-scrolling logo showcase highlighting trusted brands with gradient masking and elegant motion effects.",
-      "categories": [
-        "logo-cloud"
-      ],
-      "registryDependencies": [
-        "https://motion-primitives.com/c/infinite-slider.json"
       ]
     },
     {
@@ -413,17 +413,6 @@
       ]
     },
     {
-      "name": "testimonials-1",
-      "type": "registry:block",
-      "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
-      "categories": [
-        "testimonials"
-      ],
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
       "name": "pricing-3",
       "type": "registry:block",
       "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
@@ -432,6 +421,17 @@
       ],
       "registryDependencies": [
         "button"
+      ]
+    },
+    {
+      "name": "testimonials-1",
+      "type": "registry:block",
+      "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
+      "categories": [
+        "testimonials"
+      ],
+      "dependencies": [
+        "motion"
       ]
     },
     {
