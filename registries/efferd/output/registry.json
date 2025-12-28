@@ -2,17 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2025-12-27T00:03:57.148Z",
+  "syncedAt": "2025-12-28T00:03:58.524Z",
   "itemCount": 38,
   "items": [
-    {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
     {
       "name": "contact-2",
       "type": "registry:block",
@@ -22,15 +14,11 @@
       ]
     },
     {
-      "name": "auth-1",
+      "name": "contact-1",
       "type": "registry:block",
-      "description": "Modern auth page with particle background and social login buttons.",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
       "categories": [
-        "auth"
-      ],
-      "registryDependencies": [
-        "button",
-        "https://magicui.design/r/particles.json"
+        "contact"
       ]
     },
     {
@@ -60,6 +48,40 @@
       ]
     },
     {
+      "name": "cta-3",
+      "type": "registry:block",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "cta-1",
+      "type": "registry:block",
+      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "auth-1",
+      "type": "registry:block",
+      "description": "Modern auth page with particle background and social login buttons.",
+      "categories": [
+        "auth"
+      ],
+      "registryDependencies": [
+        "button",
+        "https://magicui.design/r/particles.json"
+      ]
+    },
+    {
       "name": "cta-4",
       "type": "registry:block",
       "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
@@ -83,28 +105,6 @@
       ]
     },
     {
-      "name": "cta-1",
-      "type": "registry:block",
-      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "cta-3",
-      "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "faqs-1",
       "type": "registry:block",
       "description": "Elegant FAQ section with accordion-style questions, smooth transitions, and clear support call-to-action.",
@@ -116,9 +116,9 @@
       ]
     },
     {
-      "name": "faqs-3",
+      "name": "faqs-2",
       "type": "registry:block",
-      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
+      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
       "categories": [
         "faqs"
       ],
@@ -127,9 +127,9 @@
       ]
     },
     {
-      "name": "faqs-2",
+      "name": "faqs-3",
       "type": "registry:block",
-      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
+      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
       "categories": [
         "faqs"
       ],
@@ -164,6 +164,28 @@
       ]
     },
     {
+      "name": "features-1",
+      "type": "registry:block",
+      "description": "Minimal feature card with icon, title, and subtle grid background.",
+      "categories": [
+        "features"
+      ],
+      "registryDependencies": [
+        "https://magicui.design/r/grid-pattern.json"
+      ]
+    },
+    {
+      "name": "footer-1",
+      "type": "registry:block",
+      "description": "Clean footer with company links, resources, and social icons.",
+      "categories": [
+        "footer"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
       "name": "footer-2",
       "type": "registry:block",
       "description": "Animated footer with link sections, brand logo, and social icons.",
@@ -183,14 +205,14 @@
       ]
     },
     {
-      "name": "features-1",
+      "name": "footer-4",
       "type": "registry:block",
-      "description": "Minimal feature card with icon, title, and subtle grid background.",
+      "description": "Multi-column footer with app store buttons, social icons, and link groups.",
       "categories": [
-        "features"
+        "footer"
       ],
       "registryDependencies": [
-        "https://magicui.design/r/grid-pattern.json"
+        "button"
       ]
     },
     {
@@ -202,28 +224,6 @@
       ],
       "dependencies": [
         "motion"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "footer-1",
-      "type": "registry:block",
-      "description": "Clean footer with company links, resources, and social icons.",
-      "categories": [
-        "footer"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "footer-4",
-      "type": "registry:block",
-      "description": "Multi-column footer with app store buttons, social icons, and link groups.",
-      "categories": [
-        "footer"
       ],
       "registryDependencies": [
         "button"
@@ -272,17 +272,6 @@
       ]
     },
     {
-      "name": "header-2",
-      "type": "registry:block",
-      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
-      "categories": [
-        "header"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "form-3",
       "type": "registry:block",
       "description": "Comprehensive account settings form with structured fields for name, email, password, and phone number, featuring icons, grouped inputs, and save actions.",
@@ -295,6 +284,17 @@
         "field",
         "input",
         "input-group"
+      ]
+    },
+    {
+      "name": "header-2",
+      "type": "registry:block",
+      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
+      "categories": [
+        "header"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -351,18 +351,6 @@
       ]
     },
     {
-      "name": "logo-cloud-4",
-      "type": "registry:block",
-      "description": "Animated logo carousel with soft edge blurs and gradient accents for a sleek, modern brand showcase.",
-      "categories": [
-        "logo-cloud"
-      ],
-      "registryDependencies": [
-        "https://motion-primitives.com/c/infinite-slider.json",
-        "https://motion-primitives.com/c/progressive-blur.json"
-      ]
-    },
-    {
       "name": "not-found-1",
       "type": "registry:block",
       "description": "Minimal 404 error page with bold typography, subtle borders, and clear navigation actions.",
@@ -375,18 +363,15 @@
       ]
     },
     {
-      "name": "not-found-2",
+      "name": "logo-cloud-4",
       "type": "registry:block",
-      "description": "Animated 404 page with floating gradient orbs, soft motion effects, and clean centered layout.",
+      "description": "Animated logo carousel with soft edge blurs and gradient accents for a sleek, modern brand showcase.",
       "categories": [
-        "not-found"
-      ],
-      "dependencies": [
-        "motion"
+        "logo-cloud"
       ],
       "registryDependencies": [
-        "button",
-        "empty"
+        "https://motion-primitives.com/c/infinite-slider.json",
+        "https://motion-primitives.com/c/progressive-blur.json"
       ]
     },
     {
@@ -405,22 +390,26 @@
       ]
     },
     {
+      "name": "not-found-2",
+      "type": "registry:block",
+      "description": "Animated 404 page with floating gradient orbs, soft motion effects, and clean centered layout.",
+      "categories": [
+        "not-found"
+      ],
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "empty"
+      ]
+    },
+    {
       "name": "pricing-2",
       "type": "registry:block",
       "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
       "categories": [
         "pricing"
-      ]
-    },
-    {
-      "name": "pricing-3",
-      "type": "registry:block",
-      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
-      "categories": [
-        "pricing"
-      ],
-      "registryDependencies": [
-        "button"
       ]
     },
     {
@@ -432,6 +421,17 @@
       ],
       "dependencies": [
         "motion"
+      ]
+    },
+    {
+      "name": "pricing-3",
+      "type": "registry:block",
+      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
+      "categories": [
+        "pricing"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
