@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "generatedAt": "2025-12-31T00:03:52.258Z",
+  "generatedAt": "2026-01-01T00:04:13.892Z",
   "registries": [
     {
       "name": "ai-elements",
@@ -8,7 +8,7 @@
       "description": "AI-powered UI components for building AI applications with Vercel AI SDK",
       "homepage": "https://registry.ai-sdk.dev/elements",
       "itemCount": 77,
-      "lastSync": "2025-12-31T00:03:11.624Z",
+      "lastSync": "2026-01-01T00:03:23.115Z",
       "url": "registries/ai-elements/output/{name}.json"
     },
     {
@@ -17,7 +17,7 @@
       "description": "Auth, contact, CTA, and other UI blocks",
       "homepage": "https://efferd.com",
       "itemCount": 38,
-      "lastSync": "2025-12-31T00:03:49.665Z",
+      "lastSync": "2026-01-01T00:04:02.945Z",
       "url": "registries/efferd/output/{name}.json"
     },
     {
@@ -25,8 +25,8 @@
       "displayName": "Better Upload",
       "description": "Beautiful file upload components for React applications",
       "homepage": "https://better-upload.com",
-      "itemCount": 3,
-      "lastSync": "2025-12-31T00:03:49.858Z",
+      "itemCount": 4,
+      "lastSync": "2026-01-01T00:04:03.475Z",
       "url": "registries/better-upload/output/{name}.json"
     },
     {
@@ -35,7 +35,7 @@
       "description": "Ready-to-use UI blocks for rapid development",
       "homepage": "https://blocks.so",
       "itemCount": 70,
-      "lastSync": "2025-12-31T00:03:50.190Z",
+      "lastSync": "2026-01-01T00:04:05.678Z",
       "url": "registries/blocks/output/{name}.json"
     },
     {
@@ -44,7 +44,7 @@
       "description": "Pricing tables, subscription management, and billing UI components",
       "homepage": "https://billingsdk.com",
       "itemCount": 35,
-      "lastSync": "2025-12-31T00:03:50.476Z",
+      "lastSync": "2026-01-01T00:04:06.985Z",
       "url": "registries/billingsdk/output/{name}.json"
     },
     {
@@ -53,7 +53,7 @@
       "description": "Beautiful, animated UI components with stunning visual effects for React",
       "homepage": "https://ui.aceternity.com",
       "itemCount": 95,
-      "lastSync": "2025-12-31T00:03:51.091Z",
+      "lastSync": "2026-01-01T00:04:09.622Z",
       "url": "registries/aceternity/output/{name}.json"
     },
     {
@@ -62,7 +62,7 @@
       "description": "AI Chat UI Library - React components for building AI chat interfaces",
       "homepage": "https://assistant-ui.com",
       "itemCount": 17,
-      "lastSync": "2025-12-31T00:03:51.606Z",
+      "lastSync": "2026-01-01T00:04:12.234Z",
       "url": "registries/assistant-ui/output/{name}.json"
     },
     {
@@ -71,7 +71,7 @@
       "description": "Media player UI components for React applications",
       "homepage": "https://limeplay.winoffrg.dev",
       "itemCount": 42,
-      "lastSync": "2025-12-31T00:03:52.200Z",
+      "lastSync": "2026-01-01T00:04:13.835Z",
       "url": "registries/limeplay/output/{name}.json"
     }
   ]
