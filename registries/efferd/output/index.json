@@ -2,9 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-01T00:04:02.945Z",
+  "syncedAt": "2026-01-02T00:03:47.160Z",
   "itemCount": 38,
   "items": [
+    {
+      "name": "contact-2",
+      "type": "registry:block",
+      "description": "Modern contact card with info section and built-in form area.",
+      "categories": [
+        "contact"
+      ]
+    },
     {
       "name": "auth-1",
       "type": "registry:block",
@@ -18,20 +26,17 @@
       ]
     },
     {
-      "name": "cta-2",
+      "name": "contact-1",
       "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
       "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
+        "contact"
       ]
     },
     {
-      "name": "cta-3",
+      "name": "cta-2",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
       "categories": [
         "cta"
       ],
@@ -78,11 +83,14 @@
       ]
     },
     {
-      "name": "contact-2",
+      "name": "cta-3",
       "type": "registry:block",
-      "description": "Modern contact card with info section and built-in form area.",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
       "categories": [
-        "contact"
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -97,17 +105,20 @@
       ]
     },
     {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
       "name": "faqs-1",
       "type": "registry:block",
       "description": "Elegant FAQ section with accordion-style questions, smooth transitions, and clear support call-to-action.",
+      "categories": [
+        "faqs"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ]
+    },
+    {
+      "name": "faqs-3",
+      "type": "registry:block",
+      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
       "categories": [
         "faqs"
       ],
@@ -127,14 +138,15 @@
       ]
     },
     {
-      "name": "faqs-3",
+      "name": "faqs-4",
       "type": "registry:block",
-      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
+      "description": "Multi-category FAQ section with sidebar filters, adaptive accordion layout, and elegant interactive transitions.",
       "categories": [
         "faqs"
       ],
       "registryDependencies": [
-        "accordion"
+        "accordion",
+        "button"
       ]
     },
     {
@@ -163,17 +175,6 @@
       ]
     },
     {
-      "name": "footer-1",
-      "type": "registry:block",
-      "description": "Clean footer with company links, resources, and social icons.",
-      "categories": [
-        "footer"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "footer-2",
       "type": "registry:block",
       "description": "Animated footer with link sections, brand logo, and social icons.",
@@ -185,18 +186,6 @@
       ]
     },
     {
-      "name": "faqs-4",
-      "type": "registry:block",
-      "description": "Multi-category FAQ section with sidebar filters, adaptive accordion layout, and elegant interactive transitions.",
-      "categories": [
-        "faqs"
-      ],
-      "registryDependencies": [
-        "accordion",
-        "button"
-      ]
-    },
-    {
       "name": "footer-3",
       "type": "registry:block",
       "description": "Grid-based footer with social cards, link groups, and copyright bar.",
@@ -205,14 +194,11 @@
       ]
     },
     {
-      "name": "footer-5",
+      "name": "footer-1",
       "type": "registry:block",
-      "description": "Sticky layered footer with gradient background, social icons, and animated link groups.",
+      "description": "Clean footer with company links, resources, and social icons.",
       "categories": [
         "footer"
-      ],
-      "dependencies": [
-        "motion"
       ],
       "registryDependencies": [
         "button"
@@ -224,6 +210,20 @@
       "description": "Multi-column footer with app store buttons, social icons, and link groups.",
       "categories": [
         "footer"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "footer-5",
+      "type": "registry:block",
+      "description": "Sticky layered footer with gradient background, social icons, and animated link groups.",
+      "categories": [
+        "footer"
+      ],
+      "dependencies": [
+        "motion"
       ],
       "registryDependencies": [
         "button"
@@ -287,17 +287,6 @@
       ]
     },
     {
-      "name": "header-2",
-      "type": "registry:block",
-      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
-      "categories": [
-        "header"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "header-3",
       "type": "registry:block",
       "description": "Feature-rich responsive header with scroll blur, animated mobile drawer, and nested navigation menus.",
@@ -310,11 +299,14 @@
       ]
     },
     {
-      "name": "logo-cloud-1",
+      "name": "header-2",
       "type": "registry:block",
-      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
+      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
       "categories": [
-        "logo-cloud"
+        "header"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -329,6 +321,14 @@
       ],
       "registryDependencies": [
         "aspect-ratio"
+      ]
+    },
+    {
+      "name": "logo-cloud-1",
+      "type": "registry:block",
+      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
+      "categories": [
+        "logo-cloud"
       ]
     },
     {
