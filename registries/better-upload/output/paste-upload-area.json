@@ -1,15 +1,15 @@
 {
   "name": "paste-upload-area",
   "title": "Paste Upload Area",
-  "type": "registry:component",
+  "type": "registry:ui",
   "dependencies": [
     "@better-upload/client"
   ],
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/better-upload/paste-upload-area.tsx",
-      "type": "registry:component",
+      "path": "ui/paste-upload-area.tsx",
+      "type": "registry:ui",
       "content": "import type { UploadHookControl } from '@better-upload/client';\n\ntype PasteUploadAreaProps = {\n  children: React.ReactNode;\n  control: UploadHookControl<true>;\n  metadata?: Record<string, unknown>;\n  uploadOverride?: (\n    ...args: Parameters<UploadHookControl<true>['upload']>\n  ) => void;\n\n  // Add any additional props you need.\n};\n\nexport function PasteUploadArea({\n  children,\n  control: { upload, isPending },\n  metadata,\n  uploadOverride,\n}: PasteUploadAreaProps) {\n  return (\n    <div\n      onPasteCapture={(e) => {\n        const files = e.clipboardData.files;\n        if (files.length > 0 && !isPending) {\n          if (uploadOverride) {\n            uploadOverride(files, { metadata });\n          } else {\n            upload(files, { metadata });\n          }\n        }\n      }}\n    >\n      {children}\n    </div>\n  );\n}\n"
     }
   ]
