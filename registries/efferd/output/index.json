@@ -2,21 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-03T00:03:44.698Z",
+  "syncedAt": "2026-01-04T00:03:56.182Z",
   "itemCount": 38,
   "items": [
-    {
-      "name": "auth-1",
-      "type": "registry:block",
-      "description": "Modern auth page with particle background and social login buttons.",
-      "categories": [
-        "auth"
-      ],
-      "registryDependencies": [
-        "button",
-        "https://magicui.design/r/particles.json"
-      ]
-    },
     {
       "name": "contact-1",
       "type": "registry:block",
@@ -26,33 +14,11 @@
       ]
     },
     {
-      "name": "cta-1",
-      "type": "registry:block",
-      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "contact-2",
       "type": "registry:block",
       "description": "Modern contact card with info section and built-in form area.",
       "categories": [
         "contact"
-      ]
-    },
-    {
-      "name": "cta-2",
-      "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
       ]
     },
     {
@@ -71,14 +37,49 @@
       ]
     },
     {
-      "name": "cta-4",
+      "name": "cta-1",
       "type": "registry:block",
-      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
+      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
       "categories": [
         "cta"
       ],
       "registryDependencies": [
         "button"
+      ]
+    },
+    {
+      "name": "cta-2",
+      "type": "registry:block",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "auth-1",
+      "type": "registry:block",
+      "description": "Modern auth page with particle background and social login buttons.",
+      "categories": [
+        "auth"
+      ],
+      "registryDependencies": [
+        "button",
+        "https://magicui.design/r/particles.json"
+      ]
+    },
+    {
+      "name": "cta-5",
+      "type": "registry:block",
+      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group"
       ]
     },
     {
@@ -93,15 +94,14 @@
       ]
     },
     {
-      "name": "cta-5",
+      "name": "cta-4",
       "type": "registry:block",
-      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
+      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
       "categories": [
         "cta"
       ],
       "registryDependencies": [
-        "button",
-        "input-group"
+        "button"
       ]
     },
     {
@@ -150,17 +150,6 @@
       ]
     },
     {
-      "name": "footer-1",
-      "type": "registry:block",
-      "description": "Clean footer with company links, resources, and social icons.",
-      "categories": [
-        "footer"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "faqs-5",
       "type": "registry:block",
       "description": "Responsive FAQ section with filters, search, and accordions for quick answers.",
@@ -183,6 +172,17 @@
       ],
       "registryDependencies": [
         "https://magicui.design/r/grid-pattern.json"
+      ]
+    },
+    {
+      "name": "footer-1",
+      "type": "registry:block",
+      "description": "Clean footer with company links, resources, and social icons.",
+      "categories": [
+        "footer"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -276,15 +276,14 @@
       ]
     },
     {
-      "name": "header-3",
+      "name": "header-1",
       "type": "registry:block",
-      "description": "Feature-rich responsive header with scroll blur, animated mobile drawer, and nested navigation menus.",
+      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
       "categories": [
         "header"
       ],
       "registryDependencies": [
-        "button",
-        "navigation-menu"
+        "button"
       ]
     },
     {
@@ -299,14 +298,15 @@
       ]
     },
     {
-      "name": "header-1",
+      "name": "header-3",
       "type": "registry:block",
-      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
+      "description": "Feature-rich responsive header with scroll blur, animated mobile drawer, and nested navigation menus.",
       "categories": [
         "header"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "navigation-menu"
       ]
     },
     {
@@ -390,6 +390,21 @@
       ]
     },
     {
+      "name": "pricing-1",
+      "type": "registry:block",
+      "description": "Responsive pricing section with frequency toggle, tooltips, and highlightable plans.",
+      "categories": [
+        "pricing"
+      ],
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ]
+    },
+    {
       "name": "pricing-2",
       "type": "registry:block",
       "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
@@ -406,21 +421,6 @@
       ],
       "registryDependencies": [
         "button"
-      ]
-    },
-    {
-      "name": "pricing-1",
-      "type": "registry:block",
-      "description": "Responsive pricing section with frequency toggle, tooltips, and highlightable plans.",
-      "categories": [
-        "pricing"
-      ],
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "tooltip"
       ]
     },
     {

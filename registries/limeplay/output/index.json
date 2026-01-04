@@ -2,12 +2,33 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "limeplay",
   "homepage": "https://limeplay.winoffrg.dev",
-  "syncedAt": "2026-01-03T00:03:48.179Z",
+  "syncedAt": "2026-01-04T00:03:58.180Z",
   "itemCount": 42,
   "items": [
     {
       "name": "fallback-poster",
       "type": "registry:ui",
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json"
+      ]
+    },
+    {
+      "name": "media-provider",
+      "type": "registry:ui",
+      "dependencies": [
+        "zustand"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/create-media-store.json"
+      ]
+    },
+    {
+      "name": "player-layout",
+      "type": "registry:ui",
+      "dependencies": [
+        "@radix-ui/react-compose-refs",
+        "@radix-ui/react-slot"
+      ],
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/media-provider.json"
       ]
@@ -25,27 +46,6 @@
       ]
     },
     {
-      "name": "player-layout",
-      "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-compose-refs",
-        "@radix-ui/react-slot"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json"
-      ]
-    },
-    {
-      "name": "media-provider",
-      "type": "registry:ui",
-      "dependencies": [
-        "zustand"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/create-media-store.json"
-      ]
-    },
-    {
       "name": "media",
       "type": "registry:ui",
       "dependencies": [
@@ -57,6 +57,20 @@
       ]
     },
     {
+      "name": "volume-control",
+      "type": "registry:ui",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/utils.json",
+        "https://limeplay.winoffrg.dev/r/use-volume.json",
+        "https://limeplay.winoffrg.dev/r/use-track-events.json",
+        "https://limeplay.winoffrg.dev/r/use-player.json"
+      ]
+    },
+    {
       "name": "playback-control",
       "type": "registry:ui",
       "dependencies": [
@@ -65,6 +79,15 @@
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/media-provider.json",
         "https://limeplay.winoffrg.dev/r/use-player.json"
+      ]
+    },
+    {
+      "name": "timeline-labels",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/utils.json",
+        "https://limeplay.winoffrg.dev/r/time.json"
       ]
     },
     {
@@ -84,24 +107,6 @@
         "https://limeplay.winoffrg.dev/r/media-provider.json",
         "https://limeplay.winoffrg.dev/r/use-playback-rate.json",
         "select"
-      ]
-    },
-    {
-      "name": "limeplay-logo",
-      "type": "registry:ui"
-    },
-    {
-      "name": "volume-control",
-      "type": "registry:ui",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/utils.json",
-        "https://limeplay.winoffrg.dev/r/use-volume.json",
-        "https://limeplay.winoffrg.dev/r/use-track-events.json",
-        "https://limeplay.winoffrg.dev/r/use-player.json"
       ]
     },
     {
@@ -126,13 +131,8 @@
       ]
     },
     {
-      "name": "timeline-labels",
-      "type": "registry:ui",
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/utils.json",
-        "https://limeplay.winoffrg.dev/r/time.json"
-      ]
+      "name": "limeplay-logo",
+      "type": "registry:ui"
     },
     {
       "name": "captions",
@@ -144,54 +144,6 @@
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/media-provider.json",
         "https://limeplay.winoffrg.dev/r/use-captions.json"
-      ]
-    },
-    {
-      "name": "seek-controls",
-      "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-slot"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/use-seek.json",
-        "https://limeplay.winoffrg.dev/r/use-player.json"
-      ]
-    },
-    {
-      "name": "basic-player",
-      "type": "registry:block",
-      "author": "Rohan Gupta (@winoffrg)",
-      "description": "Limeplay Basic Player",
-      "dependencies": [
-        "@phosphor-icons/react",
-        "zustand",
-        "shaka-player"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/player-layout.json",
-        "https://limeplay.winoffrg.dev/r/root-container.json",
-        "https://limeplay.winoffrg.dev/r/fallback-poster.json",
-        "https://limeplay.winoffrg.dev/r/limeplay-logo.json",
-        "https://limeplay.winoffrg.dev/r/media.json",
-        "https://limeplay.winoffrg.dev/r/utils.json",
-        "button",
-        "https://limeplay.winoffrg.dev/r/playback-control.json",
-        "https://limeplay.winoffrg.dev/r/use-player.json",
-        "https://limeplay.winoffrg.dev/r/use-shaka-player.json"
-      ]
-    },
-    {
-      "name": "use-player",
-      "type": "registry:hook",
-      "dependencies": [
-        "zustand"
-      ],
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/utils.json",
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/player-hooks.json"
       ]
     },
     {
@@ -235,6 +187,42 @@
       ]
     },
     {
+      "name": "seek-controls",
+      "type": "registry:ui",
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/use-seek.json",
+        "https://limeplay.winoffrg.dev/r/use-player.json"
+      ]
+    },
+    {
+      "name": "basic-player",
+      "type": "registry:block",
+      "author": "Rohan Gupta (@winoffrg)",
+      "description": "Limeplay Basic Player",
+      "dependencies": [
+        "@phosphor-icons/react",
+        "zustand",
+        "shaka-player"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/player-layout.json",
+        "https://limeplay.winoffrg.dev/r/root-container.json",
+        "https://limeplay.winoffrg.dev/r/fallback-poster.json",
+        "https://limeplay.winoffrg.dev/r/limeplay-logo.json",
+        "https://limeplay.winoffrg.dev/r/media.json",
+        "https://limeplay.winoffrg.dev/r/utils.json",
+        "button",
+        "https://limeplay.winoffrg.dev/r/playback-control.json",
+        "https://limeplay.winoffrg.dev/r/use-player.json",
+        "https://limeplay.winoffrg.dev/r/use-shaka-player.json"
+      ]
+    },
+    {
       "name": "create-media-store",
       "type": "registry:lib",
       "dependencies": [
@@ -242,6 +230,54 @@
       ],
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/use-player.json"
+      ]
+    },
+    {
+      "name": "time",
+      "type": "registry:lib",
+      "dependencies": [
+        "date-fns"
+      ]
+    },
+    {
+      "name": "use-volume",
+      "type": "registry:hook",
+      "dependencies": [
+        "lodash.clamp",
+        "zustand"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/use-player.json",
+        "https://limeplay.winoffrg.dev/r/utils.json",
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/player-hooks.json"
+      ]
+    },
+    {
+      "name": "use-player",
+      "type": "registry:hook",
+      "dependencies": [
+        "zustand"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/utils.json",
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/player-hooks.json"
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib"
+    },
+    {
+      "name": "use-track-events",
+      "type": "registry:hook",
+      "dependencies": [
+        "lodash.clamp",
+        "zustand"
+      ],
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/player-hooks.json"
       ]
     },
     {
@@ -271,38 +307,15 @@
       ]
     },
     {
-      "name": "time",
-      "type": "registry:lib",
-      "dependencies": [
-        "date-fns"
-      ]
-    },
-    {
-      "name": "utils",
-      "type": "registry:lib"
-    },
-    {
-      "name": "use-volume",
+      "name": "use-playback-rate",
       "type": "registry:hook",
       "dependencies": [
-        "lodash.clamp",
         "zustand"
       ],
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/use-player.json",
         "https://limeplay.winoffrg.dev/r/utils.json",
         "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/player-hooks.json"
-      ]
-    },
-    {
-      "name": "use-track-events",
-      "type": "registry:hook",
-      "dependencies": [
-        "lodash.clamp",
-        "zustand"
-      ],
-      "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/player-hooks.json"
       ]
     },
@@ -320,28 +333,8 @@
       ]
     },
     {
-      "name": "player-hooks-demo",
-      "type": "registry:ui",
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/use-player.json",
-        "https://limeplay.winoffrg.dev/r/use-shaka-player.json",
-        "https://limeplay.winoffrg.dev/r/use-timeline.json",
-        "https://limeplay.winoffrg.dev/r/use-volume.json",
-        "https://limeplay.winoffrg.dev/r/use-captions.json",
-        "https://limeplay.winoffrg.dev/r/use-playback-rate.json"
-      ]
-    },
-    {
       "name": "use-interval",
       "type": "registry:hook"
-    },
-    {
-      "name": "fallback-poster-demo",
-      "type": "registry:example",
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/fallback-poster.json",
-        "https://limeplay.winoffrg.dev/r/limeplay-logo.json"
-      ]
     },
     {
       "name": "custom-demo-controls",
@@ -355,32 +348,39 @@
       ]
     },
     {
-      "name": "use-playback-rate",
-      "type": "registry:hook",
-      "dependencies": [
-        "zustand"
-      ],
+      "name": "player-hooks-demo",
+      "type": "registry:ui",
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/use-player.json",
-        "https://limeplay.winoffrg.dev/r/utils.json",
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/player-hooks.json"
+        "https://limeplay.winoffrg.dev/r/use-shaka-player.json",
+        "https://limeplay.winoffrg.dev/r/use-timeline.json",
+        "https://limeplay.winoffrg.dev/r/use-volume.json",
+        "https://limeplay.winoffrg.dev/r/use-captions.json",
+        "https://limeplay.winoffrg.dev/r/use-playback-rate.json"
       ]
     },
     {
-      "name": "volume-state-control-demo",
+      "name": "fallback-poster-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/mute-control.json"
+        "https://limeplay.winoffrg.dev/r/fallback-poster.json",
+        "https://limeplay.winoffrg.dev/r/limeplay-logo.json"
       ]
     },
     {
-      "name": "volume-slider-control-vertical-demo",
+      "name": "volume-slider-control-horizontal-demo",
       "type": "registry:example",
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/volume-control.json",
         "https://limeplay.winoffrg.dev/r/volume-state-control-demo.json"
+      ]
+    },
+    {
+      "name": "playback-state-control-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/playback-control.json"
       ]
     },
     {
@@ -399,6 +399,14 @@
       ]
     },
     {
+      "name": "volume-state-control-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/mute-control.json"
+      ]
+    },
+    {
       "name": "timeline-control-demo",
       "type": "registry:example",
       "registryDependencies": [
@@ -408,11 +416,11 @@
       ]
     },
     {
-      "name": "playback-state-control-demo",
+      "name": "volume-slider-control-vertical-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/playback-control.json"
+        "https://limeplay.winoffrg.dev/r/volume-control.json",
+        "https://limeplay.winoffrg.dev/r/volume-state-control-demo.json"
       ]
     },
     {
@@ -425,11 +433,13 @@
       ]
     },
     {
-      "name": "volume-slider-control-horizontal-demo",
+      "name": "timeline-labels-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/volume-control.json",
-        "https://limeplay.winoffrg.dev/r/volume-state-control-demo.json"
+        "https://limeplay.winoffrg.dev/r/media-provider.json",
+        "https://limeplay.winoffrg.dev/r/timeline-control.json",
+        "https://limeplay.winoffrg.dev/r/timeline-labels.json",
+        "https://limeplay.winoffrg.dev/r/use-timeline.json"
       ]
     },
     {
@@ -438,16 +448,6 @@
       "registryDependencies": [
         "https://limeplay.winoffrg.dev/r/media-provider.json",
         "https://limeplay.winoffrg.dev/r/seek-controls.json"
-      ]
-    },
-    {
-      "name": "timeline-labels-demo",
-      "type": "registry:example",
-      "registryDependencies": [
-        "https://limeplay.winoffrg.dev/r/media-provider.json",
-        "https://limeplay.winoffrg.dev/r/timeline-control.json",
-        "https://limeplay.winoffrg.dev/r/timeline-labels.json",
-        "https://limeplay.winoffrg.dev/r/use-timeline.json"
       ]
     },
     {
