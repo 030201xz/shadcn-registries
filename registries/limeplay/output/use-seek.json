@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/default/hooks/use-seek.ts",
-      "content": "import {\n  useGetStore,\n  useMediaStore,\n} from \"@/registry/default/ui/media-provider\"\n\nexport function useSeek() {\n  const store = useGetStore()\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n\n  function seek(offset: number) {\n    if (!mediaRef.current) {\n      return\n    }\n\n    const media = mediaRef.current\n    const newTime = media.currentTime + offset\n\n    media.currentTime = Math.max(0, Math.min(newTime, media.duration || 0))\n\n    store.setState({\n      idle: false,\n    })\n  }\n\n  return {\n    seek,\n  }\n}\n",
+      "content": "import {\n  useGetStore,\n  useMediaStore,\n} from \"@/registry/default/ui/media-provider\"\n\n/**\n * Return type for the useSeek hook.\n * Provides functionality to seek forward or backward in media playback.\n */\nexport interface UseSeekReturn {\n  /**\n   * Seeks to a relative position in the media timeline.\n   * @param offset - Number of seconds to seek (positive for forward, negative for backward)\n   */\n  seek: (offset: number) => void\n}\n\nexport function useSeek(): UseSeekReturn {\n  const store = useGetStore()\n  const mediaRef = useMediaStore((state) => state.mediaRef)\n\n  function seek(offset: number) {\n    if (!mediaRef.current) {\n      return\n    }\n\n    const media = mediaRef.current\n    const newTime = media.currentTime + offset\n\n    media.currentTime = Math.max(0, Math.min(newTime, media.duration || 0))\n\n    store.setState({\n      idle: false,\n    })\n  }\n\n  return {\n    seek,\n  }\n}\n",
       "type": "registry:hook",
       "target": "hooks/limeplay/use-seek.ts"
     }

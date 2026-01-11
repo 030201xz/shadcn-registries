@@ -19,7 +19,7 @@
     "button",
     "https://limeplay.winoffrg.dev/r/playback-control.json",
     "https://limeplay.winoffrg.dev/r/use-player.json",
-    "https://limeplay.winoffrg.dev/r/use-shaka-player.json"
+    "https://limeplay.winoffrg.dev/r/use-playback.json"
   ],
   "files": [
     {
@@ -42,7 +42,7 @@
     },
     {
       "path": "registry/default/blocks/basic-player/components/player-hooks.tsx",
-      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\nimport { useShakaPlayer } from \"@/registry/default/hooks/use-shaka-player\"\n\nexport const PlayerHooks = React.memo(() => {\n  useShakaPlayer()\n  usePlayerStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
+      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { usePlaybackStates } from \"@/registry/default/hooks/use-playback\"\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\n\nexport const PlayerHooks = React.memo(() => {\n  usePlayerStates()\n  usePlaybackStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
       "type": "registry:component",
       "target": "components/basic-player/components/player-hooks.tsx"
     },
