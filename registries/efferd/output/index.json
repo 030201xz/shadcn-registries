@@ -2,17 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-11T00:03:55.855Z",
+  "syncedAt": "2026-01-12T00:03:52.428Z",
   "itemCount": 38,
   "items": [
-    {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
     {
       "name": "contact-2",
       "type": "registry:block",
@@ -22,20 +14,24 @@
       ]
     },
     {
-      "name": "cta-2",
+      "name": "auth-2",
       "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
       "categories": [
-        "cta"
+        "auth"
+      ],
+      "dependencies": [
+        "motion"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "input-group"
       ]
     },
     {
-      "name": "cta-3",
+      "name": "cta-2",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
       "categories": [
         "cta"
       ],
@@ -78,6 +74,25 @@
       ]
     },
     {
+      "name": "cta-3",
+      "type": "registry:block",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "name": "contact-1",
+      "type": "registry:block",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
+      "categories": [
+        "contact"
+      ]
+    },
+    {
       "name": "auth-1",
       "type": "registry:block",
       "description": "Modern auth page with particle background and social login buttons.",
@@ -87,21 +102,6 @@
       "registryDependencies": [
         "button",
         "https://magicui.design/r/particles.json"
-      ]
-    },
-    {
-      "name": "auth-2",
-      "type": "registry:block",
-      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
-      "categories": [
-        "auth"
-      ],
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "input-group"
       ]
     },
     {
@@ -363,6 +363,21 @@
       ]
     },
     {
+      "name": "not-found-2",
+      "type": "registry:block",
+      "description": "Animated 404 page with floating gradient orbs, soft motion effects, and clean centered layout.",
+      "categories": [
+        "not-found"
+      ],
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "empty"
+      ]
+    },
+    {
       "name": "not-found-1",
       "type": "registry:block",
       "description": "Minimal 404 error page with bold typography, subtle borders, and clear navigation actions.",
@@ -387,21 +402,6 @@
       "registryDependencies": [
         "button",
         "tooltip"
-      ]
-    },
-    {
-      "name": "not-found-2",
-      "type": "registry:block",
-      "description": "Animated 404 page with floating gradient orbs, soft motion effects, and clean centered layout.",
-      "categories": [
-        "not-found"
-      ],
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "empty"
       ]
     },
     {

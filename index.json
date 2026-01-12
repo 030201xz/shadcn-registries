@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "generatedAt": "2026-01-11T00:04:02.819Z",
+  "generatedAt": "2026-01-12T00:03:55.741Z",
   "registries": [
     {
       "name": "ai-elements",
@@ -8,7 +8,7 @@
       "description": "AI-powered UI components for building AI applications with Vercel AI SDK",
       "homepage": "https://registry.ai-sdk.dev/elements",
       "itemCount": 77,
-      "lastSync": "2026-01-11T00:03:17.592Z",
+      "lastSync": "2026-01-12T00:03:14.989Z",
       "url": "registries/ai-elements/output/{name}.json"
     },
     {
@@ -17,7 +17,7 @@
       "description": "Auth, contact, CTA, and other UI blocks",
       "homepage": "https://efferd.com",
       "itemCount": 38,
-      "lastSync": "2026-01-11T00:03:55.855Z",
+      "lastSync": "2026-01-12T00:03:52.428Z",
       "url": "registries/efferd/output/{name}.json"
     },
     {
@@ -26,7 +26,7 @@
       "description": "Beautiful file upload components for React applications",
       "homepage": "https://better-upload.com",
       "itemCount": 4,
-      "lastSync": "2026-01-11T00:03:56.218Z",
+      "lastSync": "2026-01-12T00:03:52.714Z",
       "url": "registries/better-upload/output/{name}.json"
     },
     {
@@ -35,7 +35,7 @@
       "description": "Ready-to-use UI blocks for rapid development",
       "homepage": "https://blocks.so",
       "itemCount": 70,
-      "lastSync": "2026-01-11T00:03:57.720Z",
+      "lastSync": "2026-01-12T00:03:53.167Z",
       "url": "registries/blocks/output/{name}.json"
     },
     {
@@ -44,7 +44,7 @@
       "description": "Pricing tables, subscription management, and billing UI components",
       "homepage": "https://billingsdk.com",
       "itemCount": 35,
-      "lastSync": "2026-01-11T00:03:58.533Z",
+      "lastSync": "2026-01-12T00:03:53.690Z",
       "url": "registries/billingsdk/output/{name}.json"
     },
     {
@@ -53,7 +53,7 @@
       "description": "Beautiful, animated UI components with stunning visual effects for React",
       "homepage": "https://ui.aceternity.com",
       "itemCount": 95,
-      "lastSync": "2026-01-11T00:03:59.861Z",
+      "lastSync": "2026-01-12T00:03:54.231Z",
       "url": "registries/aceternity/output/{name}.json"
     },
     {
@@ -62,7 +62,7 @@
       "description": "AI Chat UI Library - React components for building AI chat interfaces",
       "homepage": "https://assistant-ui.com",
       "itemCount": 17,
-      "lastSync": "2026-01-11T00:04:01.745Z",
+      "lastSync": "2026-01-12T00:03:54.881Z",
       "url": "registries/assistant-ui/output/{name}.json"
     },
     {
@@ -71,7 +71,7 @@
       "description": "Media player UI components for React applications",
       "homepage": "https://limeplay.winoffrg.dev",
       "itemCount": 44,
-      "lastSync": "2026-01-11T00:04:02.759Z",
+      "lastSync": "2026-01-12T00:03:55.681Z",
       "url": "registries/limeplay/output/{name}.json"
     }
   ]
