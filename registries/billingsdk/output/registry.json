@@ -2,21 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "billingsdk",
   "homepage": "https://billingsdk.com",
-  "syncedAt": "2026-01-12T00:03:53.690Z",
+  "syncedAt": "2026-01-13T00:03:49.821Z",
   "itemCount": 35,
   "items": [
-    {
-      "name": "index",
-      "type": "registry:lib",
-      "title": "BillingSDK Config",
-      "description": "Config for BillingSDK components"
-    },
-    {
-      "name": "hello-world",
-      "type": "registry:block",
-      "title": "Hello World Component",
-      "description": "A simple hello world component"
-    },
     {
       "name": "pricing-table-one",
       "type": "registry:block",
@@ -37,6 +25,70 @@
         "separator",
         "utils"
       ]
+    },
+    {
+      "name": "pricing-table-two",
+      "type": "registry:block",
+      "title": "Pricing Table Two",
+      "description": "A pricing table component with a feature table",
+      "dependencies": [
+        "lucide-react",
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "table",
+        "switch",
+        "utils"
+      ]
+    },
+    {
+      "name": "pricing-table-three",
+      "type": "registry:block",
+      "title": "Pricing Table Three",
+      "description": "A pricing table component with a feature table",
+      "dependencies": [
+        "lucide-react",
+        "class-variance-authority",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "badge",
+        "radio-group",
+        "label",
+        "utils"
+      ]
+    },
+    {
+      "name": "invoice-history",
+      "type": "registry:block",
+      "title": "Invoice History",
+      "description": "A read-only invoice history table",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "button",
+        "table",
+        "badge",
+        "utils"
+      ]
+    },
+    {
+      "name": "hello-world",
+      "type": "registry:block",
+      "title": "Hello World Component",
+      "description": "A simple hello world component"
+    },
+    {
+      "name": "index",
+      "type": "registry:lib",
+      "title": "BillingSDK Config",
+      "description": "Config for BillingSDK components"
     },
     {
       "name": "all",
@@ -76,22 +128,6 @@
       ]
     },
     {
-      "name": "invoice-history",
-      "type": "registry:block",
-      "title": "Invoice History",
-      "description": "A read-only invoice history table",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card",
-        "button",
-        "table",
-        "badge",
-        "utils"
-      ]
-    },
-    {
       "name": "pricing-table-four",
       "type": "registry:block",
       "title": "Pricing Table Four",
@@ -106,58 +142,6 @@
         "label",
         "radio-group",
         "badge",
-        "utils"
-      ]
-    },
-    {
-      "name": "pricing-table-two",
-      "type": "registry:block",
-      "title": "Pricing Table Two",
-      "description": "A pricing table component with a feature table",
-      "dependencies": [
-        "lucide-react",
-        "class-variance-authority",
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "table",
-        "switch",
-        "utils"
-      ]
-    },
-    {
-      "name": "pricing-table-five",
-      "type": "registry:block",
-      "title": "Pricing Table Five",
-      "description": "A modern pricing table component with contact us plan",
-      "dependencies": [
-        "lucide-react",
-        "class-variance-authority",
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "badge",
-        "radio-group",
-        "label",
-        "utils"
-      ]
-    },
-    {
-      "name": "pricing-table-six",
-      "type": "registry:block",
-      "title": "Pricing Table Six",
-      "description": "A modern pricing table component with contact us plan",
-      "dependencies": [
-        "lucide-react",
-        "class-variance-authority",
-        "framer-motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
         "utils"
       ]
     },
@@ -194,25 +178,45 @@
       ]
     },
     {
-      "name": "cancel-subscription-card",
+      "name": "pricing-table-six",
       "type": "registry:block",
-      "title": "Cancel Subscription Card",
-      "description": "A cancel subscription card component",
+      "title": "Pricing Table Six",
+      "description": "A modern pricing table component with contact us plan",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "class-variance-authority",
+        "framer-motion"
       ],
       "registryDependencies": [
         "button",
-        "badge",
         "card",
         "utils"
       ]
     },
     {
-      "name": "pricing-table-three",
+      "name": "pricing-table-eight",
       "type": "registry:block",
-      "title": "Pricing Table Three",
-      "description": "A pricing table component with a feature table",
+      "title": "Pricing Table Eight",
+      "description": "A modern pricing table component with a clean design.",
+      "dependencies": [
+        "lucide-react",
+        "class-variance-authority",
+        "framer-motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "badge",
+        "radio-group",
+        "label",
+        "utils"
+      ]
+    },
+    {
+      "name": "pricing-table-five",
+      "type": "registry:block",
+      "title": "Pricing Table Five",
+      "description": "A modern pricing table component with contact us plan",
       "dependencies": [
         "lucide-react",
         "class-variance-authority",
@@ -228,14 +232,16 @@
       ]
     },
     {
-      "name": "usage-based-pricing",
+      "name": "cancel-subscription-card",
       "type": "registry:block",
-      "title": "Usage Based Pricing",
-      "description": "A usage based pricing component",
+      "title": "Cancel Subscription Card",
+      "description": "A cancel subscription card component",
       "dependencies": [
-        "motion"
+        "lucide-react"
       ],
       "registryDependencies": [
+        "button",
+        "badge",
         "card",
         "utils"
       ]
@@ -256,40 +262,6 @@
         "toggle",
         "label",
         "dialog",
-        "utils"
-      ]
-    },
-    {
-      "name": "usage-meter-linear",
-      "type": "registry:block",
-      "title": "Usage Meter Linear",
-      "description": "A usage meter linear component",
-      "dependencies": [
-        "lucide-react",
-        "motion"
-      ],
-      "registryDependencies": [
-        "card",
-        "badge",
-        "utils"
-      ]
-    },
-    {
-      "name": "update-plan-card",
-      "type": "registry:block",
-      "title": "Update Plan Card",
-      "description": "A update plan card component",
-      "dependencies": [
-        "lucide-react",
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "badge",
-        "radio-group",
-        "toggle",
-        "label",
-        "card",
         "utils"
       ]
     },
@@ -327,51 +299,34 @@
       ]
     },
     {
-      "name": "payment-details",
+      "name": "update-plan-card",
       "type": "registry:block",
-      "title": "Payment Details",
-      "description": "A comprehensive payment details form component with card details, billing information, and country selection",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "utils"
-      ]
-    },
-    {
-      "name": "banner",
-      "type": "registry:block",
-      "title": "Top Banner",
-      "description": "A banner component",
+      "title": "Update Plan Card",
+      "description": "A update plan card component",
       "dependencies": [
         "lucide-react",
         "motion"
       ],
       "registryDependencies": [
         "button",
+        "badge",
+        "radio-group",
+        "toggle",
+        "label",
+        "card",
         "utils"
       ]
     },
     {
-      "name": "payment-method-selector",
+      "name": "usage-based-pricing",
       "type": "registry:block",
-      "title": "Payment Method Selector",
-      "description": "A payment method selector component with support for cards, digital wallets, UPI, and BNPL services",
+      "title": "Usage Based Pricing",
+      "description": "A usage based pricing component",
       "dependencies": [
-        "lucide-react",
         "motion"
       ],
       "registryDependencies": [
-        "button",
-        "dialog",
-        "tooltip",
         "card",
-        "input",
-        "label",
         "utils"
       ]
     },
@@ -418,20 +373,35 @@
       ]
     },
     {
-      "name": "billing-settings-2",
+      "name": "banner",
       "type": "registry:block",
-      "title": "Billing Settings 2",
-      "description": "A comprehensive billing settings component with tabs for general, payment methods, invoices, and usage limits",
+      "title": "Top Banner",
+      "description": "A banner component",
       "dependencies": [
-        "currency-codes"
+        "lucide-react",
+        "motion"
       ],
       "registryDependencies": [
         "button",
+        "utils"
+      ]
+    },
+    {
+      "name": "payment-method-selector",
+      "type": "registry:block",
+      "title": "Payment Method Selector",
+      "description": "A payment method selector component with support for cards, digital wallets, UPI, and BNPL services",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "tooltip",
         "card",
         "input",
         "label",
-        "select",
-        "switch",
         "utils"
       ]
     },
@@ -455,84 +425,51 @@
       ]
     },
     {
-      "name": "detailed-usage-table",
+      "name": "payment-details",
       "type": "registry:block",
-      "title": "Detailed Usage Table",
-      "description": "A detailed usage table component with resource consumption breakdown",
-      "registryDependencies": [
-        "table",
-        "card",
-        "badge",
-        "utils"
-      ]
-    },
-    {
-      "name": "upcoming-charges",
-      "type": "registry:block",
-      "title": "Upcoming Charges",
-      "description": "A component that displays information about upcoming billing cycles, including the next billing date, total amount, and a breakdown of individual charges",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card",
-        "badge",
-        "utils"
-      ]
-    },
-    {
-      "name": "usage-table",
-      "type": "registry:block",
-      "title": "Usage Table",
-      "description": "A usage table component with resource consumption breakdown",
-      "registryDependencies": [
-        "table",
-        "card",
-        "utils"
-      ]
-    },
-    {
-      "name": "payment-card",
-      "type": "registry:block",
-      "title": "Payment Card",
-      "description": "A payment card component",
-      "dependencies": [
-        "lucide-react",
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "utils"
-      ]
-    },
-    {
-      "name": "payment-failure",
-      "type": "registry:block",
-      "title": "Payment Failure",
-      "description": "A payment failure card component with retry, home, and support actions.",
+      "title": "Payment Details",
+      "description": "A comprehensive payment details form component with card details, billing information, and country selection",
       "dependencies": [
         "lucide-react"
       ],
       "registryDependencies": [
         "button",
         "card",
+        "input",
+        "label",
         "utils"
       ]
     },
     {
-      "name": "trial-expiry-card",
+      "name": "usage-meter-linear",
       "type": "registry:block",
-      "title": "Trial Expiry Card",
-      "description": "A card component that displays trial expiration countdown with progress indicator and feature list",
+      "title": "Usage Meter Linear",
+      "description": "A usage meter linear component",
       "dependencies": [
         "lucide-react",
         "motion"
       ],
       "registryDependencies": [
-        "button",
         "card",
         "badge",
+        "utils"
+      ]
+    },
+    {
+      "name": "billing-settings-2",
+      "type": "registry:block",
+      "title": "Billing Settings 2",
+      "description": "A comprehensive billing settings component with tabs for general, payment methods, invoices, and usage limits",
+      "dependencies": [
+        "currency-codes"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label",
+        "select",
+        "switch",
         "utils"
       ]
     },
@@ -554,6 +491,59 @@
       ]
     },
     {
+      "name": "detailed-usage-table",
+      "type": "registry:block",
+      "title": "Detailed Usage Table",
+      "description": "A detailed usage table component with resource consumption breakdown",
+      "registryDependencies": [
+        "table",
+        "card",
+        "badge",
+        "utils"
+      ]
+    },
+    {
+      "name": "trial-expiry-card",
+      "type": "registry:block",
+      "title": "Trial Expiry Card",
+      "description": "A card component that displays trial expiration countdown with progress indicator and feature list",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "badge",
+        "utils"
+      ]
+    },
+    {
+      "name": "usage-table",
+      "type": "registry:block",
+      "title": "Usage Table",
+      "description": "A usage table component with resource consumption breakdown",
+      "registryDependencies": [
+        "table",
+        "card",
+        "utils"
+      ]
+    },
+    {
+      "name": "payment-failure",
+      "type": "registry:block",
+      "title": "Payment Failure",
+      "description": "A payment failure card component with retry, home, and support actions.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "utils"
+      ]
+    },
+    {
       "name": "billing-screen",
       "type": "registry:block",
       "title": "Billing Screen",
@@ -568,21 +558,31 @@
       ]
     },
     {
-      "name": "pricing-table-eight",
+      "name": "upcoming-charges",
       "type": "registry:block",
-      "title": "Pricing Table Eight",
-      "description": "A modern pricing table component with a clean design.",
+      "title": "Upcoming Charges",
+      "description": "A component that displays information about upcoming billing cycles, including the next billing date, total amount, and a breakdown of individual charges",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "badge",
+        "utils"
+      ]
+    },
+    {
+      "name": "payment-card",
+      "type": "registry:block",
+      "title": "Payment Card",
+      "description": "A payment card component",
       "dependencies": [
         "lucide-react",
-        "class-variance-authority",
-        "framer-motion"
+        "motion"
       ],
       "registryDependencies": [
         "button",
         "card",
-        "badge",
-        "radio-group",
-        "label",
         "utils"
       ]
     }
