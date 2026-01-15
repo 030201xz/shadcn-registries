@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-persona-command",
+  "type": "registry:block",
+  "title": "Persona Command Example",
+  "description": "Example implementation of persona command.",
+  "files": [
+    {
+      "path": "registry/default/examples/persona-command.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { Persona, type PersonaState } from \"@/components/ai-elements/persona\";\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\nimport {\n  BrainIcon,\n  CircleIcon,\n  EyeClosedIcon,\n  type LucideIcon,\n  MegaphoneIcon,\n  MicIcon,\n} from \"lucide-react\";\nimport { useState } from \"react\";\n\nconst states: {\n  state: PersonaState;\n  icon: LucideIcon;\n  label: string;\n}[] = [\n  {\n    state: \"idle\",\n    icon: CircleIcon,\n    label: \"Idle\",\n  },\n  {\n    state: \"listening\",\n    icon: MicIcon,\n    label: \"Listening\",\n  },\n  {\n    state: \"thinking\",\n    icon: BrainIcon,\n    label: \"Thinking\",\n  },\n  {\n    state: \"speaking\",\n    icon: MegaphoneIcon,\n    label: \"Speaking\",\n  },\n  {\n    state: \"asleep\",\n    icon: EyeClosedIcon,\n    label: \"Asleep\",\n  },\n];\n\nconst Example = () => {\n  const [currentState, setCurrentState] = useState<PersonaState>(\"idle\");\n\n  return (\n    <div className=\"flex size-full flex-col items-center justify-center gap-4\">\n      <Persona className=\"size-32\" state={currentState} variant=\"command\" />\n\n      <ButtonGroup orientation=\"horizontal\">\n        {states.map((state) => (\n          <Tooltip key={state.state}>\n            <TooltipTrigger asChild>\n              <Button\n                onClick={() => setCurrentState(state.state)}\n                size=\"icon-sm\"\n                variant={currentState === state.state ? \"default\" : \"outline\"}\n              >\n                <state.icon className=\"size-4\" />\n              </Button>\n            </TooltipTrigger>\n            <TooltipContent>{state.label}</TooltipContent>\n          </Tooltip>\n        ))}\n      </ButtonGroup>\n    </div>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-persona-command.tsx"
+    }
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/persona.json",
+    "button",
+    "button-group",
+    "tooltip"
+  ]
+}

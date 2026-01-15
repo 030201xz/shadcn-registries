@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-speech-input",
+  "type": "registry:block",
+  "title": "Speech Input Example",
+  "description": "Example implementation of speech input.",
+  "files": [
+    {
+      "path": "registry/default/examples/speech-input.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport { SpeechInput } from \"@/components/ai-elements/speech-input\";\nimport { useState } from \"react\";\n\nconst Example = () => {\n  const [transcript, setTranscript] = useState(\"\");\n\n  const handleTranscriptionChange = (text: string) => {\n    setTranscript((prev) => {\n      const newText = prev ? `${prev} ${text}` : text;\n      return newText;\n    });\n  };\n\n  const handleClear = () => {\n    setTranscript(\"\");\n  };\n\n  /**\n   * Fallback handler for browsers that don't support Web Speech API (Firefox, Safari).\n   * This function receives recorded audio and should send it to a transcription service.\n   * Example uses OpenAI Whisper API - replace with your preferred service.\n   */\n  const handleAudioRecorded = async (audioBlob: Blob): Promise<string> => {\n    const formData = new FormData();\n    formData.append(\"file\", audioBlob, \"audio.webm\");\n    formData.append(\"model\", \"whisper-1\");\n\n    const response = await fetch(\n      \"https://api.openai.com/v1/audio/transcriptions\",\n      {\n        method: \"POST\",\n        headers: {\n          Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,\n        },\n        body: formData,\n      }\n    );\n\n    if (!response.ok) {\n      throw new Error(\"Transcription failed\");\n    }\n\n    const data = await response.json();\n    return data.text;\n  };\n\n  return (\n    <div className=\"flex size-full flex-col items-center justify-center gap-4\">\n      <div className=\"flex gap-2\">\n        <SpeechInput\n          onTranscriptionChange={handleTranscriptionChange}\n          onAudioRecorded={handleAudioRecorded}\n          size=\"icon\"\n          variant=\"outline\"\n        />\n        {transcript && (\n          <button\n            className=\"text-muted-foreground text-sm underline hover:text-foreground\"\n            onClick={handleClear}\n            type=\"button\"\n          >\n            Clear\n          </button>\n        )}\n      </div>\n      {transcript ? (\n        <div className=\"max-w-md rounded-lg border bg-card p-4 text-sm\">\n          <p className=\"text-muted-foreground\">\n            <strong>Transcript:</strong>\n          </p>\n          <p className=\"mt-2\">{transcript}</p>\n        </div>\n      ) : (\n        <p className=\"text-muted-foreground text-sm\">\n          Click the microphone to start speaking\n        </p>\n      )}\n    </div>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-speech-input.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/speech-input.json"
+  ]
+}

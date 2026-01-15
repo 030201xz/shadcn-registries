@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-mic-selector",
+  "type": "registry:block",
+  "title": "Mic Selector Example",
+  "description": "Example implementation of mic selector.",
+  "files": [
+    {
+      "path": "registry/default/examples/mic-selector.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  MicSelector,\n  MicSelectorContent,\n  MicSelectorEmpty,\n  MicSelectorInput,\n  MicSelectorItem,\n  MicSelectorLabel,\n  MicSelectorList,\n  MicSelectorTrigger,\n  MicSelectorValue,\n} from \"@/components/ai-elements/mic-selector\";\n\nconst Example = () => (\n  <div className=\"flex size-full flex-col items-center justify-center gap-4\">\n    <MicSelector\n      onOpenChange={(open) => console.log(\"MicSelector is open?\", open)}\n      onValueChange={(newValue) => console.log(\"MicSelector value:\", newValue)}\n    >\n      <MicSelectorTrigger className=\"w-full max-w-sm\">\n        <MicSelectorValue />\n      </MicSelectorTrigger>\n      <MicSelectorContent>\n        <MicSelectorInput />\n        <MicSelectorEmpty />\n        <MicSelectorList>\n          {(devices) =>\n            devices.map((device) => (\n              <MicSelectorItem key={device.deviceId} value={device.deviceId}>\n                <MicSelectorLabel device={device} />\n              </MicSelectorItem>\n            ))\n          }\n        </MicSelectorList>\n      </MicSelectorContent>\n    </MicSelector>\n  </div>\n);\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-mic-selector.tsx"
+    }
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/mic-selector.json"
+  ]
+}

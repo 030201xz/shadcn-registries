@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-audio-player",
+  "type": "registry:block",
+  "title": "Audio Player Example",
+  "description": "Example implementation of audio player.",
+  "files": [
+    {
+      "path": "registry/default/examples/audio-player.tsx",
+      "type": "registry:block",
+      "content": "\"use client\";\n\nimport {\n  AudioPlayer,\n  AudioPlayerControlBar,\n  AudioPlayerDurationDisplay,\n  AudioPlayerElement,\n  AudioPlayerMuteButton,\n  AudioPlayerPlayButton,\n  AudioPlayerSeekBackwardButton,\n  AudioPlayerSeekForwardButton,\n  AudioPlayerTimeDisplay,\n  AudioPlayerTimeRange,\n  AudioPlayerVolumeRange,\n} from \"@/components/ai-elements/audio-player\";\nimport type { Experimental_SpeechResult as SpeechResult } from \"ai\";\nimport { useEffect, useState } from \"react\";\n\nconst Example = () => {\n  const [data, setData] = useState<SpeechResult[\"audio\"] | null>(null);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      const response = await fetch(\n        \"https://ejiidnob33g9ap1r.public.blob.vercel-storage.com/ElevenLabs_2025-11-10T22_07_46_Hayden_pvc_sp108_s50_sb75_se0_b_m2.mp3\"\n      );\n      const arrayBuffer = await response.arrayBuffer();\n      const base64 = Buffer.from(arrayBuffer).toString(\"base64\");\n\n      const newData: SpeechResult[\"audio\"] = {\n        mediaType: \"audio/mpeg\",\n        base64,\n        format: \"mp3\",\n        uint8Array: new Uint8Array(arrayBuffer),\n      };\n\n      setData(newData);\n    };\n\n    if (!data) {\n      fetchData();\n    }\n  }, [data]);\n\n  if (!data) {\n    return <div>Loading...</div>;\n  }\n\n  return (\n    <div className=\"flex size-full items-center justify-center\">\n      <AudioPlayer>\n        <AudioPlayerElement data={data} />\n        <AudioPlayerControlBar>\n          <AudioPlayerPlayButton />\n          <AudioPlayerSeekBackwardButton seekOffset={10} />\n          <AudioPlayerSeekForwardButton seekOffset={10} />\n          <AudioPlayerTimeDisplay />\n          <AudioPlayerTimeRange />\n          <AudioPlayerDurationDisplay />\n          <AudioPlayerMuteButton />\n          <AudioPlayerVolumeRange />\n        </AudioPlayerControlBar>\n      </AudioPlayer>\n    </div>\n  );\n};\n\nexport default Example;\n",
+      "target": "components/ai-elements/example-audio-player.tsx"
+    }
+  ],
+  "dependencies": [
+    "ai"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "https://registry.ai-sdk.dev/audio-player.json"
+  ]
+}
