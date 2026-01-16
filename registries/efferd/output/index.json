@@ -2,9 +2,20 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-15T00:03:53.783Z",
+  "syncedAt": "2026-01-16T00:03:44.861Z",
   "itemCount": 38,
   "items": [
+    {
+      "name": "cta-1",
+      "type": "registry:block",
+      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
     {
       "name": "auth-1",
       "type": "registry:block",
@@ -18,32 +29,9 @@
       ]
     },
     {
-      "name": "auth-2",
+      "name": "cta-3",
       "type": "registry:block",
-      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
-      "categories": [
-        "auth"
-      ],
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "input-group"
-      ]
-    },
-    {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
-      "name": "cta-1",
-      "type": "registry:block",
-      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
       "categories": [
         "cta"
       ],
@@ -75,17 +63,6 @@
       ]
     },
     {
-      "name": "cta-2",
-      "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "contact-2",
       "type": "registry:block",
       "description": "Modern contact card with info section and built-in form area.",
@@ -94,9 +71,32 @@
       ]
     },
     {
-      "name": "cta-3",
+      "name": "contact-1",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
+      "categories": [
+        "contact"
+      ]
+    },
+    {
+      "name": "auth-2",
+      "type": "registry:block",
+      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
+      "categories": [
+        "auth"
+      ],
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group"
+      ]
+    },
+    {
+      "name": "cta-2",
+      "type": "registry:block",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
       "categories": [
         "cta"
       ],
@@ -310,14 +310,6 @@
       ]
     },
     {
-      "name": "logo-cloud-1",
-      "type": "registry:block",
-      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
-      "categories": [
-        "logo-cloud"
-      ]
-    },
-    {
       "name": "image-gallery-1",
       "type": "registry:block",
       "description": "Masonry-style responsive gallery using random images with dynamic aspect ratios.",
@@ -329,6 +321,14 @@
       ],
       "registryDependencies": [
         "aspect-ratio"
+      ]
+    },
+    {
+      "name": "logo-cloud-1",
+      "type": "registry:block",
+      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
+      "categories": [
+        "logo-cloud"
       ]
     },
     {
@@ -413,17 +413,6 @@
       ]
     },
     {
-      "name": "pricing-3",
-      "type": "registry:block",
-      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
-      "categories": [
-        "pricing"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "testimonials-1",
       "type": "registry:block",
       "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
@@ -432,6 +421,17 @@
       ],
       "dependencies": [
         "motion"
+      ]
+    },
+    {
+      "name": "pricing-3",
+      "type": "registry:block",
+      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
+      "categories": [
+        "pricing"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
