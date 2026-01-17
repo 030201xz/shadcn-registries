@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-16T00:03:47.629Z",
-  "itemCount": 17,
+  "syncedAt": "2026-01-17T00:04:04.013Z",
+  "itemCount": 18,
   "items": [
     {
       "name": "shimmer-style",
@@ -180,6 +180,16 @@
         "sidebar",
         "https://r.assistant-ui.com/thread-list.json"
       ]
+    },
+    {
+      "name": "sources",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
     }
   ]
 }
