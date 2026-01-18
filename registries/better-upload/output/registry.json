@@ -2,20 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "better-upload",
   "homepage": "https://better-upload.com",
-  "syncedAt": "2026-01-17T00:03:55.440Z",
+  "syncedAt": "2026-01-18T00:03:53.749Z",
   "itemCount": 4,
   "items": [
-    {
-      "name": "upload-dropzone",
-      "type": "registry:ui",
-      "title": "Upload Dropzone",
-      "dependencies": [
-        "@better-upload/client",
-        "lucide-react",
-        "react-dropzone"
-      ],
-      "registryDependencies": []
-    },
     {
       "name": "upload-dropzone-progress",
       "type": "registry:ui",
@@ -30,6 +19,26 @@
       ]
     },
     {
+      "name": "upload-dropzone",
+      "type": "registry:ui",
+      "title": "Upload Dropzone",
+      "dependencies": [
+        "@better-upload/client",
+        "lucide-react",
+        "react-dropzone"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "paste-upload-area",
+      "type": "registry:ui",
+      "title": "Paste Upload Area",
+      "dependencies": [
+        "@better-upload/client"
+      ],
+      "registryDependencies": []
+    },
+    {
       "name": "upload-button",
       "type": "registry:ui",
       "title": "Upload Button",
@@ -40,15 +49,6 @@
       "registryDependencies": [
         "button"
       ]
-    },
-    {
-      "name": "paste-upload-area",
-      "type": "registry:ui",
-      "title": "Paste Upload Area",
-      "dependencies": [
-        "@better-upload/client"
-      ],
-      "registryDependencies": []
     }
   ]
 }

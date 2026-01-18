@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-17T00:03:55.216Z",
+  "syncedAt": "2026-01-18T00:03:53.634Z",
   "itemCount": 38,
   "items": [
     {
@@ -60,9 +60,9 @@
       ]
     },
     {
-      "name": "cta-2",
+      "name": "cta-4",
       "type": "registry:block",
-      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
+      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
       "categories": [
         "cta"
       ],
@@ -94,9 +94,9 @@
       ]
     },
     {
-      "name": "cta-4",
+      "name": "cta-2",
       "type": "registry:block",
-      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
+      "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
       "categories": [
         "cta"
       ],
@@ -116,9 +116,9 @@
       ]
     },
     {
-      "name": "faqs-3",
+      "name": "faqs-2",
       "type": "registry:block",
-      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
+      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
       "categories": [
         "faqs"
       ],
@@ -127,9 +127,9 @@
       ]
     },
     {
-      "name": "faqs-2",
+      "name": "faqs-3",
       "type": "registry:block",
-      "description": "Split-screen FAQ layout with bordered sections, interactive accordion, and a clean call-to-action footer.",
+      "description": "Two-column FAQ section featuring bordered layout, vertical guide line, and elegant accordion interactions.",
       "categories": [
         "faqs"
       ],
@@ -216,18 +216,17 @@
       ]
     },
     {
-      "name": "form-2",
+      "name": "footer-5",
       "type": "registry:block",
-      "description": "Project submission form featuring bordered layout, plus-icon corners, and detailed input fields for name, repository, and description.",
+      "description": "Sticky layered footer with gradient background, social icons, and animated link groups.",
       "categories": [
-        "form"
+        "footer"
+      ],
+      "dependencies": [
+        "motion"
       ],
       "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "input-group",
-        "textarea"
+        "button"
       ]
     },
     {
@@ -244,6 +243,21 @@
         "input",
         "input-group",
         "label"
+      ]
+    },
+    {
+      "name": "form-2",
+      "type": "registry:block",
+      "description": "Project submission form featuring bordered layout, plus-icon corners, and detailed input fields for name, repository, and description.",
+      "categories": [
+        "form"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "input-group",
+        "textarea"
       ]
     },
     {
@@ -267,20 +281,6 @@
       "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
       "categories": [
         "header"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "footer-5",
-      "type": "registry:block",
-      "description": "Sticky layered footer with gradient background, social icons, and animated link groups.",
-      "categories": [
-        "footer"
-      ],
-      "dependencies": [
-        "motion"
       ],
       "registryDependencies": [
         "button"
@@ -324,6 +324,14 @@
       ]
     },
     {
+      "name": "logo-cloud-2",
+      "type": "registry:block",
+      "description": "Stylish logo grid featuring top tech brands with decorative plus icons and dynamic borders for a modern visual layout.",
+      "categories": [
+        "logo-cloud"
+      ]
+    },
+    {
       "name": "logo-cloud-1",
       "type": "registry:block",
       "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
@@ -343,26 +351,6 @@
       ]
     },
     {
-      "name": "logo-cloud-4",
-      "type": "registry:block",
-      "description": "Animated logo carousel with soft edge blurs and gradient accents for a sleek, modern brand showcase.",
-      "categories": [
-        "logo-cloud"
-      ],
-      "registryDependencies": [
-        "https://motion-primitives.com/c/infinite-slider.json",
-        "https://motion-primitives.com/c/progressive-blur.json"
-      ]
-    },
-    {
-      "name": "logo-cloud-2",
-      "type": "registry:block",
-      "description": "Stylish logo grid featuring top tech brands with decorative plus icons and dynamic borders for a modern visual layout.",
-      "categories": [
-        "logo-cloud"
-      ]
-    },
-    {
       "name": "not-found-1",
       "type": "registry:block",
       "description": "Minimal 404 error page with bold typography, subtle borders, and clear navigation actions.",
@@ -375,18 +363,15 @@
       ]
     },
     {
-      "name": "pricing-1",
+      "name": "logo-cloud-4",
       "type": "registry:block",
-      "description": "Responsive pricing section with frequency toggle, tooltips, and highlightable plans.",
+      "description": "Animated logo carousel with soft edge blurs and gradient accents for a sleek, modern brand showcase.",
       "categories": [
-        "pricing"
-      ],
-      "dependencies": [
-        "motion"
+        "logo-cloud"
       ],
       "registryDependencies": [
-        "button",
-        "tooltip"
+        "https://motion-primitives.com/c/infinite-slider.json",
+        "https://motion-primitives.com/c/progressive-blur.json"
       ]
     },
     {
@@ -405,14 +390,37 @@
       ]
     },
     {
-      "name": "pricing-3",
+      "name": "pricing-2",
       "type": "registry:block",
-      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
+      "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
+      "categories": [
+        "pricing"
+      ]
+    },
+    {
+      "name": "pricing-1",
+      "type": "registry:block",
+      "description": "Responsive pricing section with frequency toggle, tooltips, and highlightable plans.",
       "categories": [
         "pricing"
       ],
+      "dependencies": [
+        "motion"
+      ],
       "registryDependencies": [
-        "button"
+        "button",
+        "tooltip"
+      ]
+    },
+    {
+      "name": "testimonials-1",
+      "type": "registry:block",
+      "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
+      "categories": [
+        "testimonials"
+      ],
+      "dependencies": [
+        "motion"
       ]
     },
     {
@@ -430,22 +438,14 @@
       ]
     },
     {
-      "name": "testimonials-1",
+      "name": "pricing-3",
       "type": "registry:block",
-      "description": "Infinite vertical testimonial scroller with smooth motion and repeated card animation.",
-      "categories": [
-        "testimonials"
-      ],
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "pricing-2",
-      "type": "registry:block",
-      "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
+      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
       "categories": [
         "pricing"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     }
   ]
