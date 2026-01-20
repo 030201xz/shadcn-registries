@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-19T00:03:51.047Z",
-  "itemCount": 18,
+  "syncedAt": "2026-01-20T00:03:55.339Z",
+  "itemCount": 19,
   "items": [
     {
       "name": "shimmer-style",
@@ -152,7 +152,19 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "button"
+        "collapsible"
+      ]
+    },
+    {
+      "name": "tool-group",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "collapsible"
       ]
     },
     {
