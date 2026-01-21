@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-20T00:03:49.932Z",
+  "syncedAt": "2026-01-21T00:03:54.772Z",
   "itemCount": 38,
   "items": [
     {
@@ -29,34 +29,19 @@
       ]
     },
     {
-      "name": "contact-2",
+      "name": "contact-1",
       "type": "registry:block",
-      "description": "Modern contact card with info section and built-in form area.",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
       "categories": [
         "contact"
       ]
     },
     {
-      "name": "cta-3",
+      "name": "contact-2",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Modern contact card with info section and built-in form area.",
       "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "cta-5",
-      "type": "registry:block",
-      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
-      "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button",
-        "input-group"
+        "contact"
       ]
     },
     {
@@ -71,11 +56,14 @@
       ]
     },
     {
-      "name": "contact-1",
+      "name": "cta-3",
       "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
       "categories": [
-        "contact"
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -98,6 +86,18 @@
       ],
       "dependencies": [
         "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group"
+      ]
+    },
+    {
+      "name": "cta-5",
+      "type": "registry:block",
+      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
+      "categories": [
+        "cta"
       ],
       "registryDependencies": [
         "button",
@@ -287,17 +287,6 @@
       ]
     },
     {
-      "name": "header-2",
-      "type": "registry:block",
-      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
-      "categories": [
-        "header"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "header-3",
       "type": "registry:block",
       "description": "Feature-rich responsive header with scroll blur, animated mobile drawer, and nested navigation menus.",
@@ -307,6 +296,17 @@
       "registryDependencies": [
         "button",
         "navigation-menu"
+      ]
+    },
+    {
+      "name": "header-2",
+      "type": "registry:block",
+      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
+      "categories": [
+        "header"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -390,25 +390,6 @@
       ]
     },
     {
-      "name": "pricing-3",
-      "type": "registry:block",
-      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
-      "categories": [
-        "pricing"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "pricing-2",
-      "type": "registry:block",
-      "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
-      "categories": [
-        "pricing"
-      ]
-    },
-    {
       "name": "pricing-1",
       "type": "registry:block",
       "description": "Responsive pricing section with frequency toggle, tooltips, and highlightable plans.",
@@ -421,6 +402,25 @@
       "registryDependencies": [
         "button",
         "tooltip"
+      ]
+    },
+    {
+      "name": "pricing-2",
+      "type": "registry:block",
+      "description": "Modular pricing card UI kit with reusable glass-style components and typography helpers.",
+      "categories": [
+        "pricing"
+      ]
+    },
+    {
+      "name": "pricing-3",
+      "type": "registry:block",
+      "description": "Three-tier pricing grid with interactive plan cards, badges, and feature lists.",
+      "categories": [
+        "pricing"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
