@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-23T00:04:20.133Z",
-  "itemCount": 19,
+  "syncedAt": "2026-01-24T00:04:01.957Z",
+  "itemCount": 21,
   "items": [
     {
       "name": "shimmer-style",
@@ -203,6 +203,25 @@
         "class-variance-authority"
       ],
       "registryDependencies": []
+    },
+    {
+      "name": "image",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "file",
+      "type": "registry:component",
+      "dependencies": [
+        "@assistant-ui/react",
+        "lucide-react",
+        "class-variance-authority"
+      ]
     }
   ]
 }
