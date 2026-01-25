@@ -19,6 +19,7 @@
     "https://limeplay.winoffrg.dev/r/mute-control.json",
     "https://limeplay.winoffrg.dev/r/player-hooks.json",
     "https://limeplay.winoffrg.dev/r/playback-control.json",
+    "https://limeplay.winoffrg.dev/r/picture-in-picture-control.json",
     "https://limeplay.winoffrg.dev/r/timeline-control.json",
     "https://limeplay.winoffrg.dev/r/volume-control.json",
     "https://limeplay.winoffrg.dev/r/use-timeline.json",
@@ -36,6 +37,7 @@
     "https://limeplay.winoffrg.dev/r/playback-rate.json",
     "https://limeplay.winoffrg.dev/r/use-playback-rate.json",
     "https://limeplay.winoffrg.dev/r/use-playback.json",
+    "https://limeplay.winoffrg.dev/r/use-picture-in-picture.json",
     "https://limeplay.winoffrg.dev/r/use-playlist.json",
     "https://limeplay.winoffrg.dev/r/use-asset.json"
   ],
@@ -60,7 +62,7 @@
     },
     {
       "path": "registry/default/blocks/linear-player/components/playback-state-control.tsx",
-      "content": "\"use client\"\n\nimport {\n  CircleNotchIcon,\n  PauseIcon,\n  PlayIcon,\n  RepeatIcon,\n} from \"@phosphor-icons/react\"\n\nimport { Button } from \"@/registry/default/blocks/linear-player/ui/button\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\nimport { PlaybackControl } from \"@/registry/default/ui/playback-control\"\n\nexport function PlaybackStateControl() {\n  const status = useMediaStore((state) => state.status)\n\n  return (\n    <PlaybackControl asChild>\n      <Button className=\"cursor-pointer\" size=\"icon\" variant=\"glass\">\n        {status === \"playing\" ? (\n          <PauseIcon weight=\"fill\" />\n        ) : status === \"ended\" ? (\n          <RepeatIcon />\n        ) : status === \"buffering\" ? (\n          <CircleNotchIcon className=\"animate-spin\" weight=\"bold\" />\n        ) : (\n          <PlayIcon weight=\"fill\" />\n        )}\n      </Button>\n    </PlaybackControl>\n  )\n}\n",
+      "content": "\"use client\"\n\nimport {\n  CircleNotchIcon,\n  PauseIcon,\n  PlayIcon,\n  RepeatIcon,\n} from \"@phosphor-icons/react\"\n\nimport { Button } from \"@/registry/default/blocks/linear-player/ui/button\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\nimport { PlaybackControl } from \"@/registry/default/ui/playback-control\"\n\nexport function PlaybackStateControl() {\n  const status = useMediaStore((state) => state.status)\n\n  return (\n    <PlaybackControl asChild>\n      <Button className=\"cursor-pointer\" size=\"icon\" variant=\"glass\">\n        {status === \"playing\" ? (\n          <PauseIcon weight=\"fill\" />\n        ) : status === \"ended\" ? (\n          <RepeatIcon />\n        ) : status === \"buffering\" || status === \"loading\" ? (\n          <CircleNotchIcon className=\"animate-spin\" weight=\"bold\" />\n        ) : (\n          <PlayIcon weight=\"fill\" />\n        )}\n      </Button>\n    </PlaybackControl>\n  )\n}\n",
       "type": "registry:component",
       "target": "components/linear-player/components/playback-state-control.tsx"
     },
@@ -78,13 +80,13 @@
     },
     {
       "path": "registry/default/blocks/linear-player/components/bottom-controls.tsx",
-      "content": "import { CaptionsStateControl } from \"@/registry/default/blocks/linear-player/components/captions-state-control\"\nimport { PlaybackRateControl } from \"@/registry/default/blocks/linear-player/components/playback-rate-control\"\nimport { PlaybackStateControl } from \"@/registry/default/blocks/linear-player/components/playback-state-control\"\nimport { Playlist } from \"@/registry/default/blocks/linear-player/components/playlist\"\nimport { TimelineSliderControl } from \"@/registry/default/blocks/linear-player/components/timeline-slider-control\"\nimport { VolumeGroupControl } from \"@/registry/default/blocks/linear-player/components/volume-group-control\"\nimport * as Layout from \"@/registry/default/ui/player-layout\"\n\nexport function BottomControls() {\n  return (\n    <Layout.ControlsBottomContainer>\n      <PlaybackStateControl />\n      <VolumeGroupControl />\n      <TimelineSliderControl />\n      <PlaybackRateControl />\n      <CaptionsStateControl />\n      <Playlist />\n    </Layout.ControlsBottomContainer>\n  )\n}\n",
+      "content": "import { CaptionsStateControl } from \"@/registry/default/blocks/linear-player/components/captions-state-control\"\nimport { PictureInPictureControl } from \"@/registry/default/blocks/linear-player/components/picture-in-picture-control\"\nimport { PlaybackRateControl } from \"@/registry/default/blocks/linear-player/components/playback-rate-control\"\nimport { PlaybackStateControl } from \"@/registry/default/blocks/linear-player/components/playback-state-control\"\nimport { Playlist } from \"@/registry/default/blocks/linear-player/components/playlist\"\nimport { TimelineSliderControl } from \"@/registry/default/blocks/linear-player/components/timeline-slider-control\"\nimport { VolumeGroupControl } from \"@/registry/default/blocks/linear-player/components/volume-group-control\"\nimport * as Layout from \"@/registry/default/ui/player-layout\"\n\nexport function BottomControls() {\n  return (\n    <Layout.ControlsBottomContainer>\n      <PlaybackStateControl />\n      <VolumeGroupControl />\n      <TimelineSliderControl />\n      <PlaybackRateControl />\n      <CaptionsStateControl />\n      <PictureInPictureControl />\n      <Playlist />\n    </Layout.ControlsBottomContainer>\n  )\n}\n",
       "type": "registry:component",
       "target": "components/linear-player/components/bottom-controls.tsx"
     },
     {
       "path": "registry/default/blocks/linear-player/components/player-hooks.tsx",
-      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { useCaptionsStates } from \"@/registry/default/hooks/use-captions\"\nimport { usePlaybackStates } from \"@/registry/default/hooks/use-playback\"\nimport { usePlaybackRateStates } from \"@/registry/default/hooks/use-playback-rate\"\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\nimport { usePlaylistStates } from \"@/registry/default/hooks/use-playlist\"\nimport { useTimelineStates } from \"@/registry/default/hooks/use-timeline\"\nimport { useVolumeStates } from \"@/registry/default/hooks/use-volume\"\n\nexport const PlayerHooks = React.memo(() => {\n  usePlayerStates()\n  usePlaybackStates()\n  useTimelineStates()\n  useVolumeStates()\n  useCaptionsStates()\n  usePlaybackRateStates()\n  usePlaylistStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
+      "content": "\"use client\"\n\nimport React from \"react\"\n\nimport { useCaptionsStates } from \"@/registry/default/hooks/use-captions\"\nimport { usePictureInPictureStates } from \"@/registry/default/hooks/use-picture-in-picture\"\nimport { usePlaybackStates } from \"@/registry/default/hooks/use-playback\"\nimport { usePlaybackRateStates } from \"@/registry/default/hooks/use-playback-rate\"\nimport { usePlayerStates } from \"@/registry/default/hooks/use-player\"\nimport { usePlaylistStates } from \"@/registry/default/hooks/use-playlist\"\nimport { useTimelineStates } from \"@/registry/default/hooks/use-timeline\"\nimport { useVolumeStates } from \"@/registry/default/hooks/use-volume\"\n\nexport const PlayerHooks = React.memo(() => {\n  usePlayerStates()\n  usePlaybackStates()\n  useTimelineStates()\n  useVolumeStates()\n  useCaptionsStates()\n  usePlaybackRateStates()\n  usePlaylistStates()\n  usePictureInPictureStates()\n\n  return null\n})\n\nPlayerHooks.displayName = \"PlayerHooks\"\n",
       "type": "registry:component",
       "target": "components/linear-player/components/player-hooks.tsx"
     },

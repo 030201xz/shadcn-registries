@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "picture-in-picture-control",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/use-picture-in-picture.json",
+    "https://limeplay.winoffrg.dev/r/use-playback.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/picture-in-picture-control.tsx",
+      "content": "\"use client\"\n\nimport { Slot } from \"@radix-ui/react-slot\"\nimport * as React from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { usePictureInPicture } from \"@/registry/default/hooks/use-picture-in-picture\"\nimport { MediaReadyState } from \"@/registry/default/hooks/use-playback\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\n\nexport interface PictureInPictureControlProps extends React.ComponentProps<\n  typeof Button\n> {\n  /**\n   * Render as child component using Radix Slot\n   * @default false\n   */\n  asChild?: boolean\n  /**\n   * Keyboard shortcut hint displayed in aria-label\n   * @example \"P\"\n   */\n  shortcut?: string\n}\n\nexport type PictureInPictureControlPropsDocs = Pick<\n  PictureInPictureControlProps,\n  \"asChild\" | \"shortcut\"\n>\n\nexport const PictureInPictureControl = React.forwardRef<\n  HTMLButtonElement,\n  PictureInPictureControlProps\n>((props, forwardedRef) => {\n  const readyState = useMediaStore((state) => state.readyState)\n  const isPictureInPictureActive = useMediaStore(\n    (state) => state.isPictureInPictureActive\n  )\n  const isPictureInPictureSupported = useMediaStore(\n    (state) => state.isPictureInPictureSupported\n  )\n  const { togglePictureInPicture } = usePictureInPicture()\n\n  const {\n    \"aria-label\": ariaLabelProp,\n    asChild = false,\n    children,\n    disabled: userDisabled,\n    onClick,\n    shortcut,\n    ...restProps\n  } = props\n\n  const Comp = asChild ? Slot : Button\n\n  const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {\n    onClick?.(event)\n    if (!event.defaultPrevented) {\n      await togglePictureInPicture()\n    }\n  }\n\n  const isDisabled =\n    readyState < MediaReadyState.HAVE_METADATA ||\n    !isPictureInPictureSupported ||\n    userDisabled\n\n  const getDefaultAriaLabel = () => {\n    const shortcutText = shortcut ? ` (keyboard shortcut ${shortcut})` : \"\"\n    const label = isPictureInPictureActive\n      ? \"Exit Picture-in-Picture\"\n      : \"Enter Picture-in-Picture\"\n    return `${label}${shortcutText}`\n  }\n\n  return (\n    <Comp\n      aria-keyshortcuts={shortcut}\n      aria-label={ariaLabelProp ?? getDefaultAriaLabel()}\n      data-label=\"lp-picture-in-picture-control\"\n      disabled={isDisabled}\n      {...restProps}\n      onClick={handleClick}\n      ref={forwardedRef}\n    >\n      {children}\n    </Comp>\n  )\n})\n\nPictureInPictureControl.displayName = \"PictureInPictureControl\"\n",
+      "type": "registry:ui",
+      "target": "components/limeplay/picture-in-picture-control.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

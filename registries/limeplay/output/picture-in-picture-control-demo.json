@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "picture-in-picture-control-demo",
+  "registryDependencies": [
+    "https://limeplay.winoffrg.dev/r/media-provider.json",
+    "https://limeplay.winoffrg.dev/r/picture-in-picture-control.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/picture-in-picture-control-demo.tsx",
+      "content": "\"use client\"\n\nimport { PictureInPictureIcon } from \"@phosphor-icons/react\"\n\nimport { Button } from \"@/registry/default/blocks/linear-player/ui/button\"\nimport { useMediaStore } from \"@/registry/default/ui/media-provider\"\nimport { PictureInPictureControl } from \"@/registry/default/ui/picture-in-picture-control\"\n\nexport default function PictureInPictureControlDemo() {\n  const isPictureInPictureActive = useMediaStore(\n    (state) => state.isPictureInPictureActive\n  )\n\n  return (\n    <PictureInPictureControl asChild shortcut=\"P\">\n      <Button className=\"cursor-pointer\" size=\"icon\" variant=\"glass\">\n        <PictureInPictureIcon\n          weight={isPictureInPictureActive ? \"fill\" : \"regular\"}\n        />\n      </Button>\n    </PictureInPictureControl>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}
