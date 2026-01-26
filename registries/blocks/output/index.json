@@ -2,9 +2,45 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "blocks",
   "homepage": "https://blocks.so",
-  "syncedAt": "2026-01-25T00:03:53.449Z",
+  "syncedAt": "2026-01-26T00:03:47.394Z",
   "itemCount": 70,
   "items": [
+    {
+      "name": "ai-01",
+      "type": "registry:block",
+      "title": "AI Chat with Voice Input",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A ai chat with voice input block.",
+      "categories": [
+        "ai"
+      ],
+      "dependencies": [
+        "@tabler/icons-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu",
+        "textarea"
+      ]
+    },
+    {
+      "name": "ai-02",
+      "type": "registry:block",
+      "title": "AI Chat with Model Selection",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A ai chat with model selection block.",
+      "categories": [
+        "ai"
+      ],
+      "dependencies": [
+        "@tabler/icons-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "select",
+        "textarea"
+      ]
+    },
     {
       "name": "ai-04",
       "type": "registry:block",
@@ -27,6 +63,24 @@
       ]
     },
     {
+      "name": "command-menu-01",
+      "type": "registry:block",
+      "title": "Command Menu with Groups",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A command menu with groups block.",
+      "categories": [
+        "command-menu"
+      ],
+      "dependencies": [
+        "@tabler/icons-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "command",
+        "kbd"
+      ]
+    },
+    {
       "name": "ai-03",
       "type": "registry:block",
       "title": "AI Chat Compact Interface",
@@ -42,78 +96,6 @@
         "button",
         "dropdown-menu",
         "textarea"
-      ]
-    },
-    {
-      "name": "ai-01",
-      "type": "registry:block",
-      "title": "AI Chat with Voice Input",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A ai chat with voice input block.",
-      "categories": [
-        "ai"
-      ],
-      "dependencies": [
-        "@tabler/icons-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "dropdown-menu",
-        "textarea"
-      ]
-    },
-    {
-      "name": "dialog-01",
-      "type": "registry:block",
-      "title": "Dialog Confirmation",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog confirmation block.",
-      "categories": [
-        "dialogs"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "dialog"
-      ]
-    },
-    {
-      "name": "ai-02",
-      "type": "registry:block",
-      "title": "AI Chat with Model Selection",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A ai chat with model selection block.",
-      "categories": [
-        "ai"
-      ],
-      "dependencies": [
-        "@tabler/icons-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "select",
-        "textarea"
-      ]
-    },
-    {
-      "name": "command-menu-03",
-      "type": "registry:block",
-      "title": "Command Menu with Documentation Search",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A command menu with documentation search block.",
-      "categories": [
-        "command-menu"
-      ],
-      "dependencies": [
-        "@tabler/icons-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "command",
-        "dialog",
-        "kbd"
       ]
     },
     {
@@ -136,11 +118,11 @@
       ]
     },
     {
-      "name": "command-menu-01",
+      "name": "command-menu-03",
       "type": "registry:block",
-      "title": "Command Menu with Groups",
+      "title": "Command Menu with Documentation Search",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A command menu with groups block.",
+      "description": "A command menu with documentation search block.",
       "categories": [
         "command-menu"
       ],
@@ -150,25 +132,25 @@
       "registryDependencies": [
         "button",
         "command",
+        "dialog",
         "kbd"
       ]
     },
     {
-      "name": "dialog-06",
+      "name": "dialog-01",
       "type": "registry:block",
-      "title": "Dialog with Privacy Toggle",
+      "title": "Dialog Confirmation",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog with privacy toggle block.",
+      "description": "A dialog confirmation block.",
       "categories": [
         "dialogs"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
       "registryDependencies": [
         "button",
-        "dialog",
-        "input",
-        "label",
-        "switch"
+        "dialog"
       ]
     },
     {
@@ -189,11 +171,11 @@
       ]
     },
     {
-      "name": "dialog-07",
+      "name": "dialog-03",
       "type": "registry:block",
-      "title": "Dialog with Member List",
+      "title": "Dialog with Input Field",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog with member list block.",
+      "description": "A dialog with input field block.",
       "categories": [
         "dialogs"
       ],
@@ -202,9 +184,7 @@
       ],
       "registryDependencies": [
         "button",
-        "dialog",
-        "input",
-        "label"
+        "dialog"
       ]
     },
     {
@@ -222,6 +202,24 @@
         "dialog",
         "input",
         "label"
+      ]
+    },
+    {
+      "name": "dialog-06",
+      "type": "registry:block",
+      "title": "Dialog with Privacy Toggle",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A dialog with privacy toggle block.",
+      "categories": [
+        "dialogs"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "input",
+        "label",
+        "switch"
       ]
     },
     {
@@ -244,11 +242,11 @@
       ]
     },
     {
-      "name": "dialog-11",
+      "name": "dialog-07",
       "type": "registry:block",
-      "title": "Dialog Multi-Step Wizard",
+      "title": "Dialog with Member List",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog multi-step wizard block.",
+      "description": "A dialog with member list block.",
       "categories": [
         "dialogs"
       ],
@@ -258,26 +256,8 @@
       "registryDependencies": [
         "button",
         "dialog",
-        "label",
-        "select",
-        "separator"
-      ]
-    },
-    {
-      "name": "dialog-03",
-      "type": "registry:block",
-      "title": "Dialog with Input Field",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog with input field block.",
-      "categories": [
-        "dialogs"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "dialog"
+        "input",
+        "label"
       ]
     },
     {
@@ -301,27 +281,23 @@
       ]
     },
     {
-      "name": "dialog-10",
+      "name": "dialog-11",
       "type": "registry:block",
-      "title": "Dialog with Calendar and Time Picker",
+      "title": "Dialog Multi-Step Wizard",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A dialog with calendar and time picker block.",
+      "description": "A dialog multi-step wizard block.",
       "categories": [
         "dialogs"
       ],
       "dependencies": [
-        "date-fns",
         "lucide-react"
       ],
       "registryDependencies": [
         "button",
-        "calendar",
         "dialog",
-        "input",
         "label",
-        "popover",
         "select",
-        "textarea"
+        "separator"
       ]
     },
     {
@@ -366,24 +342,27 @@
       ]
     },
     {
-      "name": "file-upload-01",
+      "name": "dialog-10",
       "type": "registry:block",
-      "title": "File Upload with Preview",
+      "title": "Dialog with Calendar and Time Picker",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A file upload with preview block.",
+      "description": "A dialog with calendar and time picker block.",
       "categories": [
-        "file-upload"
+        "dialogs"
       ],
       "dependencies": [
+        "date-fns",
         "lucide-react"
       ],
       "registryDependencies": [
         "button",
-        "card",
+        "calendar",
+        "dialog",
         "input",
         "label",
+        "popover",
         "select",
-        "tooltip"
+        "textarea"
       ]
     },
     {
@@ -408,11 +387,11 @@
       ]
     },
     {
-      "name": "file-upload-05",
+      "name": "file-upload-01",
       "type": "registry:block",
-      "title": "File Upload with Progress",
+      "title": "File Upload with Preview",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A file upload with progress block.",
+      "description": "A file upload with preview block.",
       "categories": [
         "file-upload"
       ],
@@ -421,7 +400,11 @@
       ],
       "registryDependencies": [
         "button",
-        "label"
+        "card",
+        "input",
+        "label",
+        "select",
+        "tooltip"
       ]
     },
     {
@@ -464,25 +447,6 @@
       ]
     },
     {
-      "name": "file-upload-06",
-      "type": "registry:block",
-      "title": "File Upload with Status Sections",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A file upload with status sections block.",
-      "categories": [
-        "file-upload"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "progress",
-        "separator"
-      ]
-    },
-    {
       "name": "file-upload-04",
       "type": "registry:block",
       "title": "File Upload Drag & Drop",
@@ -499,6 +463,80 @@
         "button",
         "card",
         "progress"
+      ]
+    },
+    {
+      "name": "file-upload-05",
+      "type": "registry:block",
+      "title": "File Upload with Progress",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A file upload with progress block.",
+      "categories": [
+        "file-upload"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "label"
+      ]
+    },
+    {
+      "name": "form-layout-01",
+      "type": "registry:block",
+      "title": "Form with Workspace Fields",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A form with workspace fields block.",
+      "categories": [
+        "form-layout"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ]
+    },
+    {
+      "name": "form-layout-02",
+      "type": "registry:block",
+      "title": "Form with Side Labels",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A form with side labels block.",
+      "categories": [
+        "form-layout"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "radio-group",
+        "select",
+        "separator",
+        "textarea"
+      ]
+    },
+    {
+      "name": "form-layout-03",
+      "type": "registry:block",
+      "title": "Form with Checkbox Settings",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A form with checkbox settings block.",
+      "categories": [
+        "form-layout"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "field",
+        "input",
+        "select",
+        "separator",
+        "textarea"
       ]
     },
     {
@@ -544,55 +582,22 @@
       ]
     },
     {
-      "name": "form-layout-01",
+      "name": "file-upload-06",
       "type": "registry:block",
-      "title": "Form with Workspace Fields",
+      "title": "File Upload with Status Sections",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A form with workspace fields block.",
+      "description": "A file upload with status sections block.",
       "categories": [
-        "form-layout"
+        "file-upload"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
       "registryDependencies": [
         "button",
-        "field",
-        "input",
+        "card",
+        "progress",
         "separator"
-      ]
-    },
-    {
-      "name": "form-layout-02",
-      "type": "registry:block",
-      "title": "Form with Side Labels",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A form with side labels block.",
-      "categories": [
-        "form-layout"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "radio-group",
-        "select",
-        "separator",
-        "textarea"
-      ]
-    },
-    {
-      "name": "grid-list-02",
-      "type": "registry:block",
-      "title": "Grid List with Links",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A grid list with links block.",
-      "categories": [
-        "grid-list"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "avatar",
-        "card"
       ]
     },
     {
@@ -614,59 +619,6 @@
       ]
     },
     {
-      "name": "login-03",
-      "type": "registry:block",
-      "title": "Login with Email and Password",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A login with email and password block.",
-      "categories": [
-        "login"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "button",
-        "input",
-        "label"
-      ]
-    },
-    {
-      "name": "form-layout-03",
-      "type": "registry:block",
-      "title": "Form with Checkbox Settings",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A form with checkbox settings block.",
-      "categories": [
-        "form-layout"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "button",
-        "checkbox",
-        "field",
-        "input",
-        "select",
-        "separator",
-        "textarea"
-      ]
-    },
-    {
-      "name": "login-04",
-      "type": "registry:block",
-      "title": "Login with Social Buttons",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A login with social buttons block.",
-      "categories": [
-        "login"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "separator"
-      ]
-    },
-    {
       "name": "grid-list-03",
       "type": "registry:block",
       "title": "Grid List with Icons",
@@ -679,6 +631,21 @@
         "lucide-react"
       ],
       "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "name": "grid-list-02",
+      "type": "registry:block",
+      "title": "Grid List with Links",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A grid list with links block.",
+      "categories": [
+        "grid-list"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "avatar",
         "card"
       ]
     },
@@ -700,20 +667,50 @@
       ]
     },
     {
-      "name": "login-07",
+      "name": "login-02",
       "type": "registry:block",
-      "title": "Login Full Page with Icons",
+      "title": "Login with Email, Password and Google",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A login full page with icons block.",
+      "description": "A login with email, password and google block.",
       "categories": [
         "login"
       ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "dependencies": [],
       "registryDependencies": [
         "button",
-        "checkbox",
+        "input",
+        "label",
+        "separator"
+      ]
+    },
+    {
+      "name": "login-03",
+      "type": "registry:block",
+      "title": "Login with Email and Password",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A login with email and password block.",
+      "categories": [
+        "login"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ]
+    },
+    {
+      "name": "login-04",
+      "type": "registry:block",
+      "title": "Login with Social Buttons",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A login with social buttons block.",
+      "categories": [
+        "login"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "button",
         "input",
         "label",
         "separator"
@@ -738,23 +735,6 @@
       ]
     },
     {
-      "name": "login-02",
-      "type": "registry:block",
-      "title": "Login with Email, Password and Google",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A login with email, password and google block.",
-      "categories": [
-        "login"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "separator"
-      ]
-    },
-    {
       "name": "login-06",
       "type": "registry:block",
       "title": "Login with Magic Link and SSO",
@@ -769,6 +749,26 @@
         "card",
         "input",
         "separator"
+      ]
+    },
+    {
+      "name": "login-08",
+      "type": "registry:block",
+      "title": "Login with SSO",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A login with sso block.",
+      "categories": [
+        "login"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "checkbox",
+        "input",
+        "label"
       ]
     },
     {
@@ -790,47 +790,6 @@
         "input",
         "label",
         "select"
-      ]
-    },
-    {
-      "name": "sidebar-02",
-      "type": "registry:block",
-      "title": "Sidebar Dashboard Inset",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A sidebar dashboard inset block.",
-      "categories": [
-        "sidebar"
-      ],
-      "dependencies": [
-        "framer-motion",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "avatar",
-        "button",
-        "collapsible",
-        "dropdown-menu",
-        "sidebar"
-      ]
-    },
-    {
-      "name": "login-08",
-      "type": "registry:block",
-      "title": "Login with SSO",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A login with sso block.",
-      "categories": [
-        "login"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "checkbox",
-        "input",
-        "label"
       ]
     },
     {
@@ -874,17 +833,44 @@
       ]
     },
     {
-      "name": "stats-01",
+      "name": "sidebar-02",
       "type": "registry:block",
-      "title": "Stats with Trending",
+      "title": "Sidebar Dashboard Inset",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with trending block.",
+      "description": "A sidebar dashboard inset block.",
       "categories": [
-        "stats"
+        "sidebar"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "framer-motion",
+        "lucide-react"
+      ],
       "registryDependencies": [
-        "card"
+        "avatar",
+        "button",
+        "collapsible",
+        "dropdown-menu",
+        "sidebar"
+      ]
+    },
+    {
+      "name": "login-07",
+      "type": "registry:block",
+      "title": "Login Full Page with Icons",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A login full page with icons block.",
+      "categories": [
+        "login"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "input",
+        "label",
+        "separator"
       ]
     },
     {
@@ -909,11 +895,11 @@
       ]
     },
     {
-      "name": "sidebar-04",
+      "name": "sidebar-05",
       "type": "registry:block",
-      "title": "Sidebar Double-Sided Mail",
+      "title": "Sidebar Double-Sided",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A sidebar double-sided mail block.",
+      "description": "A sidebar double-sided block.",
       "categories": [
         "sidebar"
       ],
@@ -947,6 +933,39 @@
       ]
     },
     {
+      "name": "stats-01",
+      "type": "registry:block",
+      "title": "Stats with Trending",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats with trending block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "name": "sidebar-04",
+      "type": "registry:block",
+      "title": "Sidebar Double-Sided Mail",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A sidebar double-sided mail block.",
+      "categories": [
+        "sidebar"
+      ],
+      "dependencies": [
+        "@tabler/icons-react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar",
+        "dropdown-menu",
+        "sidebar"
+      ]
+    },
+    {
       "name": "stats-02",
       "type": "registry:block",
       "title": "Stats with Borders",
@@ -964,53 +983,15 @@
       ]
     },
     {
-      "name": "stats-04",
+      "name": "stats-03",
       "type": "registry:block",
-      "title": "Stats with Badges",
+      "title": "Stats with Card Layout",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with badges block.",
+      "description": "A stats with card layout block.",
       "categories": [
         "stats"
       ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "card"
-      ]
-    },
-    {
-      "name": "sidebar-05",
-      "type": "registry:block",
-      "title": "Sidebar Double-Sided",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A sidebar double-sided block.",
-      "categories": [
-        "sidebar"
-      ],
-      "dependencies": [
-        "@tabler/icons-react",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "avatar",
-        "dropdown-menu",
-        "sidebar"
-      ]
-    },
-    {
-      "name": "stats-06",
-      "type": "registry:block",
-      "title": "Stats with Status",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with status block.",
-      "categories": [
-        "stats"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
+      "dependencies": [],
       "registryDependencies": [
         "card"
       ]
@@ -1034,6 +1015,37 @@
       ]
     },
     {
+      "name": "stats-04",
+      "type": "registry:block",
+      "title": "Stats with Badges",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats with badges block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "card"
+      ]
+    },
+    {
+      "name": "stats-05",
+      "type": "registry:block",
+      "title": "Stats with Links",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats with links block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
       "name": "stats-08",
       "type": "registry:block",
       "title": "Stats with Circular Progress and Links",
@@ -1051,31 +1063,74 @@
       ]
     },
     {
-      "name": "stats-03",
+      "name": "stats-06",
       "type": "registry:block",
-      "title": "Stats with Card Layout",
+      "title": "Stats with Status",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with card layout block.",
+      "description": "A stats with status block.",
       "categories": [
         "stats"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
       "registryDependencies": [
         "card"
       ]
     },
     {
-      "name": "stats-05",
+      "name": "stats-10",
       "type": "registry:block",
-      "title": "Stats with Links",
+      "title": "Stats with Area Chart",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with links block.",
+      "description": "A stats with area chart block.",
       "categories": [
         "stats"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "recharts"
+      ],
       "registryDependencies": [
-        "card"
+        "card",
+        "chart"
+      ]
+    },
+    {
+      "name": "stats-11",
+      "type": "registry:block",
+      "title": "Stats Dashboard with Progress Bars",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats dashboard with progress bars block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "dialog",
+        "input",
+        "label"
+      ]
+    },
+    {
+      "name": "stats-12",
+      "type": "registry:block",
+      "title": "Stats Usage Dashboard",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats usage dashboard block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [
+        "recharts"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "chart"
       ]
     },
     {
@@ -1108,53 +1163,6 @@
       ]
     },
     {
-      "name": "stats-15",
-      "type": "registry:block",
-      "title": "Stats with Value Breakdown",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with value breakdown block.",
-      "categories": [
-        "stats"
-      ],
-      "dependencies": [],
-      "registryDependencies": []
-    },
-    {
-      "name": "stats-12",
-      "type": "registry:block",
-      "title": "Stats Usage Dashboard",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats usage dashboard block.",
-      "categories": [
-        "stats"
-      ],
-      "dependencies": [
-        "recharts"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "chart"
-      ]
-    },
-    {
-      "name": "stats-10",
-      "type": "registry:block",
-      "title": "Stats with Area Chart",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats with area chart block.",
-      "categories": [
-        "stats"
-      ],
-      "dependencies": [
-        "recharts"
-      ],
-      "registryDependencies": [
-        "card",
-        "chart"
-      ]
-    },
-    {
       "name": "stats-14",
       "type": "registry:block",
       "title": "Stats with Usage Breakdown",
@@ -1167,6 +1175,34 @@
       "registryDependencies": [
         "badge",
         "card"
+      ]
+    },
+    {
+      "name": "stats-15",
+      "type": "registry:block",
+      "title": "Stats with Value Breakdown",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A stats with value breakdown block.",
+      "categories": [
+        "stats"
+      ],
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "table-03",
+      "type": "registry:block",
+      "title": "Table with Filters",
+      "author": "ephraim duncan <https://ephraimduncan.com>",
+      "description": "A table with filters block.",
+      "categories": [
+        "tables"
+      ],
+      "dependencies": [],
+      "registryDependencies": [
+        "badge",
+        "select",
+        "table"
       ]
     },
     {
@@ -1189,39 +1225,20 @@
       ]
     },
     {
-      "name": "table-03",
+      "name": "table-01",
       "type": "registry:block",
-      "title": "Table with Filters",
+      "title": "Table with Accordion",
       "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A table with filters block.",
+      "description": "A table with accordion block.",
       "categories": [
         "tables"
-      ],
-      "dependencies": [],
-      "registryDependencies": [
-        "badge",
-        "select",
-        "table"
-      ]
-    },
-    {
-      "name": "stats-11",
-      "type": "registry:block",
-      "title": "Stats Dashboard with Progress Bars",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A stats dashboard with progress bars block.",
-      "categories": [
-        "stats"
       ],
       "dependencies": [
         "lucide-react"
       ],
       "registryDependencies": [
         "button",
-        "card",
-        "dialog",
-        "input",
-        "label"
+        "table"
       ]
     },
     {
@@ -1244,23 +1261,6 @@
         "dropdown-menu",
         "input",
         "select",
-        "table"
-      ]
-    },
-    {
-      "name": "table-01",
-      "type": "registry:block",
-      "title": "Table with Accordion",
-      "author": "ephraim duncan <https://ephraimduncan.com>",
-      "description": "A table with accordion block.",
-      "categories": [
-        "tables"
-      ],
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
         "table"
       ]
     },
