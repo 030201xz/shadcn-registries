@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-26T00:03:49.244Z",
-  "itemCount": 22,
+  "syncedAt": "2026-01-27T00:04:30.878Z",
+  "itemCount": 23,
   "items": [
     {
       "name": "shimmer-style",
@@ -235,6 +235,16 @@
       "registryDependencies": [
         "select"
       ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-select",
+        "lucide-react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
     }
   ]
 }

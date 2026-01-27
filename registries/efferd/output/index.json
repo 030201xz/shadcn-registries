@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-26T00:03:46.818Z",
+  "syncedAt": "2026-01-27T00:04:22.748Z",
   "itemCount": 38,
   "items": [
     {
@@ -18,22 +18,6 @@
       ]
     },
     {
-      "name": "contact-2",
-      "type": "registry:block",
-      "description": "Modern contact card with info section and built-in form area.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
-      "name": "contact-1",
-      "type": "registry:block",
-      "description": "Elegant contact page with office info, email, phone, and social links.",
-      "categories": [
-        "contact"
-      ]
-    },
-    {
       "name": "cta-1",
       "type": "registry:block",
       "description": "Centered call-to-action bar with bold heading and dual action buttons.",
@@ -45,18 +29,22 @@
       ]
     },
     {
-      "name": "auth-2",
+      "name": "contact-1",
       "type": "registry:block",
-      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
+      "description": "Elegant contact page with office info, email, phone, and social links.",
       "categories": [
-        "auth"
-      ],
-      "dependencies": [
-        "motion"
+        "contact"
+      ]
+    },
+    {
+      "name": "cta-3",
+      "type": "registry:block",
+      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "categories": [
+        "cta"
       ],
       "registryDependencies": [
-        "button",
-        "input-group"
+        "button"
       ]
     },
     {
@@ -83,6 +71,14 @@
       ]
     },
     {
+      "name": "contact-2",
+      "type": "registry:block",
+      "description": "Modern contact card with info section and built-in form area.",
+      "categories": [
+        "contact"
+      ]
+    },
+    {
       "name": "cta-2",
       "type": "registry:block",
       "description": "Minimal call-to-action section with headline, short description, and dual buttons for sales contact and getting started.",
@@ -94,14 +90,18 @@
       ]
     },
     {
-      "name": "cta-3",
+      "name": "auth-2",
       "type": "registry:block",
-      "description": "Stylish call-to-action block featuring bordered layout, decorative icons, and clear buttons for contacting sales or getting started.",
+      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
       "categories": [
-        "cta"
+        "auth"
+      ],
+      "dependencies": [
+        "motion"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "input-group"
       ]
     },
     {
@@ -150,17 +150,6 @@
       ]
     },
     {
-      "name": "features-1",
-      "type": "registry:block",
-      "description": "Minimal feature card with icon, title, and subtle grid background.",
-      "categories": [
-        "features"
-      ],
-      "registryDependencies": [
-        "https://magicui.design/r/grid-pattern.json"
-      ]
-    },
-    {
       "name": "faqs-5",
       "type": "registry:block",
       "description": "Responsive FAQ section with filters, search, and accordions for quick answers.",
@@ -172,6 +161,17 @@
         "button",
         "input-group",
         "empty"
+      ]
+    },
+    {
+      "name": "features-1",
+      "type": "registry:block",
+      "description": "Minimal feature card with icon, title, and subtle grid background.",
+      "categories": [
+        "features"
+      ],
+      "registryDependencies": [
+        "https://magicui.design/r/grid-pattern.json"
       ]
     },
     {
@@ -194,17 +194,6 @@
       ]
     },
     {
-      "name": "footer-2",
-      "type": "registry:block",
-      "description": "Animated footer with link sections, brand logo, and social icons.",
-      "categories": [
-        "footer"
-      ],
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
       "name": "footer-4",
       "type": "registry:block",
       "description": "Multi-column footer with app store buttons, social icons, and link groups.",
@@ -213,6 +202,17 @@
       ],
       "registryDependencies": [
         "button"
+      ]
+    },
+    {
+      "name": "footer-2",
+      "type": "registry:block",
+      "description": "Animated footer with link sections, brand logo, and social icons.",
+      "categories": [
+        "footer"
+      ],
+      "dependencies": [
+        "motion"
       ]
     },
     {
@@ -227,6 +227,21 @@
       ],
       "registryDependencies": [
         "button"
+      ]
+    },
+    {
+      "name": "form-2",
+      "type": "registry:block",
+      "description": "Project submission form featuring bordered layout, plus-icon corners, and detailed input fields for name, repository, and description.",
+      "categories": [
+        "form"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "input-group",
+        "textarea"
       ]
     },
     {
@@ -246,33 +261,25 @@
       ]
     },
     {
-      "name": "form-2",
+      "name": "header-1",
       "type": "registry:block",
-      "description": "Project submission form featuring bordered layout, plus-icon corners, and detailed input fields for name, repository, and description.",
+      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
       "categories": [
-        "form"
+        "header"
       ],
       "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "input-group",
-        "textarea"
+        "button"
       ]
     },
     {
-      "name": "form-3",
+      "name": "header-2",
       "type": "registry:block",
-      "description": "Comprehensive account settings form with structured fields for name, email, password, and phone number, featuring icons, grouped inputs, and save actions.",
+      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
       "categories": [
-        "form"
+        "header"
       ],
       "registryDependencies": [
-        "button",
-        "button-group",
-        "field",
-        "input",
-        "input-group"
+        "button"
       ]
     },
     {
@@ -288,25 +295,18 @@
       ]
     },
     {
-      "name": "header-2",
+      "name": "form-3",
       "type": "registry:block",
-      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
+      "description": "Comprehensive account settings form with structured fields for name, email, password, and phone number, featuring icons, grouped inputs, and save actions.",
       "categories": [
-        "header"
+        "form"
       ],
       "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "header-1",
-      "type": "registry:block",
-      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
-      "categories": [
-        "header"
-      ],
-      "registryDependencies": [
-        "button"
+        "button",
+        "button-group",
+        "field",
+        "input",
+        "input-group"
       ]
     },
     {
