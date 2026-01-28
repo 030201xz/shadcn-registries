@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-27T00:04:30.878Z",
-  "itemCount": 23,
+  "syncedAt": "2026-01-28T00:03:55.934Z",
+  "itemCount": 26,
   "items": [
     {
       "name": "shimmer-style",
@@ -198,11 +198,11 @@
       "name": "sources",
       "type": "registry:component",
       "dependencies": [
-        "@assistant-ui/react",
-        "@radix-ui/react-slot",
-        "class-variance-authority"
+        "@assistant-ui/react"
       ],
-      "registryDependencies": []
+      "registryDependencies": [
+        "https://r.assistant-ui.com/badge.json"
+      ]
     },
     {
       "name": "image",
@@ -241,6 +241,35 @@
       "type": "registry:component",
       "dependencies": [
         "@radix-ui/react-select",
+        "lucide-react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-tabs",
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "accordion",
+      "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-accordion",
         "lucide-react",
         "class-variance-authority"
       ],
