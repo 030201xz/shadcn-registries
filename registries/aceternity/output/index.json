@@ -2,54 +2,9 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "aceternity",
   "homepage": "https://ui.aceternity.com",
-  "syncedAt": "2026-01-28T00:03:52.931Z",
+  "syncedAt": "2026-01-29T00:04:56.124Z",
   "itemCount": 96,
   "items": [
-    {
-      "name": "sparkles",
-      "type": "registry:ui",
-      "title": "Sparkles",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tsparticles/react",
-        "@tsparticles/engine",
-        "@tsparticles/slim",
-        "motion"
-      ]
-    },
-    {
-      "name": "spotlight",
-      "type": "registry:ui",
-      "title": "Spotlight",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "text-reveal-card",
-      "type": "registry:ui",
-      "title": "Text Reveal Card",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "animated-tooltip",
-      "type": "registry:ui",
-      "title": "Animated Tooltip",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "moving-line",
-      "type": "registry:ui",
-      "title": "Moving Line",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
     {
       "name": "grid",
       "type": "registry:ui",
@@ -66,9 +21,66 @@
       ]
     },
     {
+      "name": "moving-line",
+      "type": "registry:ui",
+      "title": "Moving Line",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "sparkles",
+      "type": "registry:ui",
+      "title": "Sparkles",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tsparticles/react",
+        "@tsparticles/engine",
+        "@tsparticles/slim",
+        "motion"
+      ]
+    },
+    {
+      "name": "animated-tooltip",
+      "type": "registry:ui",
+      "title": "Animated Tooltip",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "text-reveal-card",
+      "type": "registry:ui",
+      "title": "Text Reveal Card",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
       "name": "following-pointer",
       "type": "registry:ui",
       "title": "Following Pointer",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "svg-mask-effect",
+      "type": "registry:ui",
+      "title": "Svg Mask Effect",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "background-beams",
+      "type": "registry:ui",
+      "title": "Background Beams",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -81,13 +93,10 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "parallax-scroll",
+      "name": "spotlight",
       "type": "registry:ui",
-      "title": "Parallax Scroll",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
+      "title": "Spotlight",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "evervault-card",
@@ -108,15 +117,6 @@
       ]
     },
     {
-      "name": "svg-mask-effect",
-      "type": "registry:ui",
-      "title": "Svg Mask Effect",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
       "name": "parallax-scroll-2",
       "type": "registry:ui",
       "title": "Parallax Scroll 2",
@@ -126,18 +126,18 @@
       ]
     },
     {
-      "name": "background-beams",
+      "name": "parallax-scroll",
       "type": "registry:ui",
-      "title": "Background Beams",
+      "title": "Parallax Scroll",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
       ]
     },
     {
-      "name": "container-scroll-animation",
+      "name": "tracing-beam",
       "type": "registry:ui",
-      "title": "Container Scroll Animation",
+      "title": "Tracing Beam",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -153,10 +153,13 @@
       ]
     },
     {
-      "name": "meteors",
+      "name": "container-scroll-animation",
       "type": "registry:ui",
-      "title": "Meteors",
-      "author": "Manu Arora <hi@manuarora.in>"
+      "title": "Container Scroll Animation",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
     },
     {
       "name": "card-stack",
@@ -168,13 +171,19 @@
       ]
     },
     {
-      "name": "tracing-beam",
+      "name": "floating-navbar",
       "type": "registry:ui",
-      "title": "Tracing Beam",
+      "title": "Floating Navbar",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
       ]
+    },
+    {
+      "name": "meteors",
+      "type": "registry:ui",
+      "title": "Meteors",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "moving-border",
@@ -195,24 +204,6 @@
       ]
     },
     {
-      "name": "floating-navbar",
-      "type": "registry:ui",
-      "title": "Floating Navbar",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "bento-grid",
-      "type": "registry:ui",
-      "title": "Bento Grid",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tabler/icons-react"
-      ]
-    },
-    {
       "name": "lamp",
       "type": "registry:ui",
       "title": "Lamp",
@@ -222,27 +213,18 @@
       ]
     },
     {
-      "name": "google-gemini-effect",
+      "name": "tailwindcss-buttons",
       "type": "registry:ui",
-      "title": "Google Gemini Effect",
+      "title": "Tailwindcss Buttons",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
-        "motion"
+        "@tabler/icons-react"
       ]
     },
     {
       "name": "navbar-menu",
       "type": "registry:ui",
       "title": "Navbar Menu",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "typewriter-effect",
-      "type": "registry:ui",
-      "title": "Typewriter Effect",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -268,12 +250,39 @@
       ]
     },
     {
-      "name": "tailwindcss-buttons",
+      "name": "google-gemini-effect",
       "type": "registry:ui",
-      "title": "Tailwindcss Buttons",
+      "title": "Google Gemini Effect",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "bento-grid",
+      "type": "registry:ui",
+      "title": "Bento Grid",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "@tabler/icons-react"
+      ]
+    },
+    {
+      "name": "typewriter-effect",
+      "type": "registry:ui",
+      "title": "Typewriter Effect",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "images-slider",
+      "type": "registry:ui",
+      "title": "Images Slider",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
       ]
     },
     {
@@ -283,21 +292,21 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
+      "name": "direction-aware-hover",
+      "type": "registry:ui",
+      "title": "Direction Aware Hover",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "@radix-ui/react-tabs"
-      ]
-    },
-    {
-      "name": "hero-parallax",
-      "type": "registry:ui",
-      "title": "Hero Parallax",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
       ]
     },
     {
@@ -310,9 +319,9 @@
       ]
     },
     {
-      "name": "images-slider",
+      "name": "hero-parallax",
       "type": "registry:ui",
-      "title": "Images Slider",
+      "title": "Hero Parallax",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -328,33 +337,9 @@
       ]
     },
     {
-      "name": "direction-aware-hover",
-      "type": "registry:ui",
-      "title": "Direction Aware Hover",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "background-gradient-animation",
-      "type": "registry:ui",
-      "title": "Background Gradient Animation",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
       "name": "layout-grid",
       "type": "registry:ui",
       "title": "Layout Grid",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "input",
-      "type": "registry:ui",
-      "title": "Input",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -371,6 +356,31 @@
       ]
     },
     {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "multi-step-loader",
+      "type": "registry:ui",
+      "title": "Multi Step Loader",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tabler/icons-react",
+        "motion"
+      ]
+    },
+    {
+      "name": "background-gradient-animation",
+      "type": "registry:ui",
+      "title": "Background Gradient Animation",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
@@ -380,10 +390,24 @@
       ]
     },
     {
-      "name": "aurora-background",
+      "name": "canvas-reveal-effect",
       "type": "registry:ui",
-      "title": "Aurora Background",
-      "author": "Manu Arora <hi@manuarora.in>"
+      "title": "Canvas Reveal Effect",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "three",
+        "@react-three/fiber@alpha"
+      ]
+    },
+    {
+      "name": "hero-highlight",
+      "type": "registry:ui",
+      "title": "Hero Highlight",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "mini-svg-data-uri",
+        "motion"
+      ]
     },
     {
       "name": "globe",
@@ -407,39 +431,15 @@
       ]
     },
     {
-      "name": "hero-highlight",
+      "name": "aurora-background",
       "type": "registry:ui",
-      "title": "Hero Highlight",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "mini-svg-data-uri",
-        "motion"
-      ]
+      "title": "Aurora Background",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "multi-step-loader",
+      "name": "placeholders-and-vanish-input",
       "type": "registry:ui",
-      "title": "Multi Step Loader",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tabler/icons-react",
-        "motion"
-      ]
-    },
-    {
-      "name": "canvas-reveal-effect",
-      "type": "registry:ui",
-      "title": "Canvas Reveal Effect",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "three",
-        "@react-three/fiber@alpha"
-      ]
-    },
-    {
-      "name": "wobble-card",
-      "type": "registry:ui",
-      "title": "Wobble Card",
+      "title": "Placeholders And Vanish Input",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -449,6 +449,15 @@
       "name": "flip-words",
       "type": "registry:ui",
       "title": "Flip Words",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "wobble-card",
+      "type": "registry:ui",
+      "title": "Wobble Card",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -465,6 +474,31 @@
       ]
     },
     {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tabler/icons-react",
+        "motion"
+      ]
+    },
+    {
+      "name": "animated-modal",
+      "type": "registry:ui",
+      "title": "Animated Modal",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "glare-card",
+      "type": "registry:ui",
+      "title": "Glare Card",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
       "name": "link-preview",
       "type": "registry:ui",
       "title": "Link Preview",
@@ -476,23 +510,10 @@
       ]
     },
     {
-      "name": "placeholders-and-vanish-input",
+      "name": "shooting-stars",
       "type": "registry:ui",
-      "title": "Placeholders And Vanish Input",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
-    },
-    {
-      "name": "sidebar",
-      "type": "registry:ui",
-      "title": "Sidebar",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tabler/icons-react",
-        "motion"
-      ]
+      "title": "Shooting Stars",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "apple-cards-carousel",
@@ -506,18 +527,6 @@
       "registryDependencies": [
         "https://ui.aceternity.com/registry/use-outside-click.json"
       ]
-    },
-    {
-      "name": "glare-card",
-      "type": "registry:ui",
-      "title": "Glare Card",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "shooting-stars",
-      "type": "registry:ui",
-      "title": "Shooting Stars",
-      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "compare",
@@ -536,12 +545,26 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "animated-modal",
+      "name": "file-upload",
       "type": "registry:ui",
-      "title": "Animated Modal",
+      "title": "File Upload",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tabler/icons-react",
+        "react-dropzone",
+        "motion"
+      ]
+    },
+    {
+      "name": "cover",
+      "type": "registry:ui",
+      "title": "Cover",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
+      ],
+      "registryDependencies": [
+        "https://ui.aceternity.com/registry/sparkles.json"
       ]
     },
     {
@@ -557,15 +580,28 @@
       ]
     },
     {
-      "name": "file-upload",
+      "name": "timeline",
       "type": "registry:ui",
-      "title": "File Upload",
+      "title": "Timeline",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
-        "@tabler/icons-react",
-        "react-dropzone",
         "motion"
       ]
+    },
+    {
+      "name": "text-hover-effect",
+      "type": "registry:ui",
+      "title": "Text Hover Effect",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "focus-cards",
+      "type": "registry:ui",
+      "title": "Focus Cards",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "floating-dock",
@@ -578,27 +614,9 @@
       ]
     },
     {
-      "name": "focus-cards",
+      "name": "background-lines",
       "type": "registry:ui",
-      "title": "Focus Cards",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "cover",
-      "type": "registry:ui",
-      "title": "Cover",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "https://ui.aceternity.com/registry/sparkles.json"
-      ]
-    },
-    {
-      "name": "timeline",
-      "type": "registry:ui",
-      "title": "Timeline",
+      "title": "Background Lines",
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
@@ -611,6 +629,16 @@
       "author": "Manu Arora <hi@manuarora.in>",
       "dependencies": [
         "motion"
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tabler/icons-react",
+        "react-syntax-highlighter"
       ]
     },
     {
@@ -633,6 +661,15 @@
       ]
     },
     {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "author": "Manu Arora <hi@manuarora.in>",
+      "dependencies": [
+        "@tabler/icons-react"
+      ]
+    },
+    {
       "name": "world-map",
       "type": "registry:ui",
       "title": "World Map",
@@ -643,38 +680,22 @@
       ]
     },
     {
-      "name": "code-block",
-      "type": "registry:ui",
-      "title": "Code Block",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tabler/icons-react",
-        "react-syntax-highlighter"
-      ]
-    },
-    {
       "name": "colourful-text",
       "type": "registry:ui",
       "title": "Colourful Text",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "text-hover-effect",
+      "name": "3d-marquee",
       "type": "registry:ui",
-      "title": "Text Hover Effect",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
+      "title": "3d Marquee",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "background-lines",
+      "name": "spotlight-new",
       "type": "registry:ui",
-      "title": "Background Lines",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "motion"
-      ]
+      "title": "Spotlight New",
+      "author": "Manu Arora <hi@manuarora.in>"
     },
     {
       "name": "glowing-effect",
@@ -686,30 +707,9 @@
       ]
     },
     {
-      "name": "3d-marquee",
-      "type": "registry:ui",
-      "title": "3d Marquee",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
       "name": "container-text-flip",
       "type": "registry:ui",
       "title": "Container Text Flip",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "carousel",
-      "type": "registry:ui",
-      "title": "Carousel",
-      "author": "Manu Arora <hi@manuarora.in>",
-      "dependencies": [
-        "@tabler/icons-react"
-      ]
-    },
-    {
-      "name": "spotlight-new",
-      "type": "registry:ui",
-      "title": "Spotlight New",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
@@ -719,9 +719,27 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
+      "name": "loader",
+      "type": "registry:ui",
+      "title": "Loader",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
       "name": "sticky-banner",
       "type": "registry:ui",
       "title": "Sticky Banner",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
+      "name": "draggable-card",
+      "type": "registry:ui",
+      "title": "Draggable Card",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
+      "name": "comet-card",
+      "type": "registry:ui",
+      "title": "Comet Card",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
@@ -731,9 +749,9 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "comet-card",
+      "name": "stateful-button",
       "type": "registry:ui",
-      "title": "Comet Card",
+      "title": "Stateful Button",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
@@ -746,39 +764,9 @@
       ]
     },
     {
-      "name": "loader",
-      "type": "registry:ui",
-      "title": "Loader",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "draggable-card",
-      "type": "registry:ui",
-      "title": "Draggable Card",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "stateful-button",
-      "type": "registry:ui",
-      "title": "Stateful Button",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
       "name": "pixelated-canvas",
       "type": "registry:ui",
       "title": "Pixelated Canvas",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "tooltip-card",
-      "type": "registry:ui",
-      "title": "Tooltip Card",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "noise-background",
-      "type": "registry:ui",
-      "title": "Noise Background",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
@@ -797,15 +785,9 @@
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
-      "name": "dither-shader",
+      "name": "tooltip-card",
       "type": "registry:ui",
-      "title": "Dither Shader",
-      "author": "Manu Arora <hi@manuarora.in>"
-    },
-    {
-      "name": "webcam-pixel-grid",
-      "type": "registry:ui",
-      "title": "Webcam Pixel Grid",
+      "title": "Tooltip Card",
       "author": "Manu Arora <hi@manuarora.in>"
     },
     {
@@ -816,6 +798,24 @@
       "dependencies": [
         "motion"
       ]
+    },
+    {
+      "name": "noise-background",
+      "type": "registry:ui",
+      "title": "Noise Background",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
+      "name": "dither-shader",
+      "type": "registry:ui",
+      "title": "Dither Shader",
+      "author": "Manu Arora <hi@manuarora.in>"
+    },
+    {
+      "name": "webcam-pixel-grid",
+      "type": "registry:ui",
+      "title": "Webcam Pixel Grid",
+      "author": "Manu Arora <hi@manuarora.in>"
     }
   ]
 }

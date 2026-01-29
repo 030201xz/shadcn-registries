@@ -4,7 +4,7 @@
   "type": "registry:page",
   "files": [
     {
-      "content": "\"use client\";\n\nimport { AssistantRuntimeProvider } from \"@assistant-ui/react\";\nimport {\n  AssistantChatTransport,\n  useChatRuntime,\n} from \"@assistant-ui/react-ai-sdk\";\nimport { Thread } from \"@/components/assistant-ui/thread\";\nimport { ThreadList } from \"@/components/assistant-ui/thread-list\";\n\nexport const Assistant = () => {\n  const runtime = useChatRuntime({\n    transport: new AssistantChatTransport({\n      api: \"/api/chat\",\n    }),\n  });\n\n  return (\n    <AssistantRuntimeProvider runtime={runtime}>\n      <div className=\"grid h-dvh grid-cols-[200px_1fr] gap-x-2 px-4 py-4\">\n        <ThreadList />\n        <Thread />\n      </div>\n    </AssistantRuntimeProvider>\n  );\n};\n",
+      "content": "\"use client\";\n\nimport { AssistantRuntimeProvider } from \"@assistant-ui/react\";\nimport {\n  useChatRuntime,\n  AssistantChatTransport,\n} from \"@assistant-ui/react-ai-sdk\";\nimport { Thread } from \"@/components/assistant-ui/thread\";\n\nexport const Assistant = () => {\n  const runtime = useChatRuntime({\n    transport: new AssistantChatTransport({\n      api: \"/api/chat\",\n    }),\n  });\n\n  return (\n    <AssistantRuntimeProvider runtime={runtime}>\n      <div className=\"h-dvh\">\n        <Thread />\n      </div>\n    </AssistantRuntimeProvider>\n  );\n};\n",
       "type": "registry:page",
       "path": "app/ai-sdk/assistant.tsx",
       "target": "app/assistant.tsx"
@@ -12,8 +12,10 @@
   ],
   "registryDependencies": [
     "https://r.assistant-ui.com/ai-sdk-backend.json",
-    "https://r.assistant-ui.com/thread.json",
-    "https://r.assistant-ui.com/thread-list.json"
+    "https://r.assistant-ui.com/thread.json"
+  ],
+  "dependencies": [
+    "@assistant-ui/react-ai-sdk"
   ],
   "meta": {
     "importSpecifier": "Assistant",

@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-28T00:03:55.934Z",
+  "syncedAt": "2026-01-29T00:04:58.809Z",
   "itemCount": 26,
   "items": [
     {
@@ -12,17 +12,18 @@
     {
       "name": "chat/b/ai-sdk-quick-start/json",
       "type": "registry:page",
+      "dependencies": [
+        "@assistant-ui/react-ai-sdk"
+      ],
       "registryDependencies": [
         "https://r.assistant-ui.com/ai-sdk-backend.json",
-        "https://r.assistant-ui.com/thread.json",
-        "https://r.assistant-ui.com/thread-list.json"
+        "https://r.assistant-ui.com/thread.json"
       ]
     },
     {
       "name": "ai-sdk-backend",
       "type": "registry:page",
       "dependencies": [
-        "@assistant-ui/react-ai-sdk",
         "ai",
         "@ai-sdk/openai"
       ]
