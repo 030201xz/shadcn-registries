@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "assistant-ui",
   "homepage": "https://assistant-ui.com",
-  "syncedAt": "2026-01-29T00:04:58.809Z",
-  "itemCount": 26,
+  "syncedAt": "2026-01-30T00:05:14.241Z",
+  "itemCount": 27,
   "items": [
     {
       "name": "shimmer-style",
@@ -182,6 +182,16 @@
         "mermaid",
         "@assistant-ui/react",
         "@assistant-ui/react-markdown"
+      ]
+    },
+    {
+      "name": "diff-viewer",
+      "type": "registry:component",
+      "dependencies": [
+        "diff",
+        "parse-diff",
+        "@assistant-ui/react-markdown",
+        "class-variance-authority"
       ]
     },
     {
