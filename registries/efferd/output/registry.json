@@ -2,34 +2,18 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "efferd",
   "homepage": "https://efferd.com",
-  "syncedAt": "2026-01-31T00:05:12.040Z",
+  "syncedAt": "2026-02-01T00:04:57.079Z",
   "itemCount": 38,
   "items": [
     {
-      "name": "auth-1",
+      "name": "cta-1",
       "type": "registry:block",
-      "description": "Modern auth page with particle background and social login buttons.",
+      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
       "categories": [
-        "auth"
+        "cta"
       ],
       "registryDependencies": [
-        "button",
-        "https://magicui.design/r/particles.json"
-      ]
-    },
-    {
-      "name": "auth-2",
-      "type": "registry:block",
-      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
-      "categories": [
-        "auth"
-      ],
-      "dependencies": [
-        "motion"
-      ],
-      "registryDependencies": [
-        "button",
-        "input-group"
+        "button"
       ]
     },
     {
@@ -44,26 +28,15 @@
       ]
     },
     {
-      "name": "cta-4",
+      "name": "auth-1",
       "type": "registry:block",
-      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
+      "description": "Modern auth page with particle background and social login buttons.",
       "categories": [
-        "cta"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
-      "name": "cta-5",
-      "type": "registry:block",
-      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
-      "categories": [
-        "cta"
+        "auth"
       ],
       "registryDependencies": [
         "button",
-        "input-group"
+        "https://magicui.design/r/particles.json"
       ]
     },
     {
@@ -86,6 +59,29 @@
       ]
     },
     {
+      "name": "cta-5",
+      "type": "registry:block",
+      "description": "Newsletter subscription section with email input, submit button, and expert avatars for added trust and engagement.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group"
+      ]
+    },
+    {
+      "name": "cta-4",
+      "type": "registry:block",
+      "description": "Modern call-to-action card with rounded edges, subtle shadow, and dual buttons for contacting sales or getting started.",
+      "categories": [
+        "cta"
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
       "name": "contact-1",
       "type": "registry:block",
       "description": "Elegant contact page with office info, email, phone, and social links.",
@@ -94,14 +90,18 @@
       ]
     },
     {
-      "name": "cta-1",
+      "name": "auth-2",
       "type": "registry:block",
-      "description": "Centered call-to-action bar with bold heading and dual action buttons.",
+      "description": "Modern auth page with testimonial sidebar, social logins, and email signup.",
       "categories": [
-        "cta"
+        "auth"
+      ],
+      "dependencies": [
+        "motion"
       ],
       "registryDependencies": [
-        "button"
+        "button",
+        "input-group"
       ]
     },
     {
@@ -150,17 +150,6 @@
       ]
     },
     {
-      "name": "features-1",
-      "type": "registry:block",
-      "description": "Minimal feature card with icon, title, and subtle grid background.",
-      "categories": [
-        "features"
-      ],
-      "registryDependencies": [
-        "https://magicui.design/r/grid-pattern.json"
-      ]
-    },
-    {
       "name": "faqs-5",
       "type": "registry:block",
       "description": "Responsive FAQ section with filters, search, and accordions for quick answers.",
@@ -172,6 +161,17 @@
         "button",
         "input-group",
         "empty"
+      ]
+    },
+    {
+      "name": "features-1",
+      "type": "registry:block",
+      "description": "Minimal feature card with icon, title, and subtle grid background.",
+      "categories": [
+        "features"
+      ],
+      "registryDependencies": [
+        "https://magicui.design/r/grid-pattern.json"
       ]
     },
     {
@@ -276,9 +276,9 @@
       ]
     },
     {
-      "name": "header-1",
+      "name": "header-2",
       "type": "registry:block",
-      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
+      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
       "categories": [
         "header"
       ],
@@ -287,9 +287,9 @@
       ]
     },
     {
-      "name": "header-2",
+      "name": "header-1",
       "type": "registry:block",
-      "description": "Elegant responsive header with scroll-based styling, mobile drawer menu, and smooth transitions.",
+      "description": "Responsive sticky header with scroll blur effect, animated mobile menu, and adaptive navigation links.",
       "categories": [
         "header"
       ],
@@ -310,14 +310,6 @@
       ]
     },
     {
-      "name": "logo-cloud-1",
-      "type": "registry:block",
-      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
-      "categories": [
-        "logo-cloud"
-      ]
-    },
-    {
       "name": "image-gallery-1",
       "type": "registry:block",
       "description": "Masonry-style responsive gallery using random images with dynamic aspect ratios.",
@@ -329,6 +321,14 @@
       ],
       "registryDependencies": [
         "aspect-ratio"
+      ]
+    },
+    {
+      "name": "logo-cloud-1",
+      "type": "registry:block",
+      "description": "Simple logo grid displaying brand icons in a clean, bordered layout with light and dark mode support.",
+      "categories": [
+        "logo-cloud"
       ]
     },
     {
