@@ -2,21 +2,18 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "ai-elements",
   "homepage": "https://registry.ai-sdk.dev/elements",
-  "syncedAt": "2026-02-03T00:05:44.017Z",
+  "syncedAt": "2026-02-04T00:04:41.031Z",
   "itemCount": 77,
   "items": [
     {
-      "name": "artifact",
+      "name": "canvas",
       "type": "registry:component",
-      "title": "Artifact",
-      "description": "AI-powered artifact component.",
+      "title": "Canvas",
+      "description": "AI-powered canvas component.",
       "dependencies": [
-        "lucide-react"
+        "@xyflow/react"
       ],
-      "registryDependencies": [
-        "button",
-        "tooltip"
-      ]
+      "registryDependencies": []
     },
     {
       "name": "code-block",
@@ -32,17 +29,17 @@
       ]
     },
     {
-      "name": "chain-of-thought",
+      "name": "checkpoint",
       "type": "registry:component",
-      "title": "Chain Of Thought",
-      "description": "AI-powered chain of-thought component.",
+      "title": "Checkpoint",
+      "description": "AI-powered checkpoint component.",
       "dependencies": [
-        "@radix-ui/react-use-controllable-state",
         "lucide-react"
       ],
       "registryDependencies": [
-        "badge",
-        "collapsible"
+        "button",
+        "separator",
+        "tooltip"
       ]
     },
     {
@@ -79,19 +76,6 @@
       "registryDependencies": []
     },
     {
-      "name": "conversation",
-      "type": "registry:component",
-      "title": "Conversation",
-      "description": "AI-powered conversation component.",
-      "dependencies": [
-        "lucide-react",
-        "use-stick-to-bottom"
-      ],
-      "registryDependencies": [
-        "button"
-      ]
-    },
-    {
       "name": "context",
       "type": "registry:component",
       "title": "Context",
@@ -104,6 +88,19 @@
         "button",
         "hover-card",
         "progress"
+      ]
+    },
+    {
+      "name": "conversation",
+      "type": "registry:component",
+      "title": "Conversation",
+      "description": "AI-powered conversation component.",
+      "dependencies": [
+        "lucide-react",
+        "use-stick-to-bottom"
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -141,14 +138,6 @@
       ]
     },
     {
-      "name": "loader",
-      "type": "registry:component",
-      "title": "Loader",
-      "description": "AI-powered loader component.",
-      "dependencies": [],
-      "registryDependencies": []
-    },
-    {
       "name": "model-selector",
       "type": "registry:component",
       "title": "Model Selector",
@@ -160,33 +149,12 @@
       ]
     },
     {
-      "name": "message",
+      "name": "loader",
       "type": "registry:component",
-      "title": "Message",
-      "description": "AI-powered message component.",
-      "dependencies": [
-        "ai",
-        "lucide-react",
-        "streamdown"
-      ],
-      "registryDependencies": [
-        "button",
-        "button-group",
-        "tooltip"
-      ]
-    },
-    {
-      "name": "open-in-chat",
-      "type": "registry:component",
-      "title": "Open In Chat",
-      "description": "AI-powered open in-chat component.",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "dropdown-menu"
-      ]
+      "title": "Loader",
+      "description": "AI-powered loader component.",
+      "dependencies": [],
+      "registryDependencies": []
     },
     {
       "name": "node",
@@ -199,6 +167,16 @@
       "registryDependencies": [
         "card"
       ]
+    },
+    {
+      "name": "panel",
+      "type": "registry:component",
+      "title": "Panel",
+      "description": "AI-powered panel component.",
+      "dependencies": [
+        "@xyflow/react"
+      ],
+      "registryDependencies": []
     },
     {
       "name": "plan",
@@ -216,17 +194,30 @@
       ]
     },
     {
-      "name": "checkpoint",
+      "name": "open-in-chat",
       "type": "registry:component",
-      "title": "Checkpoint",
-      "description": "AI-powered checkpoint component.",
+      "title": "Open In Chat",
+      "description": "AI-powered open in-chat component.",
       "dependencies": [
         "lucide-react"
       ],
       "registryDependencies": [
         "button",
-        "separator",
-        "tooltip"
+        "dropdown-menu"
+      ]
+    },
+    {
+      "name": "queue",
+      "type": "registry:component",
+      "title": "Queue",
+      "description": "AI-powered queue component.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "collapsible",
+        "scroll-area"
       ]
     },
     {
@@ -245,25 +236,6 @@
       ]
     },
     {
-      "name": "prompt-input",
-      "type": "registry:component",
-      "title": "Prompt Input",
-      "description": "AI-powered prompt input component.",
-      "dependencies": [
-        "ai",
-        "lucide-react",
-        "nanoid"
-      ],
-      "registryDependencies": [
-        "button",
-        "command",
-        "dropdown-menu",
-        "hover-card",
-        "input-group",
-        "select"
-      ]
-    },
-    {
       "name": "shimmer",
       "type": "registry:component",
       "title": "Shimmer",
@@ -274,15 +246,16 @@
       "registryDependencies": []
     },
     {
-      "name": "sources",
+      "name": "artifact",
       "type": "registry:component",
-      "title": "Sources",
-      "description": "AI-powered sources component.",
+      "title": "Artifact",
+      "description": "AI-powered artifact component.",
       "dependencies": [
         "lucide-react"
       ],
       "registryDependencies": [
-        "collapsible"
+        "button",
+        "tooltip"
       ]
     },
     {
@@ -294,6 +267,18 @@
       "registryDependencies": [
         "button",
         "scroll-area"
+      ]
+    },
+    {
+      "name": "task",
+      "type": "registry:component",
+      "title": "Task",
+      "description": "AI-powered task component.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "collapsible"
       ]
     },
     {
@@ -312,14 +297,16 @@
       ]
     },
     {
-      "name": "task",
+      "name": "chain-of-thought",
       "type": "registry:component",
-      "title": "Task",
-      "description": "AI-powered task component.",
+      "title": "Chain Of Thought",
+      "description": "AI-powered chain of-thought component.",
       "dependencies": [
+        "@radix-ui/react-use-controllable-state",
         "lucide-react"
       ],
       "registryDependencies": [
+        "badge",
         "collapsible"
       ]
     },
@@ -395,6 +382,16 @@
       ]
     },
     {
+      "name": "example-code-block-dark",
+      "type": "registry:block",
+      "title": "Code Block Dark Example",
+      "description": "Example implementation of code block-dark.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/code-block.json"
+      ]
+    },
+    {
       "name": "example-checkpoint",
       "type": "registry:block",
       "title": "Checkpoint Example",
@@ -409,23 +406,22 @@
       ]
     },
     {
-      "name": "example-code-block-dark",
-      "type": "registry:block",
-      "title": "Code Block Dark Example",
-      "description": "Example implementation of code block-dark.",
-      "dependencies": [],
+      "name": "prompt-input",
+      "type": "registry:component",
+      "title": "Prompt Input",
+      "description": "AI-powered prompt input component.",
+      "dependencies": [
+        "ai",
+        "lucide-react",
+        "nanoid"
+      ],
       "registryDependencies": [
-        "https://registry.ai-sdk.dev/code-block.json"
-      ]
-    },
-    {
-      "name": "example-code-block",
-      "type": "registry:block",
-      "title": "Code Block Example",
-      "description": "Example implementation of code block.",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/code-block.json"
+        "button",
+        "command",
+        "dropdown-menu",
+        "hover-card",
+        "input-group",
+        "select"
       ]
     },
     {
@@ -442,14 +438,14 @@
       ]
     },
     {
-      "name": "panel",
-      "type": "registry:component",
-      "title": "Panel",
-      "description": "AI-powered panel component.",
-      "dependencies": [
-        "@xyflow/react"
-      ],
-      "registryDependencies": []
+      "name": "example-code-block",
+      "type": "registry:block",
+      "title": "Code Block Example",
+      "description": "Example implementation of code block.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/code-block.json"
+      ]
     },
     {
       "name": "example-confirmation-rejected",
@@ -478,16 +474,6 @@
       ]
     },
     {
-      "name": "example-context",
-      "type": "registry:block",
-      "title": "Context Example",
-      "description": "Example implementation of context.",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/context.json"
-      ]
-    },
-    {
       "name": "example-confirmation",
       "type": "registry:block",
       "title": "Confirmation Example",
@@ -498,6 +484,16 @@
       ],
       "registryDependencies": [
         "https://registry.ai-sdk.dev/confirmation.json"
+      ]
+    },
+    {
+      "name": "example-context",
+      "type": "registry:block",
+      "title": "Context Example",
+      "description": "Example implementation of context.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/context.json"
       ]
     },
     {
@@ -515,10 +511,10 @@
       ]
     },
     {
-      "name": "example-demo-claude",
+      "name": "example-demo-chatgpt",
       "type": "registry:block",
-      "title": "Demo Claude Example",
-      "description": "Example implementation of demo claude.",
+      "title": "Demo Chatgpt Example",
+      "description": "Example implementation of demo chatgpt.",
       "dependencies": [
         "ai",
         "lucide-react",
@@ -528,10 +524,38 @@
         "https://registry.ai-sdk.dev/message.json",
         "https://registry.ai-sdk.dev/conversation.json",
         "https://registry.ai-sdk.dev/prompt-input.json",
-        "https://registry.ai-sdk.dev/model-selector.json",
         "https://registry.ai-sdk.dev/reasoning.json",
         "https://registry.ai-sdk.dev/sources.json",
+        "https://registry.ai-sdk.dev/suggestion.json",
         "dropdown-menu"
+      ]
+    },
+    {
+      "name": "message",
+      "type": "registry:component",
+      "title": "Message",
+      "description": "AI-powered message component.",
+      "dependencies": [
+        "ai",
+        "lucide-react",
+        "streamdown"
+      ],
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "tooltip"
+      ]
+    },
+    {
+      "name": "sources",
+      "type": "registry:component",
+      "title": "Sources",
+      "description": "AI-powered sources component.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "collapsible"
       ]
     },
     {
@@ -568,6 +592,36 @@
       ]
     },
     {
+      "name": "example-demo-claude",
+      "type": "registry:block",
+      "title": "Demo Claude Example",
+      "description": "Example implementation of demo claude.",
+      "dependencies": [
+        "ai",
+        "lucide-react",
+        "nanoid"
+      ],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/message.json",
+        "https://registry.ai-sdk.dev/conversation.json",
+        "https://registry.ai-sdk.dev/prompt-input.json",
+        "https://registry.ai-sdk.dev/model-selector.json",
+        "https://registry.ai-sdk.dev/reasoning.json",
+        "https://registry.ai-sdk.dev/sources.json",
+        "dropdown-menu"
+      ]
+    },
+    {
+      "name": "example-loader-custom",
+      "type": "registry:block",
+      "title": "Loader Custom Example",
+      "description": "Example implementation of loader custom.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/loader.json"
+      ]
+    },
+    {
       "name": "example-image",
       "type": "registry:block",
       "title": "Image Example",
@@ -586,16 +640,6 @@
       "registryDependencies": [
         "https://registry.ai-sdk.dev/inline-citation.json"
       ]
-    },
-    {
-      "name": "canvas",
-      "type": "registry:component",
-      "title": "Canvas",
-      "description": "AI-powered canvas component.",
-      "dependencies": [
-        "@xyflow/react"
-      ],
-      "registryDependencies": []
     },
     {
       "name": "example-loader-sizes",
@@ -656,16 +700,6 @@
       ]
     },
     {
-      "name": "example-open-in-chat",
-      "type": "registry:block",
-      "title": "Open In Chat Example",
-      "description": "Example implementation of open in-chat.",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/open-in-chat.json"
-      ]
-    },
-    {
       "name": "example-plan",
       "type": "registry:block",
       "title": "Plan Example",
@@ -679,17 +713,13 @@
       ]
     },
     {
-      "name": "example-prompt-input-cursor",
+      "name": "example-open-in-chat",
       "type": "registry:block",
-      "title": "Prompt Input Cursor Example",
-      "description": "Example implementation of prompt input-cursor.",
-      "dependencies": [
-        "lucide-react"
-      ],
+      "title": "Open In Chat Example",
+      "description": "Example implementation of open in-chat.",
+      "dependencies": [],
       "registryDependencies": [
-        "https://registry.ai-sdk.dev/prompt-input.json",
-        "https://registry.ai-sdk.dev/model-selector.json",
-        "button"
+        "https://registry.ai-sdk.dev/open-in-chat.json"
       ]
     },
     {
@@ -705,6 +735,20 @@
         "https://registry.ai-sdk.dev/prompt-input.json",
         "button",
         "button-group"
+      ]
+    },
+    {
+      "name": "example-prompt-input-cursor",
+      "type": "registry:block",
+      "title": "Prompt Input Cursor Example",
+      "description": "Example implementation of prompt input-cursor.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/prompt-input.json",
+        "https://registry.ai-sdk.dev/model-selector.json",
+        "button"
       ]
     },
     {
@@ -732,6 +776,16 @@
       ]
     },
     {
+      "name": "example-shimmer-duration",
+      "type": "registry:block",
+      "title": "Shimmer Duration Example",
+      "description": "Example implementation of shimmer duration.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/shimmer.json"
+      ]
+    },
+    {
       "name": "example-queue",
       "type": "registry:block",
       "title": "Queue Example",
@@ -744,27 +798,23 @@
       ]
     },
     {
-      "name": "queue",
-      "type": "registry:component",
-      "title": "Queue",
-      "description": "AI-powered queue component.",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "collapsible",
-        "scroll-area"
-      ]
-    },
-    {
-      "name": "example-shimmer-duration",
+      "name": "example-shimmer",
       "type": "registry:block",
-      "title": "Shimmer Duration Example",
-      "description": "Example implementation of shimmer duration.",
+      "title": "Shimmer Example",
+      "description": "Example implementation of shimmer.",
       "dependencies": [],
       "registryDependencies": [
         "https://registry.ai-sdk.dev/shimmer.json"
+      ]
+    },
+    {
+      "name": "example-sources",
+      "type": "registry:block",
+      "title": "Sources Example",
+      "description": "Example implementation of sources.",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://registry.ai-sdk.dev/sources.json"
       ]
     },
     {
@@ -778,13 +828,13 @@
       ]
     },
     {
-      "name": "example-shimmer",
+      "name": "example-suggestion",
       "type": "registry:block",
-      "title": "Shimmer Example",
-      "description": "Example implementation of shimmer.",
+      "title": "Suggestion Example",
+      "description": "Example implementation of suggestion.",
       "dependencies": [],
       "registryDependencies": [
-        "https://registry.ai-sdk.dev/shimmer.json"
+        "https://registry.ai-sdk.dev/suggestion.json"
       ]
     },
     {
@@ -800,16 +850,6 @@
       ]
     },
     {
-      "name": "example-sources",
-      "type": "registry:block",
-      "title": "Sources Example",
-      "description": "Example implementation of sources.",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/sources.json"
-      ]
-    },
-    {
       "name": "example-suggestion-input",
       "type": "registry:block",
       "title": "Suggestion Input Example",
@@ -820,16 +860,6 @@
       ],
       "registryDependencies": [
         "https://registry.ai-sdk.dev/prompt-input.json",
-        "https://registry.ai-sdk.dev/suggestion.json"
-      ]
-    },
-    {
-      "name": "example-suggestion",
-      "type": "registry:block",
-      "title": "Suggestion Example",
-      "description": "Example implementation of suggestion.",
-      "dependencies": [],
-      "registryDependencies": [
         "https://registry.ai-sdk.dev/suggestion.json"
       ]
     },
@@ -872,12 +902,12 @@
       ]
     },
     {
-      "name": "example-tool-input-streaming",
+      "name": "example-tool-output-error",
       "type": "registry:block",
-      "title": "Tool Input Streaming Example",
-      "description": "Example implementation of tool input-streaming.",
+      "title": "Tool Output Error Example",
+      "description": "Example implementation of tool output-error.",
       "dependencies": [
-        "nanoid"
+        "ai"
       ],
       "registryDependencies": [
         "https://registry.ai-sdk.dev/tool.json"
@@ -916,26 +946,6 @@
       ]
     },
     {
-      "name": "example-demo-chatgpt",
-      "type": "registry:block",
-      "title": "Demo Chatgpt Example",
-      "description": "Example implementation of demo chatgpt.",
-      "dependencies": [
-        "ai",
-        "lucide-react",
-        "nanoid"
-      ],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/message.json",
-        "https://registry.ai-sdk.dev/conversation.json",
-        "https://registry.ai-sdk.dev/prompt-input.json",
-        "https://registry.ai-sdk.dev/reasoning.json",
-        "https://registry.ai-sdk.dev/sources.json",
-        "https://registry.ai-sdk.dev/suggestion.json",
-        "dropdown-menu"
-      ]
-    },
-    {
       "name": "example-web-preview",
       "type": "registry:block",
       "title": "Web Preview Example",
@@ -948,13 +958,15 @@
       ]
     },
     {
-      "name": "example-loader-custom",
+      "name": "example-tool-input-streaming",
       "type": "registry:block",
-      "title": "Loader Custom Example",
-      "description": "Example implementation of loader custom.",
-      "dependencies": [],
+      "title": "Tool Input Streaming Example",
+      "description": "Example implementation of tool input-streaming.",
+      "dependencies": [
+        "nanoid"
+      ],
       "registryDependencies": [
-        "https://registry.ai-sdk.dev/loader.json"
+        "https://registry.ai-sdk.dev/tool.json"
       ]
     },
     {
@@ -969,18 +981,6 @@
         "https://registry.ai-sdk.dev/canvas.json",
         "https://registry.ai-sdk.dev/edge.json",
         "https://registry.ai-sdk.dev/node.json"
-      ]
-    },
-    {
-      "name": "example-tool-output-error",
-      "type": "registry:block",
-      "title": "Tool Output Error Example",
-      "description": "Example implementation of tool output-error.",
-      "dependencies": [
-        "ai"
-      ],
-      "registryDependencies": [
-        "https://registry.ai-sdk.dev/tool.json"
       ]
     }
   ]
