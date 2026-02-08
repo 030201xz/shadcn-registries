@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "generatedAt": "2026-02-07T00:05:53.590Z",
+  "generatedAt": "2026-02-08T00:09:08.688Z",
   "registries": [
     {
       "name": "ai-elements",
@@ -8,7 +8,7 @@
       "description": "AI-powered UI components for building AI applications with Vercel AI SDK",
       "homepage": "https://registry.ai-sdk.dev/elements",
       "itemCount": 77,
-      "lastSync": "2026-02-07T00:05:02.839Z",
+      "lastSync": "2026-02-08T00:08:14.421Z",
       "url": "registries/ai-elements/output/{name}.json"
     },
     {
@@ -17,7 +17,7 @@
       "description": "Auth, contact, CTA, and other UI blocks",
       "homepage": "https://efferd.com",
       "itemCount": 38,
-      "lastSync": "2026-02-07T00:05:42.068Z",
+      "lastSync": "2026-02-08T00:08:54.272Z",
       "url": "registries/efferd/output/{name}.json"
     },
     {
@@ -26,7 +26,7 @@
       "description": "Beautiful file upload components for React applications",
       "homepage": "https://better-upload.com",
       "itemCount": 4,
-      "lastSync": "2026-02-07T00:05:42.375Z",
+      "lastSync": "2026-02-08T00:08:54.708Z",
       "url": "registries/better-upload/output/{name}.json"
     },
     {
@@ -34,8 +34,8 @@
       "displayName": "Blocks",
       "description": "Ready-to-use UI blocks for rapid development",
       "homepage": "https://blocks.so",
-      "itemCount": 70,
-      "lastSync": "2026-02-07T00:05:45.186Z",
+      "itemCount": 71,
+      "lastSync": "2026-02-08T00:08:57.765Z",
       "url": "registries/blocks/output/{name}.json"
     },
     {
@@ -44,7 +44,7 @@
       "description": "Pricing tables, subscription management, and billing UI components",
       "homepage": "https://billingsdk.com",
       "itemCount": 35,
-      "lastSync": "2026-02-07T00:05:46.537Z",
+      "lastSync": "2026-02-08T00:08:59.357Z",
       "url": "registries/billingsdk/output/{name}.json"
     },
     {
@@ -52,8 +52,8 @@
       "displayName": "Aceternity UI",
       "description": "Beautiful, animated UI components with stunning visual effects for React",
       "homepage": "https://ui.aceternity.com",
-      "itemCount": 97,
-      "lastSync": "2026-02-07T00:05:49.258Z",
+      "itemCount": 98,
+      "lastSync": "2026-02-08T00:09:02.307Z",
       "url": "registries/aceternity/output/{name}.json"
     },
     {
@@ -62,7 +62,7 @@
       "description": "AI Chat UI Library - React components for building AI chat interfaces",
       "homepage": "https://assistant-ui.com",
       "itemCount": 27,
-      "lastSync": "2026-02-07T00:05:52.288Z",
+      "lastSync": "2026-02-08T00:09:05.892Z",
       "url": "registries/assistant-ui/output/{name}.json"
     },
     {
@@ -71,7 +71,7 @@
       "description": "Media player UI components for React applications",
       "homepage": "https://limeplay.winoffrg.dev",
       "itemCount": 47,
-      "lastSync": "2026-02-07T00:05:53.547Z",
+      "lastSync": "2026-02-08T00:09:08.613Z",
       "url": "registries/limeplay/output/{name}.json"
     }
   ]
